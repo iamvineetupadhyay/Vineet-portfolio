@@ -47,12 +47,16 @@ Welcome to the repository for my personal developer portfolio website. Built wit
 
 ```text
 portfolio-website/
+├── assets/
+│   ├── docs/                            # Document assets
+│   │   └── Vineet_Kumar_Upadhyay_Resume.pdf
+│   ├── images/                          # Image assets & preview posters
+│   │   └── avatar.png
+│   └── videos/                          # Video demo recordings
+│       └── cypr-demo.mp4
 ├── index.html                           # Main portfolio HTML5 markup
 ├── style.css                            # Engineering Console CSS design system
 ├── script.js                            # Modular JS controller & observers
-├── avatar.png                           # Developer profile avatar
-├── cypr-demo.mp4                        # CYPR SaaS video demo preview
-├── Vineet_Kumar_Upadhyay_Resume.pdf     # Resume PDF document
 ├── .gitignore                           # Git ignore rules
 └── README.md                            # Portfolio documentation
 ```
