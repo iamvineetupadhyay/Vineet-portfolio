@@ -951,6 +951,42 @@ body {
 .footer-icon-svg { width: 14px; height: 14px; }
 .footer-icon-svg.heart { color: var(--accent); }
 
+/* Terminal demo box styling */
+.terminal-demo-box {
+  padding: 1.1rem;
+  background: #0c1014;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #a9b7c6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+}
+.terminal-line.status {
+  color: #6a8759;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e2832;
+  padding-bottom: 0.4rem;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.terminal-line.task { color: #9876aa; margin-top: 0.2rem; }
+.terminal-line.stomp { color: #4e80a5; }
+.terminal-line.sanity { color: #6a8759; }
+.terminal-line.done { color: #9876aa; }
+.active-badge { color: #c68a2e; font-weight: 600; }
+
 /* ==========================================================================
    ADVANCED RESPONSIVE ENGINE — ALL DEVICE SIZES (320px - 4K)
    ========================================================================== */
@@ -971,9 +1007,9 @@ html, body {
 
 /* ---------- Mobile Devices (max-width: 768px) ---------- */
 @media (max-width: 768px) {
-  :root { --nav-h: 62px; }
+  :root { --nav-h: 60px; }
   .container { padding: 0 16px; }
-  .section { padding: 50px 0; }
+  .section { padding: 48px 0; }
   
   /* Mobile Navigation Drawer */
   .nav-links {
@@ -1010,62 +1046,68 @@ html, body {
   /* Hero Section Mobile */
   .hero { padding-top: calc(var(--nav-h) + 16px); padding-bottom: 30px; }
   .hero-content { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-  .hero-name { font-size: clamp(1.9rem, 7.5vw, 2.6rem); line-height: 1.15; }
+  .hero-name { font-size: clamp(1.85rem, 7.5vw, 2.5rem); line-height: 1.15; }
   
   /* Hero Typed Role Mobile */
   .hero-role {
-    font-size: 15px;
+    font-size: 14.5px;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
     line-height: 1.4;
     margin-top: 14px;
+    width: 100%;
   }
-  .role-prefix { display: inline-block; }
-  .typed-wrapper { display: inline-block; word-break: break-word; }
+  .role-prefix { display: inline-block; color: var(--ink-faint); }
+  .typed-wrapper { display: inline-block; word-break: break-word; color: var(--ink); }
 
-  .hero-desc { font-size: 14.5px; max-width: 100%; margin: 16px auto 0; }
-  .hero-cta { flex-direction: column; width: 100%; max-width: 320px; margin: 24px auto 0; gap: 10px; }
+  .hero-desc { font-size: 14px; max-width: 100%; margin: 16px auto 0; line-height: 1.6; }
+  .hero-cta { flex-direction: column; width: 100%; max-width: 300px; margin: 24px auto 0; gap: 10px; }
   .hero-cta .btn { width: 100%; justify-content: center; }
   
-  /* Avatar & Tags Mobile Fix: Stack tags underneath avatar */
+  /* Avatar Ring & Tags on Mobile */
+  .hero-avatar { margin-bottom: 12px; }
   .avatar-ring { width: 180px; height: 180px; margin: 0 auto; }
-  .avatar-tags {
-    position: relative;
-    inset: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 14px;
-    pointer-events: auto;
-  }
-  .avatar-tag {
-    position: static !important;
-    animation: none !important;
-    transform: none !important;
-    font-size: 11.5px;
-    padding: 5px 11px;
-    box-shadow: var(--shadow-sm);
-  }
+  .avatar-tags { inset: -5px; }
+  .avatar-tag { font-size: 10.5px; padding: 4px 9px; }
+  .tag-java { top: 0%; left: -2%; }
+  .tag-spring { top: 35%; right: -8%; }
+  .tag-api { bottom: -2%; left: 5%; }
 
-  /* About Stats Mobile Grid: 3 side-by-side columns */
+  /* About Stats Mobile Grid */
   .about-stats {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
     margin-top: 24px;
+    width: 100%;
   }
   .stat-card {
-    padding: 14px 10px;
+    padding: 12px 6px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
   }
-  .stat-number { font-size: 22px; }
-  .stat-label { font-size: 10.5px; }
+  .stat-number { font-size: 19px; }
+  .stat-label { font-size: 9.5px; letter-spacing: 0; }
+
+  /* Code Block & Terminal Mockups Mobile */
+  .code-block, .browser-frame, .extension-frame {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .code-body {
+    font-size: 11.5px;
+    padding: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+  }
+  .terminal-demo-box {
+    padding: 0.85rem;
+    font-size: 0.74rem;
+  }
 
   /* Projects & Skill Cards Mobile */
   .project-visual-card { padding: 18px; border-radius: 14px; }
@@ -1089,13 +1131,14 @@ html, body {
 
   /* Hero Adjustments */
   .hero-badge { font-size: 11px; padding: 4px 10px; }
-  .hero-name { font-size: 1.75rem; }
-  .avatar-ring { width: 150px; height: 150px; }
+  .hero-name { font-size: 1.7rem; }
+  .avatar-ring { width: 155px; height: 155px; }
+  .avatar-tag { font-size: 10px; padding: 3px 8px; }
 
   /* Stats adjustments for very small screens */
-  .stat-card { padding: 10px 6px; }
-  .stat-number { font-size: 19px; }
-  .stat-label { font-size: 9.5px; }
+  .stat-card { padding: 10px 4px; }
+  .stat-number { font-size: 17px; }
+  .stat-label { font-size: 9px; }
 
   /* Metrics Strip Mobile */
   .project-metrics-strip {

@@ -603,15 +603,15 @@
                   </div>
                   <div class="browser-badge">Engine Active</div>
                 </div>
-                <div class="browser-media-wrapper" style="padding: 1.25rem; background: #0c1014; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #a9b7c6; display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; min-height: 220px;">
-                  <div style="color: #6a8759; display: flex; justify-content: space-between; border-bottom: 1px solid #1e2832; padding-bottom: 0.4rem;">
+                <div class="terminal-demo-box">
+                  <div class="terminal-line status">
                     <span>[JOB-EXECUTOR] Pool: ThreadPoolExecutor</span>
-                    <span style="color: #c68a2e;">ACTIVE (4/4 Workers)</span>
+                    <span class="active-badge">ACTIVE (4/4 Workers)</span>
                   </div>
-                  <div style="color: #9876aa; margin-top: 0.2rem;">&gt; Dispatching task build-#1049 to worker-thread-02</div>
-                  <div style="color: #4e80a5;">&gt; [STOMP] Streaming log chunk (1024 bytes) -&gt; ws://localhost/logs</div>
-                  <div style="color: #6a8759;">&gt; [SANITY_CHECK] Input sanitized: 0 injection artifacts detected.</div>
-                  <div style="color: #9876aa;">&gt; Task finished in 482ms. Status: COMPLETED_SUCCESS</div>
+                  <div class="terminal-line task">&gt; Dispatching task build-#1049 to worker-thread-02</div>
+                  <div class="terminal-line stomp">&gt; [STOMP] Streaming log chunk (1024 bytes) -&gt; ws://localhost/logs</div>
+                  <div class="terminal-line sanity">&gt; [SANITY_CHECK] Input sanitized: 0 injection artifacts detected.</div>
+                  <div class="terminal-line done">&gt; Task finished in 482ms. Status: COMPLETED_SUCCESS</div>
                 </div>
               </div>
 
