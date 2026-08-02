@@ -1,91 +1,67 @@
-# Vineet Kumar Upadhyay — Developer Portfolio 🚀
+# Vineet Kumar Upadhyay
 
-> **Backend Engineer | Java & Spring Boot Developer | Distributed Systems & Cybersecurity Builder**
-
-Welcome to the repository for my personal developer portfolio website. Built with a bespoke **"Engineering Console"** design system, combining a blueprint-paper light aesthetic with dark developer terminal viewports, real-time micro-interactions, responsive video showcases, and official brand tech badges.
-
----
-
-## ✨ Features & Highlights
-
-- 🎨 **Engineering Console Design System**: Tailored HSL color palette featuring blueprint-paper base (`#EFF1EF`), terminal amber accents (`#C68A2E`), and charcoal navy typography (`#12161B`).
-- ⚡ **Zero-Dependency Core**: Lightweight Vanilla JavaScript (ES6+) for smooth, fast 60fps rendering without third-party framework overhead.
-- 📺 **Interactive Media Showcase**: Custom video mockup players with play/pause toggles and graceful asset loading fallbacks.
-- 🛡️ **Brand Badges**: Compact Shields.io style brand badges featuring vector SVG icons with strict dimensional sizing.
-- 📱 **Fully Responsive Layout**: Adaptive single-column mobile view with auto-playing video previews and dual-column desktop viewport.
-- ⌨️ **Typed Hero Animation**: Smooth typing loop effect for engineering roles with `prefers-reduced-motion` support.
+📍 DDU Nagar, Chandauli, Uttar Pradesh - 232101 | 📞 +91-9506185689  
+💼 **Backend Engineer | Java & Spring Boot | PostgreSQL | Distributed Systems**  
+📧 [iec.vineet@gmail.com](mailto:iec.vineet@gmail.com) | 🌐 [github.com/iamvineetupadhyay](https://github.com/iamvineetupadhyay) | 🔗 [linkedin.com/in/iamvineetupadhyay](https://linkedin.com/in/iamvineetupadhyay)
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## 🎯 Professional Summary
 
-| Category | Technologies / Tools |
-| :--- | :--- |
-| **Languages & Core CS** | Java, JavaScript, SQL, DSA, OOP, DBMS, Operating Systems, Computer Networks |
-| **Backend & Frameworks** | Spring Boot, Spring Security, Hibernate / JPA, REST APIs, WebSockets (STOMP), JWT / OAuth 2.0 |
-| **Databases & Caching** | PostgreSQL, MySQL, Redis, Caffeine Cache, HikariCP Tuning |
-| **Cloud & DevOps** | AWS (EC2, RDS), Docker, Kubernetes, Git, CI/CD Pipelines, Vercel |
-| **Testing & Tools** | JUnit, Mockito, Postman, Integration Testing |
-| **Frontend** | HTML5, Vanilla CSS3 (CSS Variables, Flexbox, Grid) |
+Final-year B.Tech CSE student building **CYPR**, a cybersecurity SaaS platform, with hands-on experience designing secure REST APIs, real-time WebSocket systems, and JWT/OAuth authentication infrastructure in Java and Spring Boot, plus the vanilla JavaScript frontends that consume them. Strong foundation in data structures, algorithms, and system design.
 
 ---
 
-## 💻 Featured Projects
+## 🛠️ Technical Skills
 
-### 1. 🛡️ CYPR — Enterprise Cybersecurity Suite
-- **Architecture**: Full-stack cybersecurity SaaS platform built with Java, Spring Boot, PostgreSQL, WebSockets, and Docker.
-- **Engine**: Features **VAJRA**, a custom phishing detection engine utilizing 15+ independent heuristic algorithms (Shannon entropy, N-gram modeling, Levenshtein distance, combosquatting & homoglyph analysis).
-- **Security**: IDOR elimination via claims-based JWT auth, step-up MFA, and bounded thread pool CI/CD orchestrator.
-
-### 2. 🎯 FocusHub — Browser Productivity Suite (Manifest V3)
-- **Architecture**: Lightweight Chrome extension with ambient soundscape mixer powered by the HTML5 Web Audio API.
-- **Features**: Asynchronous cross-session synchronization via Chrome Storage API and dynamic background tab-filtering scripts.
-
----
-
-## 📂 Project Structure
-
-```text
-portfolio-website/
-├── assets/
-│   ├── docs/                            # Document assets
-│   │   └── Vineet_Kumar_Upadhyay_Resume.pdf
-│   ├── images/                          # Image assets & preview posters
-│   │   └── avatar.png
-│   └── videos/                          # Video demo recordings
-│       └── cypr-demo.mp4
-├── index.html                           # Main portfolio HTML5 markup
-├── style.css                            # Engineering Console CSS design system
-├── script.js                            # Modular JS controller & observers
-├── .gitignore                           # Git ignore rules
-└── README.md                            # Portfolio documentation
-```
+* **Languages & Core CS:** Java, JavaScript, SQL, Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks
+* **Frameworks:** Spring Boot, Spring Security, Hibernate/JPA
+* **Frontend:** HTML, CSS, JavaScript (vanilla), REST API integration, responsive UI
+* **Databases & Caching:** PostgreSQL, MySQL, Redis, Caffeine Cache, HikariCP Tuning
+* **Cloud & DevOps:** AWS (EC2, RDS, ALB), Docker, Kubernetes, Git, CI/CD, Vercel
+* **Testing:** JUnit, Mockito, Integration Testing
+* **Backend Concepts:** REST APIs, WebSockets (STOMP), JWT/OAuth 2.0, Multithreading, RBAC, Rate Limiting, Microservices
 
 ---
 
-## 🚀 Running Locally
+## 💻 Projects
 
-No build step or package manager is required. Simply open `index.html` in any web browser:
+### **CYPR — Enterprise Cybersecurity Suite Platform**
+* **Tech Stack:** `Java` • `Spring Boot` • `PostgreSQL` • `JavaScript` • `WebSockets` • `JWT/OAuth 2.0` • `Docker`
+* Built **VAJRA**, a self-contained phishing detection engine combining 15+ independent heuristic signals (Shannon entropy, N-gram modeling, Levenshtein distance, homoglyph and combosquatting detection) with zero external API dependency.
+* Designed and deployed the product frontend (HTML, CSS, vanilla JavaScript) on Vercel, wiring dashboard, admin, and auth views directly to the Spring Boot REST API layer.
+* Implemented JWT-based auth and OAuth 2.0 social login with step-up MFA and dual-counter (session + user-level) lockout; hardened flows against account-takeover and credential-stuffing.
+* Eliminated IDOR vulnerabilities across the API by deriving user identity from JWT claims instead of client-supplied path parameters.
+* Designed a CI/CD Orchestrator with bounded thread pools for async build execution, real-time WebSocket log streaming, and sanitized log output to prevent injection.
+* Enforced RBAC on admin endpoints, idempotency keys with request-hash conflict detection, and optimistic locking on high contention entities to prevent race conditions.
+* Tuned HikariCP connection pooling on PostgreSQL/AWS RDS and used Caffeine Cache for request rate limiting under concurrent load.
 
-```bash
-# Clone the repository
-git clone https://github.com/iamvineetupadhyay/portfolio-website.git
-
-# Navigate to the project directory
-cd portfolio-website
-
-# Open in browser (Windows)
-start index.html
-```
-
----
-
-## 📫 Contact & Social Links
-
-- **GitHub**: [github.com/iamvineetupadhyay](https://github.com/iamvineetupadhyay)
-- **LinkedIn**: [linkedin.com/in/vineetupadhyay](https://linkedin.com/in/vineetupadhyay)
-- **Email**: [vku.eng@gmail.com](mailto:vku.eng@gmail.com)
+### **FocusHub — Browser Productivity Suite (Chrome Extension)**
+* **Tech Stack:** `JavaScript` • `Manifest V3` • `Web Audio API` • `Chrome Storage API`
+* Built a Manifest V3 Chrome extension in vanilla JavaScript for site blocking and focus tracking, using the Web Audio API for an in-browser soundscape mixer.
+* Designed the extension’s popup and options UI end-to-end (HTML/CSS/JS) with persistent state via the Chrome Storage API.
 
 ---
 
-*Designed & Developed with ☕ and passion by Vineet Kumar Upadhyay.*
+## 🎓 Education
+
+* **IEC College of Engineering and Technology** (Greater Noida, UP)  
+  *B.Tech in Computer Science and Engineering* | **2023 – 2027**
+* **Intermediate (Class XII)** (UP Board)  
+  *Senior Secondary Education* | **2020 – 2022**
+* **High School (Class X)** (UP Board)  
+  *Secondary Education* | **2019 – 2020**
+
+---
+
+## 🏆 Achievements
+
+* **National Finalist, ABU Robocon India (2025):** Competed among top robotics teams nationally in autonomous/manual robot design and control.
+* **Tata Imagination Challenge (2025):** Participated in the Tata Quiz, organized by Tata Group via Unstop.
+
+---
+
+## 📜 Certifications
+
+* **Java Programming Training:** IEC College of Engineering & Technology, in association with Technoledge Eduresearch Pvt. Ltd. *(Apr – Jun 2025)*
+* **Postman API Fundamentals (Student Expert):** LetsUpgrade x NSDC x GDG MAD *(Nov 2024)*
