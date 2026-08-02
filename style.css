@@ -950,3 +950,128 @@ body {
 .footer-credit { display: inline-flex; align-items: center; gap: 6px; }
 .footer-icon-svg { width: 14px; height: 14px; }
 .footer-icon-svg.heart { color: var(--accent); }
+
+/* ==========================================================================
+   ADVANCED RESPONSIVE ENGINE — ALL DEVICE SIZES (320px - 4K)
+   ========================================================================== */
+
+/* ---------- Tablet / Small Desktop (769px - 1024px) ---------- */
+@media (max-width: 1024px) {
+  .hero-name { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+  .project-visual-card { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+
+/* ---------- Mobile Devices (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  :root { --nav-h: 62px; }
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
+  
+  /* Mobile Navigation Drawer */
+  .nav-links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(239, 241, 239, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 20px 24px;
+    gap: 4px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    transform: translateY(-16px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 999;
+  }
+  .nav-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-link {
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 14.5px;
+  }
+
+  /* Hero Section Mobile */
+  .hero { padding-top: calc(var(--nav-h) + 24px); padding-bottom: 40px; }
+  .hero-content { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .hero-name { font-size: clamp(2rem, 7.5vw, 2.8rem); line-height: 1.15; }
+  .hero-desc { font-size: 14.5px; max-width: 100%; margin: 0 auto; }
+  .hero-cta { flex-direction: column; width: 100%; gap: 10px; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .avatar-ring { width: 190px; height: 190px; }
+  .avatar-tags { justify-content: center; }
+
+  /* Projects & Skill Cards Mobile */
+  .project-visual-card { padding: 18px; border-radius: 14px; }
+  .project-title { font-size: 17px; }
+  .browser-media-wrapper { aspect-ratio: 16 / 10; }
+
+  /* Achievements & Contact Grid Mobile */
+  .achievements-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact-form { padding: 20px; }
+  
+  /* Footer Mobile */
+  .footer-top, .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+}
+
+/* ---------- Extra-Small Mobile Devices (320px - 480px) ---------- */
+@media (max-width: 480px) {
+  .container { padding: 0 12px; }
+  .section-title { font-size: 22px; }
+  .section-label { font-size: 11px; }
+
+  /* Hero Adjustments */
+  .hero-badge { font-size: 11px; padding: 4px 10px; }
+  .hero-name { font-size: 1.85rem; }
+  .avatar-ring { width: 160px; height: 160px; }
+
+  /* Metrics Strip Mobile */
+  .project-metrics-strip {
+    flex-wrap: wrap;
+    gap: 10px 0;
+    padding: 10px 0;
+  }
+  .metric-item {
+    flex: 1 1 33%;
+    min-width: 80px;
+  }
+  .metric-val { font-size: 14px; }
+  .metric-lbl { font-size: 9.5px; }
+
+  /* Tech Badges on Small Screen */
+  .tech-badge {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.5rem !important;
+    gap: 0.3rem !important;
+  }
+
+  /* Code Terminal Mockup Text Wraps */
+  .browser-media-wrapper {
+    padding: 0.75rem !important;
+    font-size: 0.74rem !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Timeline Mobile */
+  .timeline { padding-left: 18px; }
+  .timeline-dot { left: -18px; width: 9px; height: 9px; }
+  .timeline-card { padding: 16px; }
+  .timeline-header { flex-wrap: wrap; gap: 6px; }
+  .timeline-meta { margin-left: 0; width: 100%; justify-content: space-between; }
+  
+  /* Contact Cards Mobile */
+  .contact-card { padding: 12px 14px; gap: 10px; }
+  .contact-value { font-size: 13px; }
+}
