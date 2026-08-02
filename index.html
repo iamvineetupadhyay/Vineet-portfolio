@@ -580,6 +580,100 @@
             </div>
           </article>
 
+          <!-- CI/CD Orchestrator Visual Showcase Card -->
+          <article class="project-visual-card" id="project-cicd">
+            <div class="project-visual-media">
+              <div class="project-title-group">
+                <div class="project-type-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  <span>System Infrastructure Engine</span>
+                </div>
+                <h3 class="project-title">CI/CD Orchestrator — Async Build Engine</h3>
+              </div>
+
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="browser-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="browser-badge">Engine Active</div>
+                </div>
+                <div class="browser-media-wrapper" style="padding: 1.25rem; background: #0c1014; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #a9b7c6; display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; min-height: 220px;">
+                  <div style="color: #6a8759; display: flex; justify-content: space-between; border-bottom: 1px solid #1e2832; padding-bottom: 0.4rem;">
+                    <span>[JOB-EXECUTOR] Pool: ThreadPoolExecutor</span>
+                    <span style="color: #c68a2e;">ACTIVE (4/4 Workers)</span>
+                  </div>
+                  <div style="color: #9876aa; margin-top: 0.2rem;">&gt; Dispatching task build-#1049 to worker-thread-02</div>
+                  <div style="color: #4e80a5;">&gt; [STOMP] Streaming log chunk (1024 bytes) -&gt; ws://localhost/logs</div>
+                  <div style="color: #6a8759;">&gt; [SANITY_CHECK] Input sanitized: 0 injection artifacts detected.</div>
+                  <div style="color: #9876aa;">&gt; Task finished in 482ms. Status: COMPLETED_SUCCESS</div>
+                </div>
+              </div>
+
+              <div class="project-tech-logos">
+                <span class="tech-badge badge-java">
+                  <svg viewBox="0 0 24 24"><path d="M4.198 17.518c0 0-1.129.565 0 1.129 1.411.706 4.704.988 7.339.988 3.528 0 7.339-.706 7.339-1.976 0-1.27-2.823-1.694-5.363-1.835-2.823-.141-6.774.282-9.315 1.694zm.847 2.4c0 0-.847.565 0 .988 1.411.706 4.422.847 7.057.847 3.387 0 6.633-.423 6.633-1.411 0-1.129-2.54-1.552-5.08-1.694-2.823-.141-6.633.282-8.61 1.27zm10.725-7.339c0 0 1.27.282 1.976 1.411.847 1.27.141 2.54-.565 3.387-.706.847-1.129.847-1.129.847s.423-.423.706-1.129c.423-.706.141-1.694-.565-2.54-.706-.847-1.129-1.129-1.129-1.129.141-.423.706-.847.706-.847zm-3.669 2.258c1.411 1.552.141 3.246-.423 4.234 0 0 .565-.565.847-1.27.423-.988.423-1.976-.423-2.964-.565-.706-.847-1.129-.847-1.129s.282.423.847 1.129zm.423-6.491c0 0 1.552.847.988 3.105-.423 1.552-1.694 2.823-1.694 2.823s.282-.565.565-1.411c.282-.847 0-1.835-.706-2.54-.706-.847-1.129-1.129-1.129-1.129s.988-.282 1.976-.848z"/></svg>
+                  Java
+                </span>
+                <span class="tech-badge badge-kafka">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  Multithreading
+                </span>
+                <span class="tech-badge badge-websocket">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  WebSockets / STOMP
+                </span>
+                <span class="tech-badge badge-docker">
+                  <svg viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m0 2.716h2.118a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.956 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m5.886 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.956 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M.015 11.233c0 3.238 2.274 5.766 5.86 5.766 3.655 0 7.37-1.127 10.6-3.328 1.488.225 3.01.211 4.457-.156.408-.104.707-.442.748-.86.04-.419-.183-.815-.558-.992-1.026-.484-2.155-.734-3.308-.734-.236 0-.472.01-.707.03-.454-2.023-2.091-3.606-4.14-3.957a.789.789 0 00-.916.634.789.789 0 00.634.916c1.408.24 2.535 1.332 2.846 2.73-1.042-.31-2.132-.47-3.235-.47H.015z"/></svg>
+                  Thread Pools
+                </span>
+              </div>
+            </div>
+
+            <div class="project-visual-info">
+              <div class="info-top-links">
+                <a href="https://github.com/iamvineetupadhyay/cicd-orchestrator" class="project-link-btn" aria-label="GitHub Repository"
+                  target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+
+              <p class="project-desc">
+                High-throughput asynchronous build execution orchestrator in Java. Features bounded thread pool management, real-time WebSocket log streaming, and injection-hardened log output routines.
+              </p>
+
+              <div class="project-metrics-strip">
+                <div class="metric-item">
+                  <span class="metric-val">4 Pool</span>
+                  <span class="metric-lbl">Worker Threads</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">&lt; 5 ms</span>
+                  <span class="metric-lbl">Dispatch Latency</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">STOMP</span>
+                  <span class="metric-lbl">Live WebSockets</span>
+                </div>
+              </div>
+
+              <ul class="project-highlights">
+                <li>Designed a high-throughput async build engine utilizing bounded thread pools (`ExecutorService`) to prevent server memory exhaustion.</li>
+                <li>Built real-time log streaming over WebSockets (STOMP) for live pipeline output monitoring without HTTP polling overhead.</li>
+                <li>Implemented strict log sanitization routines preventing ANSI escape sequence and command injection exploits in build logs.</li>
+              </ul>
+            </div>
+          </article>
+
           <!-- FocusHub Visual Showcase Card -->
           <article class="project-visual-card" id="project-focushub">
             <div class="project-visual-media">
@@ -681,100 +775,6 @@
                 <li>Designed popup and extension options interface end-to-end with zero third-party dependencies.</li>
                 <li>Utilized Chrome Storage API for asynchronous cross-session sync and configuration persistence.</li>
                 <li>Implemented dynamic background scripts for tab filtering and session timer management.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- CI/CD Orchestrator Visual Showcase Card -->
-          <article class="project-visual-card" id="project-cicd">
-            <div class="project-visual-media">
-              <div class="project-title-group">
-                <div class="project-type-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                  <span>System Infrastructure Engine</span>
-                </div>
-                <h3 class="project-title">CI/CD Orchestrator — Async Build Engine</h3>
-              </div>
-
-              <div class="browser-frame">
-                <div class="browser-header">
-                  <div class="browser-dots">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                  </div>
-                  <div class="browser-badge">Engine Active</div>
-                </div>
-                <div class="browser-media-wrapper" style="padding: 1.25rem; background: #0c1014; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #a9b7c6; display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; min-height: 220px;">
-                  <div style="color: #6a8759; display: flex; justify-content: space-between; border-bottom: 1px solid #1e2832; padding-bottom: 0.4rem;">
-                    <span>[JOB-EXECUTOR] Pool: ThreadPoolExecutor</span>
-                    <span style="color: #c68a2e;">ACTIVE (4/4 Workers)</span>
-                  </div>
-                  <div style="color: #9876aa; margin-top: 0.2rem;">&gt; Dispatching task build-#1049 to worker-thread-02</div>
-                  <div style="color: #4e80a5;">&gt; [STOMP] Streaming log chunk (1024 bytes) -&gt; ws://localhost/logs</div>
-                  <div style="color: #6a8759;">&gt; [SANITY_CHECK] Input sanitized: 0 injection artifacts detected.</div>
-                  <div style="color: #9876aa;">&gt; Task finished in 482ms. Status: COMPLETED_SUCCESS</div>
-                </div>
-              </div>
-
-              <div class="project-tech-logos">
-                <span class="tech-badge badge-java">
-                  <svg viewBox="0 0 24 24"><path d="M4.198 17.518c0 0-1.129.565 0 1.129 1.411.706 4.704.988 7.339.988 3.528 0 7.339-.706 7.339-1.976 0-1.27-2.823-1.694-5.363-1.835-2.823-.141-6.774.282-9.315 1.694zm.847 2.4c0 0-.847.565 0 .988 1.411.706 4.422.847 7.057.847 3.387 0 6.633-.423 6.633-1.411 0-1.129-2.54-1.552-5.08-1.694-2.823-.141-6.633.282-8.61 1.27zm10.725-7.339c0 0 1.27.282 1.976 1.411.847 1.27.141 2.54-.565 3.387-.706.847-1.129.847-1.129.847s.423-.423.706-1.129c.423-.706.141-1.694-.565-2.54-.706-.847-1.129-1.129-1.129-1.129.141-.423.706-.847.706-.847zm-3.669 2.258c1.411 1.552.141 3.246-.423 4.234 0 0 .565-.565.847-1.27.423-.988.423-1.976-.423-2.964-.565-.706-.847-1.129-.847-1.129s.282.423.847 1.129zm.423-6.491c0 0 1.552.847.988 3.105-.423 1.552-1.694 2.823-1.694 2.823s.282-.565.565-1.411c.282-.847 0-1.835-.706-2.54-.706-.847-1.129-1.129-1.129-1.129s.988-.282 1.976-.848z"/></svg>
-                  Java
-                </span>
-                <span class="tech-badge badge-kafka">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                  Multithreading
-                </span>
-                <span class="tech-badge badge-websocket">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                  WebSockets / STOMP
-                </span>
-                <span class="tech-badge badge-docker">
-                  <svg viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m0 2.716h2.118a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.956 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m5.886 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.956 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M.015 11.233c0 3.238 2.274 5.766 5.86 5.766 3.655 0 7.37-1.127 10.6-3.328 1.488.225 3.01.211 4.457-.156.408-.104.707-.442.748-.86.04-.419-.183-.815-.558-.992-1.026-.484-2.155-.734-3.308-.734-.236 0-.472.01-.707.03-.454-2.023-2.091-3.606-4.14-3.957a.789.789 0 00-.916.634.789.789 0 00.634.916c1.408.24 2.535 1.332 2.846 2.73-1.042-.31-2.132-.47-3.235-.47H.015z"/></svg>
-                  Thread Pools
-                </span>
-              </div>
-            </div>
-
-            <div class="project-visual-info">
-              <div class="info-top-links">
-                <a href="https://github.com/iamvineetupadhyay/cicd-orchestrator" class="project-link-btn" aria-label="GitHub Repository"
-                  target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                  </svg>
-                  <span>Source Code</span>
-                </a>
-              </div>
-
-              <p class="project-desc">
-                High-throughput asynchronous build execution orchestrator in Java. Features bounded thread pool management, real-time WebSocket log streaming, and injection-hardened log output routines.
-              </p>
-
-              <div class="project-metrics-strip">
-                <div class="metric-item">
-                  <span class="metric-val">4 Pool</span>
-                  <span class="metric-lbl">Worker Threads</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-val">&lt; 5 ms</span>
-                  <span class="metric-lbl">Dispatch Latency</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-val">STOMP</span>
-                  <span class="metric-lbl">Live WebSockets</span>
-                </div>
-              </div>
-
-              <ul class="project-highlights">
-                <li>Designed a high-throughput async build engine utilizing bounded thread pools (`ExecutorService`) to prevent server memory exhaustion.</li>
-                <li>Built real-time log streaming over WebSockets (STOMP) for live pipeline output monitoring without HTTP polling overhead.</li>
-                <li>Implemented strict log sanitization routines preventing ANSI escape sequence and command injection exploits in build logs.</li>
               </ul>
             </div>
           </article>
