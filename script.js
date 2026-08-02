@@ -150,8 +150,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Project demo videos — play/pause toggle + graceful fallback
-     if cypr-demo.mp4 / cypr-preview.png haven't been added yet
+     Project demo videos — play/pause toggle + graceful error handling
   --------------------------------------------------------------------- */
   document.querySelectorAll(".video-play-btn").forEach(function (btn) {
     var wrapper = btn.closest(".browser-media-wrapper");
@@ -160,7 +159,7 @@
 
     btn.addEventListener("click", function () {
       if (video.paused) {
-        video.play();
+        video.play().catch(function () {});
         btn.classList.add("playing");
       } else {
         video.pause();
@@ -171,9 +170,6 @@
     video.addEventListener("error", function () {
       wrapper.classList.add("media-error");
     });
-    setTimeout(function () {
-      if (video.readyState === 0) wrapper.classList.add("media-error");
-    }, 1200);
   });
 
   /* ---------------------------------------------------------------------
