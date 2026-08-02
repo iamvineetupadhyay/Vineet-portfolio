@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Vineet Kumar Upadhyay – Backend Engineer specializing in Java, Spring Boot, PostgreSQL, and Distributed Systems. Building secure, scalable cybersecurity platforms." />
+  <meta name="keywords"
+    content="Vineet Kumar Upadhyay, Backend Engineer, Java, Spring Boot, PostgreSQL, Distributed Systems, CYPR, REST API" />
+  <meta name="author" content="Vineet Kumar Upadhyay" />
+  <meta property="og:title" content="Vineet Kumar Upadhyay | Backend Engineer" />
+  <meta property="og:description" content="Backend Engineer — Java & Spring Boot | PostgreSQL | Distributed Systems" />
+  <meta property="og:type" content="website" />
+  <title>Vineet Kumar Upadhyay | Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">VKU<span class="logo-dot">.</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="Vineet_Kumar_Upadhyay_Resume.pdf" download="Vineet_Kumar_Upadhyay_Resume.pdf"
+          class="btn btn-sm btn-outline nav-resume-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Resume</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ────────────────────────────────────────────────── -->
+    <section class="hero" id="home">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero-name">
+            Vineet Kumar<br /><span class="name-accent">Upadhyay</span>
+          </h1>
+          <p class="hero-role">
+            <span class="role-prefix">I'm a </span>
+            <span class="typed-wrapper"><span class="typed" id="typed"></span><span class="cursor">|</span></span>
+          </p>
+          <p class="hero-desc">
+            Final-year B.Tech CSE student building <strong>CYPR</strong>, a cybersecurity SaaS platform — designing
+            secure REST APIs, real-time WebSocket systems, and JWT/OAuth authentication infrastructure with Java &amp;
+            Spring Boot.
+          </p>
+          <div class="hero-cta">
+            <a href="Vineet_Kumar_Upadhyay_Resume.pdf" download="Vineet_Kumar_Upadhyay_Resume.pdf"
+              class="btn btn-primary" id="download-resume-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Download Resume</span>
+            </a>
+            <a href="#projects" class="btn btn-outline" id="view-work-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <span>View Projects</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <img src="avatar.png" alt="Vineet Kumar Upadhyay" class="avatar-img" />
+            </div>
+          </div>
+          <div class="avatar-tags">
+            <div class="avatar-tag tag-java">
+              <svg class="tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16.5 9.4c0 0-1.72-2-4.5-2s-4.5 2-4.5 2" />
+                <path d="M7 16c0 1.5 2.24 3 5 3s5-1.5 5-3" />
+                <path d="M12 3v3" />
+              </svg>
+              <span>Java</span>
+            </div>
+            <div class="avatar-tag tag-spring">
+              <svg class="tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z" />
+              </svg>
+              <span>Spring Boot</span>
+            </div>
+            <div class="avatar-tag tag-api">
+              <svg class="tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ────────────────────────────────────────────────── -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">01 — About</span>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hi! I'm <strong>Vineet Kumar Upadhyay</strong>, a Backend Engineer and final-year B.Tech CSE student at
+              <strong>IEC College of Engineering and Technology</strong>, Greater Noida. I'm currently building
+              <strong>CYPR</strong> — an enterprise cybersecurity SaaS platform — from the ground up.
+            </p>
+            <p>
+              I specialize in designing secure REST APIs, real-time WebSocket systems, and JWT/OAuth authentication
+              infrastructure with <strong>Java &amp; Spring Boot</strong>, plus the vanilla JavaScript frontends that
+              consume them. Strong foundation in DSA, system design, and distributed systems.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Projects Shipped</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">2027</span>
+                <span class="stat-label">Graduating</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dot red"></div>
+                <div class="code-dot yellow"></div>
+                <div class="code-dot green"></div>
+                <span class="code-filename">Vineet.java</span>
+              </div>
+              <pre class="code-body"><span class="c-keyword">public class</span> <span class="c-class">Vineet</span> {
+
+  <span class="c-keyword">private</span> String name = <span class="c-string">"Vineet Kumar Upadhyay"</span>;
+  <span class="c-keyword">private</span> String role = <span class="c-string">"Backend Engineer"</span>;
+  <span class="c-keyword">private</span> String[] stack = {
+    <span class="c-string">"Java"</span>, <span class="c-string">"Spring Boot"</span>,
+    <span class="c-string">"PostgreSQL"</span>, <span class="c-string">"Docker"</span>, <span class="c-string">"AWS"</span>
+  };
+
+  <span class="c-keyword">public</span> String building() {
+    <span class="c-keyword">return</span> <span class="c-string">"CYPR — Cybersecurity SaaS"</span>;
+  }
+
+  <span class="c-keyword">public boolean</span> isAvailable() {
+    <span class="c-keyword">return true</span>;
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ────────────────────────────────────────────────── -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">02 — Skills</span>
+          <h2 class="section-title">Tech Stack</h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-category" data-delay="0">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Languages &amp; Core CS</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-java">
+                <svg viewBox="0 0 24 24"><path d="M4.198 17.518c0 0-1.129.565 0 1.129 1.411.706 4.704.988 7.339.988 3.528 0 7.339-.706 7.339-1.976 0-1.27-2.823-1.694-5.363-1.835-2.823-.141-6.774.282-9.315 1.694zm.847 2.4c0 0-.847.565 0 .988 1.411.706 4.422.847 7.057.847 3.387 0 6.633-.423 6.633-1.411 0-1.129-2.54-1.552-5.08-1.694-2.823-.141-6.633.282-8.61 1.27zm10.725-7.339c0 0 1.27.282 1.976 1.411.847 1.27.141 2.54-.565 3.387-.706.847-1.129.847-1.129.847s.423-.423.706-1.129c.423-.706.141-1.694-.565-2.54-.706-.847-1.129-1.129-1.129-1.129.141-.423.706-.847.706-.847zm-3.669 2.258c1.411 1.552.141 3.246-.423 4.234 0 0 .565-.565.847-1.27.423-.988.423-1.976-.423-2.964-.565-.706-.847-1.129-.847-1.129s.282.423.847 1.129zm.423-6.491c0 0 1.552.847.988 3.105-.423 1.552-1.694 2.823-1.694 2.823s.282-.565.565-1.411c.282-.847 0-1.835-.706-2.54-.706-.847-1.129-1.129-1.129-1.129s.988-.282 1.976-.848z"/></svg>
+                Java
+              </span>
+              <span class="tech-badge badge-javascript">
+                <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm10.5 13.5v-1.5H12V12h-1.5v3h1.5v1.5h1.5zm3.75 0v-4.5H15v1.5h1.25v.75H15V18h2.25v-1.5z"/></svg>
+                JavaScript
+              </span>
+              <span class="tech-badge badge-sql">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                SQL
+              </span>
+              <span class="tech-badge badge-kafka">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                DSA
+              </span>
+              <span class="tech-badge badge-kafka">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                OOP
+              </span>
+              <span class="tech-badge badge-postgresql">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                DBMS
+              </span>
+              <span class="tech-badge badge-linux">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+                OS
+              </span>
+              <span class="tech-badge badge-githubactions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                Networks
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="100">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Frameworks</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-springboot">
+                <svg viewBox="0 0 24 24"><path d="M11.968 0C5.358 0 0 5.358 0 11.968c0 6.61 5.358 11.968 11.968 11.968 6.61 0 11.968-5.358 11.968-11.968C23.936 5.358 18.578 0 11.968 0zm6.273 8.358c-.378 4.398-3.626 9.48-9.043 11.644 1.34-2.73 1.05-6.074-.78-8.528-1.782-2.39-4.71-3.23-7.23-2.11 2.8-4.24 7.912-5.74 12.012-3.486 2.458 1.353 3.652 3.666 5.04 2.48z"/></svg>
+                Spring Boot
+              </span>
+              <span class="tech-badge badge-jwt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Spring Security
+              </span>
+              <span class="tech-badge badge-sql">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                Hibernate / JPA
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="200">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Frontend</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-html5">
+                <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.78-2.928-.783-.189-2.126H6.261l.36 4.392 5.35 1.492 5.334-1.492.747-8.358H8.531z"/></svg>
+                HTML
+              </span>
+              <span class="tech-badge badge-css3">
+                <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm14.887 4.41H5.412l.23 2.622h8.04l-.232 2.718H5.872l.23 2.622h7.682l-.326 3.426-2.91.78-2.928-.783-.189-2.126H4.767l.36 4.392 6.843 1.91 6.827-1.91.747-8.358h-9.52l.23-2.622h9.29l.23-2.622z"/></svg>
+                CSS
+              </span>
+              <span class="tech-badge badge-javascript">
+                <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm10.5 13.5v-1.5H12V12h-1.5v3h1.5v1.5h1.5zm3.75 0v-4.5H15v1.5h1.25v.75H15V18h2.25v-1.5z"/></svg>
+                JavaScript
+              </span>
+              <span class="tech-badge badge-websocket">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                REST API Integration
+              </span>
+              <span class="tech-badge badge-githubactions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                Responsive UI
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="300">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Databases &amp; Caching</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-postgresql">
+                <svg viewBox="0 0 24 24"><path d="M11.975 0C5.362 0 0 5.362 0 11.975c0 6.613 5.362 11.975 11.975 11.975s11.975-5.362 11.975-11.975C23.95 5.362 18.588 0 11.975 0zm.04 3.7c3.4 0 6.15 2.1 6.15 4.7 0 1.7-.12 3.1-.35 4.4-.23 1.3-.65 2.6-1.2 3.6-.55 1-1.25 1.9-2.05 2.5s-1.7.9-2.65.9c-.95 0-1.85-.3-2.65-.9s-1.5-1.5-2.05-2.5c-.55-1-.97-2.3-1.2-3.6-.23-1.3-.35-2.7-.35-4.4 0-2.6 2.75-4.7 6.15-4.7z"/></svg>
+                PostgreSQL
+              </span>
+              <span class="tech-badge badge-mysql">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                MySQL
+              </span>
+              <span class="tech-badge badge-redis">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Redis
+              </span>
+              <span class="tech-badge badge-postman">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+                Caffeine Cache
+              </span>
+              <span class="tech-badge badge-prometheus">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                HikariCP Tuning
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="400">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Cloud &amp; DevOps</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-prometheus">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+                AWS (EC2, RDS)
+              </span>
+              <span class="tech-badge badge-docker">
+                <svg viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m0 2.716h2.118a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.956 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m5.886 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.956 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.144a.185.185 0 00-.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M.015 11.233c0 3.238 2.274 5.766 5.86 5.766 3.655 0 7.37-1.127 10.6-3.328 1.488.225 3.01.211 4.457-.156.408-.104.707-.442.748-.86.04-.419-.183-.815-.558-.992-1.026-.484-2.155-.734-3.308-.734-.236 0-.472.01-.707.03-.454-2.023-2.091-3.606-4.14-3.957a.789.789 0 00-.916.634.789.789 0 00.634.916c1.408.24 2.535 1.332 2.846 2.73-1.042-.31-2.132-.47-3.235-.47H.015z"/></svg>
+                Docker
+              </span>
+              <span class="tech-badge badge-kubernetes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                Kubernetes
+              </span>
+              <span class="tech-badge badge-git">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 9v12"/><path d="M18 15V9a9 9 0 0 0-9-9"/></svg>
+                Git
+              </span>
+              <span class="tech-badge badge-githubactions">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                CI/CD
+              </span>
+              <span class="tech-badge badge-vercel">
+                <svg viewBox="0 0 24 24"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+                Vercel
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="500">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M10 2v7.527a2 2 0 01-.211.896L4.72 20.55A1 1 0 005.618 22h12.764a1 1 0 00.898-1.45l-5.069-10.127A2 2 0 0114 9.527V2" />
+                <line x1="8.5" y1="2" x2="15.5" y2="2" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Testing</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-maven">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                JUnit
+              </span>
+              <span class="tech-badge badge-postman">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.527a2 2 0 01-.211.896L4.72 20.55A1 1 0 005.618 22h12.764a1 1 0 00.898-1.45l-5.069-10.127A2 2 0 0114 9.527V2"/></svg>
+                Mockito
+              </span>
+              <span class="tech-badge badge-githubactions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8l4 4-4 4"/></svg>
+                Integration Testing
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-delay="600">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+              </svg>
+            </div>
+            <h3 class="skill-cat-title">Backend Architecture</h3>
+            <div class="skill-pills">
+              <span class="tech-badge badge-websocket">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                REST APIs
+              </span>
+              <span class="tech-badge badge-websocket">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                WebSockets (STOMP)
+              </span>
+              <span class="tech-badge badge-jwt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                JWT / OAuth 2.0
+              </span>
+              <span class="tech-badge badge-kafka">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Multithreading
+              </span>
+              <span class="tech-badge badge-jwt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/></svg>
+                RBAC
+              </span>
+              <span class="tech-badge badge-redis">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Rate Limiting
+              </span>
+              <span class="tech-badge badge-kubernetes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
+                Microservices
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ─────────────────────────────────────────────── -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">03 — Visual Projects Showcase</span>
+          <h2 class="section-title">Featured Work</h2>
+        </div>
+        <div class="projects-visual-list">
+
+          <!-- CYPR Visual Showcase Card -->
+          <article class="project-visual-card featured" id="project-cypr">
+            <div class="project-visual-media">
+              <div class="project-title-group">
+                <div class="project-type-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                  <span>Enterprise SaaS Platform</span>
+                </div>
+                <h3 class="project-title">CYPR — Enterprise Cybersecurity Suite</h3>
+              </div>
+              <div class="browser-frame">
+                <div class="browser-header">
+                  <div class="browser-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="browser-badge">Live System</div>
+                </div>
+                <div class="browser-media-wrapper">
+                  <video class="project-video" id="cypr-video" autoplay loop muted playsinline
+                    poster="cypr-preview.png">
+                    <source src="cypr-demo.mp4" type="video/mp4" />
+                    <source src="cypr-demo.webm" type="video/webm" />
+                    <img src="cypr-preview.png" alt="CYPR SaaS Platform Preview" class="project-img" />
+                  </video>
+                  <div class="video-badge">
+                    <span class="pulse-dot"></span> LIVE DEMO VIDEO
+                  </div>
+                  <button class="video-play-btn playing" id="cypr-video-toggle" aria-label="Play or pause video preview"
+                    title="Toggle Play/Pause">
+                    <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                    <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="project-tech-logos">
+                <span class="tech-badge badge-java">
+                  <svg viewBox="0 0 24 24"><path d="M4.198 17.518c0 0-1.129.565 0 1.129 1.411.706 4.704.988 7.339.988 3.528 0 7.339-.706 7.339-1.976 0-1.27-2.823-1.694-5.363-1.835-2.823-.141-6.774.282-9.315 1.694zm.847 2.4c0 0-.847.565 0 .988 1.411.706 4.422.847 7.057.847 3.387 0 6.633-.423 6.633-1.411 0-1.129-2.54-1.552-5.08-1.694-2.823-.141-6.633.282-8.61 1.27zm10.725-7.339c0 0 1.27.282 1.976 1.411.847 1.27.141 2.54-.565 3.387-.706.847-1.129.847-1.129.847s.423-.423.706-1.129c.423-.706.141-1.694-.565-2.54-.706-.847-1.129-1.129-1.129-1.129.141-.423.706-.847.706-.847zm-3.669 2.258c1.411 1.552.141 3.246-.423 4.234 0 0 .565-.565.847-1.27.423-.988.423-1.976-.423-2.964-.565-.706-.847-1.129-.847-1.129s.282.423.847 1.129zm.423-6.491c0 0 1.552.847.988 3.105-.423 1.552-1.694 2.823-1.694 2.823s.282-.565.565-1.411c.282-.847 0-1.835-.706-2.54-.706-.847-1.129-1.129-1.129-1.129s.988-.282 1.976-.848z"/></svg>
+                  Java
+                </span>
+                <span class="tech-badge badge-springboot">
+                  <svg viewBox="0 0 24 24"><path d="M11.968 0C5.358 0 0 5.358 0 11.968c0 6.61 5.358 11.968 11.968 11.968 6.61 0 11.968-5.358 11.968-11.968C23.936 5.358 18.578 0 11.968 0zm6.273 8.358c-.378 4.398-3.626 9.48-9.043 11.644 1.34-2.73 1.05-6.074-.78-8.528-1.782-2.39-4.71-3.23-7.23-2.11 2.8-4.24 7.912-5.74 12.012-3.486 2.458 1.353 3.652 3.666 5.04 2.48z"/></svg>
+                  Spring Boot
+                </span>
+                <span class="tech-badge badge-postgresql">
+                  <svg viewBox="0 0 24 24"><path d="M11.975 0C5.362 0 0 5.362 0 11.975c0 6.613 5.362 11.975 11.975 11.975s11.975-5.362 11.975-11.975C23.95 5.362 18.588 0 11.975 0zm.04 3.7c3.4 0 6.15 2.1 6.15 4.7 0 1.7-.12 3.1-.35 4.4-.23 1.3-.65 2.6-1.2 3.6-.55 1-1.25 1.9-2.05 2.5s-1.7.9-2.65.9c-.95 0-1.85-.3-2.65-.9s-1.5-1.5-2.05-2.5c-.55-1-.97-2.3-1.2-3.6-.23-1.3-.35-2.7-.35-4.4 0-2.6 2.75-4.7 6.15-4.7z"/></svg>
+                  PostgreSQL
+                </span>
+                <span class="tech-badge badge-websocket">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  WebSockets
+                </span>
+                <span class="tech-badge badge-jwt">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                  JWT / OAuth
+                </span>
+                <span class="tech-badge badge-docker">
+                  <svg viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m0 2.716h2.118a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.956 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m5.886 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.956 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M.015 11.233c0 3.238 2.274 5.766 5.86 5.766 3.655 0 7.37-1.127 10.6-3.328 1.488.225 3.01.211 4.457-.156.408-.104.707-.442.748-.86.04-.419-.183-.815-.558-.992-1.026-.484-2.155-.734-3.308-.734-.236 0-.472.01-.707.03-.454-2.023-2.091-3.606-4.14-3.957a.789.789 0 00-.916.634.789.789 0 00.634.916c1.408.24 2.535 1.332 2.846 2.73-1.042-.31-2.132-.47-3.235-.47H.015z"/></svg>
+                  Docker
+                </span>
+                <span class="tech-badge badge-vercel">
+                  <svg viewBox="0 0 24 24"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+                  Vercel
+                </span>
+              </div>
+            </div>
+
+            <div class="project-visual-info">
+              <div class="info-top-links">
+                <a href="https://github.com/iamvineetupadhyay" class="project-link-btn" aria-label="GitHub Repository"
+                  target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+
+              <p class="project-desc">
+                Architected and developed a full-stack cybersecurity platform. Built <strong>VAJRA</strong>, a custom
+                phishing analysis engine combining 15+ independent heuristic algorithms (Shannon entropy, N-gram
+                modeling, Levenshtein distance, homoglyph &amp; combosquatting detection).
+              </p>
+
+              <div class="project-metrics-strip">
+                <div class="metric-item">
+                  <span class="metric-val">15+</span>
+                  <span class="metric-lbl">Heuristic Signals</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">0 ms</span>
+                  <span class="metric-lbl">Ext. API Latency</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">STOMP</span>
+                  <span class="metric-lbl">WebSocket Logs</span>
+                </div>
+              </div>
+
+              <ul class="project-highlights">
+                <li>JWT authentication &amp; OAuth 2.0 social login with step-up MFA and dual-counter session security.
+                </li>
+                <li>Eliminated IDOR vulnerabilities across API routes by deriving user identity strictly from JWT
+                  claims.</li>
+                <li>Engineered CI/CD Orchestrator with bounded thread pools and real-time WebSocket log streaming.</li>
+                <li>Optimized database throughput via HikariCP connection tuning on PostgreSQL/RDS and Caffeine Cache
+                  for rate limiting.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- FocusHub Visual Showcase Card -->
+          <article class="project-visual-card" id="project-focushub">
+            <div class="project-visual-media">
+              <div class="project-title-group">
+                <div class="project-type-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
+                  <span>Chrome Extension</span>
+                </div>
+                <h3 class="project-title">FocusHub — Browser Productivity Suite</h3>
+              </div>
+
+              <div class="extension-frame">
+                <div class="extension-header">
+                  <div class="ext-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <circle cx="12" cy="12" r="6" />
+                      <circle cx="12" cy="12" r="2" />
+                    </svg>
+                    <span>FocusHub Extension (Manifest V3)</span>
+                  </div>
+                  <span class="ext-status">Active</span>
+                </div>
+
+                <div class="extension-mockup-body">
+                  <div class="ext-card-widget">
+                    <div class="widget-header">
+                      <span class="widget-label">Focus Soundscape Mixer</span>
+                      <span class="widget-badge">Web Audio API</span>
+                    </div>
+                    <div class="audio-waves">
+                      <span class="wave-bar bar-1"></span>
+                      <span class="wave-bar bar-2"></span>
+                      <span class="wave-bar bar-3"></span>
+                      <span class="wave-bar bar-4"></span>
+                      <span class="wave-bar bar-5"></span>
+                    </div>
+                  </div>
+
+                  <div class="ext-card-widget">
+                    <div class="widget-header">
+                      <span class="widget-label">Distraction Blocker</span>
+                      <span class="widget-toggle active"><span class="toggle-circle"></span></span>
+                    </div>
+                    <div class="blocked-domains">
+                      <span class="domain-pill">social-media.com</span>
+                      <span class="domain-pill">distractions.io</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tech-logos">
+                <span class="tech-badge badge-javascript">
+                  <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm10.5 13.5v-1.5H12V12h-1.5v3h1.5v1.5h1.5zm3.75 0v-4.5H15v1.5h1.25v.75H15V18h2.25v-1.5z"/></svg>
+                  JavaScript
+                </span>
+                <span class="tech-badge badge-jwt">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8m-4-4h8"/></svg>
+                  Manifest V3
+                </span>
+                <span class="tech-badge badge-websocket">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                  Web Audio API
+                </span>
+                <span class="tech-badge badge-sql">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                  Chrome Storage API
+                </span>
+                <span class="tech-badge badge-html5">
+                  <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.78-2.928-.783-.189-2.126H6.261l.36 4.392 5.35 1.492 5.334-1.492.747-8.358H8.531z"/></svg>
+                  HTML5 / CSS3
+                </span>
+              </div>
+            </div>
+
+            <div class="project-visual-info">
+              <div class="info-top-links">
+                <a href="https://github.com/iamvineetupadhyay" class="project-link-btn" aria-label="GitHub Repository"
+                  target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+
+              <p class="project-desc">
+                Built a high-efficiency Manifest V3 Chrome extension in vanilla JavaScript for intelligent site blocking
+                and focus tracking. Features a real-time ambient soundscape mixer powered by the HTML5 Web Audio API.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Designed popup and extension options interface end-to-end with zero third-party dependencies.</li>
+                <li>Utilized Chrome Storage API for asynchronous cross-session sync and configuration persistence.</li>
+                <li>Implemented dynamic background scripts for tab filtering and session timer management.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EDUCATION ─────────────────────────────────────────────── -->
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">04 — Education</span>
+          <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item" id="edu-btech">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-year">2023 – 2027</span>
+                  <span class="timeline-status status-active">In Progress</span>
+                </div>
+              </div>
+              <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
+              <p class="timeline-org">IEC College of Engineering and Technology, Greater Noida, UP</p>
+              <p class="timeline-desc">
+                Studying core CS fundamentals including Data Structures, Algorithms, Database Systems, Operating
+                Systems, Computer Networks, and Software Engineering. Actively building backend-focused products and
+                competing nationally.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">DSA</span>
+                <span class="tag">DBMS</span>
+                <span class="tag">OS</span>
+                <span class="tag">Software Engineering</span>
+                <span class="tag">Networks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" id="edu-12th">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                  </svg>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-year">2020 – 2022</span>
+                  <span class="timeline-status status-done">Completed</span>
+                </div>
+              </div>
+              <h3 class="timeline-title">Intermediate (Class XII)</h3>
+              <p class="timeline-org">UP Board</p>
+              <p class="timeline-desc">
+                Completed with Science stream (PCM). Strong foundation in Mathematics and Physics.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Mathematics</span>
+                <span class="tag">Physics</span>
+                <span class="tag">Chemistry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" id="edu-10th">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+                  </svg>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-year">2019 – 2020</span>
+                  <span class="timeline-status status-done">Completed</span>
+                </div>
+              </div>
+              <h3 class="timeline-title">High School (Class X)</h3>
+              <p class="timeline-org">UP Board</p>
+              <p class="timeline-desc">
+                Completed secondary education with a strong academic foundation.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ACHIEVEMENTS & CERTIFICATIONS ─────────────────────── -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">05 — Recognition</span>
+          <h2 class="section-title">Achievements &amp; Certifications</h2>
+        </div>
+        <div class="achievements-grid">
+
+          <!-- Achievements -->
+          <div class="achieve-column">
+            <div class="achieve-column-header">
+              <svg class="section-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9H4.5a2.5 2.5 0 010-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 000-5H18" />
+                <path d="M4 22h16" />
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                <path d="M18 2H6v7a6 6 0 0012 0V2z" />
+              </svg>
+              <h3 class="achieve-column-title">Achievements</h3>
+            </div>
+
+            <div class="achieve-card" id="achieve-robocon">
+              <div class="achieve-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="10" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4M8 16h.01M16 16h.01" />
+                </svg>
+              </div>
+              <div class="achieve-body">
+                <h4 class="achieve-title">National Finalist — ABU Robocon India</h4>
+                <span class="achieve-year">2025</span>
+                <p class="achieve-desc">Competed among top robotics teams nationally in autonomous / manual robot design
+                  and control.</p>
+              </div>
+            </div>
+
+            <div class="achieve-card" id="achieve-tata">
+              <div class="achieve-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
+                </svg>
+              </div>
+              <div class="achieve-body">
+                <h4 class="achieve-title">Tata Imagination Challenge</h4>
+                <span class="achieve-year">2025</span>
+                <p class="achieve-desc">Participated in the Tata Quiz organized by Tata Group via Unstop platform.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="achieve-column">
+            <div class="achieve-column-header">
+              <svg class="section-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+              <h3 class="achieve-column-title">Certifications</h3>
+            </div>
+
+            <div class="achieve-card" id="cert-java">
+              <div class="achieve-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16.5 9.4c0 0-1.72-2-4.5-2s-4.5 2-4.5 2" />
+                  <path d="M7 16c0 1.5 2.24 3 5 3s5-1.5 5-3" />
+                  <path d="M12 3v3" />
+                </svg>
+              </div>
+              <div class="achieve-body">
+                <h4 class="achieve-title">Java Programming Training</h4>
+                <span class="achieve-year">Apr – Jun 2025</span>
+                <p class="achieve-desc">IEC College of Engineering &amp; Technology, in association with Technoledge
+                  Eduresearch Pvt. Ltd.</p>
+              </div>
+            </div>
+
+            <div class="achieve-card" id="cert-postman">
+              <div class="achieve-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </div>
+              <div class="achieve-body">
+                <h4 class="achieve-title">Postman API Fundamentals (Student Expert)</h4>
+                <span class="achieve-year">Nov 2024</span>
+                <p class="achieve-desc">LetsUpgrade × NSDC × GDG MAD — Mastering API design, testing, and documentation
+                  with Postman.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─────────────────────────────────────────────── -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">06 — Contact</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-sub">I'm open to collaborations, backend roles, and interesting technology discussions.</p>
+        </div>
+        <div class="contact-grid">
+
+          <div class="contact-links">
+            <a href="https://github.com/iamvineetupadhyay" class="contact-card" id="contact-github" target="_blank"
+              rel="noopener">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">@iamvineetupadhyay</span>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/iamvineetupadhyay/" class="contact-card" id="contact-linkedin"
+              target="_blank" rel="noopener">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">in/iamvineetupadhyay</span>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+
+            <a href="mailto:iec.vineet@gmail.com" class="contact-card" id="contact-email">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">iec.vineet@gmail.com</span>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+
+            <div class="contact-card contact-phone" id="contact-phone">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+91-9506185689</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="nav-logo">VKU<span class="logo-dot">.</span></a>
+        <p class="footer-tagline">Building robust backend systems &amp; cybersecurity platforms.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Vineet Kumar Upadhyay. All rights reserved.</p>
+        <p class="footer-credit">
+          Crafted with
+          <svg class="footer-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8h1a4 4 0 010 8h-1" />
+            <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+            <line x1="6" y1="1" x2="6" y2="4" />
+            <line x1="10" y1="1" x2="10" y2="4" />
+            <line x1="14" y1="1" x2="14" y2="4" />
+          </svg>
+          &amp;
+          <svg class="footer-icon-svg heart" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
