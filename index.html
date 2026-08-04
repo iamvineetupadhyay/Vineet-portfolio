@@ -33,9 +33,7 @@
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#certifications" class="nav-link">Credentials</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -171,6 +169,14 @@
                 <span class="stat-number">2027</span>
                 <span class="stat-label">Graduating</span>
               </div>
+            </div>
+            <div class="about-education-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="edu-icon">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>B.Tech CSE &nbsp;&middot;&nbsp; IEC College of Engineering &amp; Technology, Greater Noida
+                &nbsp;&middot;&nbsp; 2023&ndash;2027</span>
             </div>
           </div>
           <div class="about-visual">
@@ -562,11 +568,11 @@
                   <div class="browser-badge">Live System</div>
                 </div>
                 <div class="browser-media-wrapper">
-                  <video class="project-video" id="cypr-video" autoplay loop muted playsinline
+                  <video class="project-video" id="cypr-video" autoplay loop muted playsinline preload="metadata"
                     poster="assets/images/cypr-preview.png">
                     <source src="assets/videos/cypr-demo.mp4" type="video/mp4" />
                     <source src="assets/videos/cypr-demo.webm" type="video/webm" />
-                    <img src="assets/images/cypr-preview.png" alt="CYPR SaaS Platform Preview" class="project-img" />
+                    <img src="assets/images/cypr-preview.png" alt="CYPR SaaS Platform Preview" class="project-img" loading="lazy" />
                   </video>
                   <div class="video-badge">
                     <span class="pulse-dot"></span> LIVE DEMO VIDEO
@@ -654,11 +660,39 @@
                 </a>
               </div>
 
+              <div class="cypr-origin">
+                <span class="cypr-origin-label">Why I built this</span>
+                <p>India's DPDP Act (2023) created legal exposure for companies handling user data without audit trails.
+                  CYPR started as a question: <em>what does a real security posture look like for a startup that can't
+                    afford an enterprise SOC?</em></p>
+              </div>
+
               <p class="project-desc">
                 Architected and developed a full-stack cybersecurity platform. Built <strong>VAJRA</strong>, a custom
                 phishing analysis engine combining 15+ independent heuristic algorithms (Shannon entropy, N-gram
                 modeling, Levenshtein distance, homoglyph &amp; combosquatting detection).
               </p>
+
+              <div class="arch-diagram">
+                <span class="arch-label">// system architecture</span>
+                <div class="arch-flow">
+                  <div class="arch-box"><span class="arch-box-top">Browser</span><span
+                      class="arch-box-bot">Client</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-box arch-box-highlight"><span class="arch-box-top">Spring Boot</span><span
+                      class="arch-box-bot">REST API</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-box arch-box-accent"><span class="arch-box-top">VAJRA</span><span
+                      class="arch-box-bot">15+ algos</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-box"><span class="arch-box-top">PostgreSQL</span><span class="arch-box-bot">+
+                      Redis</span></div>
+                </div>
+                <div class="arch-footer">
+                  <span class="arch-docker-tag">&#x1F433; Docker containerized &nbsp;&middot;&nbsp; Vercel (frontend)
+                    &nbsp;&middot;&nbsp; AWS EC2 (backend)</span>
+                </div>
+              </div>
 
               <div class="project-metrics-strip">
                 <div class="metric-item">
@@ -666,20 +700,17 @@
                   <span class="metric-lbl">Heuristic Signals</span>
                 </div>
                 <div class="metric-item">
-                  <span class="metric-val">0 ms</span>
-                  <span class="metric-lbl">Ext. API Latency</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-val">STOMP</span>
-                  <span class="metric-lbl">WebSocket Logs</span>
+                  <span class="metric-val">IDOR</span>
+                  <span class="metric-lbl">Eliminated by Design</span>
                 </div>
               </div>
 
               <ul class="project-highlights">
                 <li>JWT authentication &amp; OAuth 2.0 social login with step-up MFA and dual-counter session security.
                 </li>
-                <li>Eliminated IDOR vulnerabilities across API routes by deriving user identity strictly from JWT
-                  claims.</li>
+                <li>Eliminated IDOR vulnerabilities by stripping all user-ID parameters from request bodies and
+                  re-deriving identity exclusively from JWT claims server-side — making it structurally impossible for a
+                  user to act as another, regardless of what they send.</li>
                 <li>Engineered CI/CD Orchestrator with bounded thread pools and real-time WebSocket log streaming.</li>
                 <li>Optimized database throughput via HikariCP connection tuning on PostgreSQL/RDS and Caffeine Cache
                   for rate limiting.</li>
@@ -773,16 +804,8 @@
 
               <div class="project-metrics-strip">
                 <div class="metric-item">
-                  <span class="metric-val">4 Pool</span>
-                  <span class="metric-lbl">Worker Threads</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-val">&lt; 5 ms</span>
-                  <span class="metric-lbl">Dispatch Latency</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-val">STOMP</span>
-                  <span class="metric-lbl">Live WebSockets</span>
+                  <span class="metric-val">Sub-second</span>
+                  <span class="metric-lbl">Bounded 4-worker pool dispatch</span>
                 </div>
               </div>
 
@@ -907,14 +930,14 @@
               </div>
 
               <p class="project-desc">
-                Built a high-efficiency Manifest V3 Chrome extension in vanilla JavaScript for intelligent site blocking
-                and focus tracking. Features a real-time ambient soundscape mixer powered by the HTML5 Web Audio API.
+                Originating from a personal need for deep work focus, I engineered FocusHub to manage distractions via
+                chrome-specific storage APIs. It provides a lightweight, zero-dependency environment for productivity.
               </p>
 
               <ul class="project-highlights">
-                <li>Designed popup and extension options interface end-to-end with zero third-party dependencies.</li>
-                <li>Utilized Chrome Storage API for asynchronous cross-session sync and configuration persistence.</li>
-                <li>Implemented dynamic background scripts for tab filtering and session timer management.</li>
+                <li>Designed popup interface from scratch without external frameworks.</li>
+                <li>Leveraged Chrome Storage API for efficient cross-session state persistence.</li>
+                <li>Built background service workers to handle tab filtering and ambient audio sessions.</li>
               </ul>
             </div>
           </article>
@@ -927,9 +950,10 @@
     <section class="section experience" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">04 — Experience</span>
-          <h2 class="section-title">Work &amp; Leadership</h2>
-          <p class="section-sub">Hands-on software development experience and technical team leadership.</p>
+          <span class="section-label">04 &mdash; Experience</span>
+          <h2 class="section-title">Work, Leadership &amp; Recognition</h2>
+          <p class="section-sub">Hands-on software development experience, technical leadership, and notable
+            achievements.</p>
         </div>
         <div class="timeline">
 
@@ -951,15 +975,13 @@
               <h3 class="timeline-title">Integrated Campus Intern (Advance Excel &amp; PowerBI)</h3>
               <p class="timeline-org">Dreamvessels Technology Pvt. Ltd., Noida (Ref: 968132)</p>
               <p class="timeline-desc">
-                Completed integrated campus software &amp; data internship from <strong>2nd September 2024 to 30th
-                  September 2024</strong>. Specialized in Advance Excel data modeling, PowerBI analytics dashboards, and
-                structured business reporting.
+                Completed integrated software &amp; data internship. Specialized in data modeling, PowerBI analytics,
+                and business reporting pipelines.
               </p>
               <div class="timeline-tags">
                 <span class="tag">Advance Excel</span>
                 <span class="tag">PowerBI</span>
                 <span class="tag">Data Analytics</span>
-                <span class="tag">Dashboard Design</span>
               </div>
               <div class="achieve-pill-actions">
                 <button class="btn-pill-action btn-primary cert-trigger"
@@ -989,28 +1011,24 @@
                 </div>
                 <div class="timeline-meta">
                   <span class="timeline-year">Aug 27, 2025</span>
-                  <span class="timeline-status status-active">Official Appreciation Award</span>
+                  <span class="timeline-status status-active">Appreciation Award</span>
                 </div>
               </div>
-              <h3 class="timeline-title">Robotics Team Member — IEC Robocon 2025 Team</h3>
+              <h3 class="timeline-title">Robotics Team Member — IEC Robocon 2025</h3>
               <p class="timeline-org">IEC College of Engineering &amp; Technology</p>
               <p class="timeline-desc">
-                Awarded official <strong>Appreciation Letter</strong> from IEC College for outstanding performance in
-                qualifying two selection stages and reaching the final stage of <strong>DD Robocon 2025</strong>
-                (organized by Prasar Bharati, IIT Delhi, and STPI). Contributed to the development of a
-                basketball-playing robot.
+                Awarded official appreciation for outstanding performance in the national DD Robocon 2025 (IIT Delhi).
+                Contributed to control logic for autonomous basketball-playing robotics.
               </p>
               <div class="timeline-tags">
                 <span class="tag">IEC Robocon 2025</span>
-                <span class="tag">DD Robocon National Level</span>
-                <span class="tag">IIT Delhi &amp; Prasar Bharati</span>
-                <span class="tag">Appreciation Award</span>
+                <span class="tag">National Level</span>
               </div>
               <div class="achieve-pill-actions">
                 <button class="btn-pill-action btn-primary cert-trigger"
                   data-cert-img="assets/images/certificates/iec_appreciation_letter.png"
                   data-cert-pdf="assets/docs/certificates/iec_appreciation_letter.pdf"
-                  data-cert-title="Appreciation Letter — IEC Robocon 2025 Team (DD Robocon 2025)"
+                  data-cert-title="Appreciation Letter — IEC Robocon 2025 Team"
                   data-cert-issuer="IEC College of Engineering &amp; Technology">
                   <span>View</span>
                 </button>
@@ -1022,98 +1040,48 @@
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── EDUCATION ─────────────────────────────────────────────── -->
-    <section class="section education" id="education">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">05 — Education</span>
-          <h2 class="section-title">Academic Background</h2>
-        </div>
-        <div class="timeline">
-
-          <div class="timeline-item" id="edu-btech">
+          <div class="timeline-item timeline-item--minor" id="exp-sih">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-header">
                 <div class="timeline-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                    <polyline points="2 17 12 22 22 17" />
+                    <polyline points="2 12 12 17 22 12" />
                   </svg>
                 </div>
                 <div class="timeline-meta">
-                  <span class="timeline-year">2023 – 2027</span>
-                  <span class="timeline-status status-active">In Progress</span>
+                  <span class="timeline-year">Sep 10, 2025</span>
+                  <span class="timeline-status status-done">National Hackathon</span>
                 </div>
               </div>
-              <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
-              <p class="timeline-org">IEC College of Engineering and Technology, Greater Noida, UP</p>
-              <p class="timeline-desc">
-                Studying core CS fundamentals including Data Structures, Algorithms, Database Systems, Operating
-                Systems, Computer Networks, and Software Engineering. Actively building backend-focused products and
-                competing nationally.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">DSA</span>
-                <span class="tag">DBMS</span>
-                <span class="tag">OS</span>
-                <span class="tag">Software Engineering</span>
-                <span class="tag">Networks</span>
-              </div>
+              <h3 class="timeline-title">Smart India Hackathon 2025</h3>
+              <p class="timeline-org">MoE Innovation Cell &amp; AICTE</p>
+              <p class="timeline-desc">Participated in India's largest national hackathon. Collaborated on a software
+                prototype solving a government problem statement.</p>
             </div>
           </div>
 
-          <div class="timeline-item" id="edu-12th">
+          <div class="timeline-item timeline-item--minor" id="exp-tata">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-header">
                 <div class="timeline-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 </div>
                 <div class="timeline-meta">
-                  <span class="timeline-year">2020 – 2022</span>
-                  <span class="timeline-status status-done">Completed</span>
+                  <span class="timeline-year">2025</span>
+                  <span class="timeline-status status-done">National Challenge</span>
                 </div>
               </div>
-              <h3 class="timeline-title">Intermediate (Class XII)</h3>
-              <p class="timeline-org">UP Board</p>
-              <p class="timeline-desc">
-                Completed with Science stream (PCM). Strong foundation in Mathematics and Physics.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Mathematics</span>
-                <span class="tag">Physics</span>
-                <span class="tag">Chemistry</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item" id="edu-10th">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div class="timeline-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
-                  </svg>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-year">2019 – 2020</span>
-                  <span class="timeline-status status-done">Completed</span>
-                </div>
-              </div>
-              <h3 class="timeline-title">High School (Class X)</h3>
-              <p class="timeline-org">UP Board</p>
-              <p class="timeline-desc">
-                Completed secondary education with a strong academic foundation.
-              </p>
+              <h3 class="timeline-title">Tata Imagination Challenge</h3>
+              <p class="timeline-org">Tata Group &times; Unstop</p>
+              <p class="timeline-desc">Competed in the national Tata Quiz testing business aptitude and strategic
+                decision-making.</p>
             </div>
           </div>
 
@@ -1121,564 +1089,81 @@
       </div>
     </section>
 
-    <!-- ─── 06: ACHIEVEMENTS & AWARDS ───────────────────────────── -->
-    <section class="section achievements" id="achievements">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">06 — Recognition</span>
-          <h2 class="section-title">Achievements &amp; Awards</h2>
-          <p class="section-sub">Honors, hackathon recognitions, and official appreciation letters.</p>
-        </div>
-
-        <div class="achieve-timeline-stack">
-          <div class="achieve-timeline-line"></div>
-
-          <!-- Timeline Item 1 (#1 Position): IEC Robocon 2025 Appreciation -->
-          <div class="achieve-timeline-item" id="achieve-college-appreciation">
-            <div class="achieve-timeline-dot"></div>
-            <div class="achieve-card-detailed">
-              <div class="achieve-top-row">
-                <span class="achieve-date-text">Aug 27, 2025</span>
-                <span class="achieve-type-pill">Official Appreciation Award</span>
-              </div>
-              <h3 class="achieve-main-heading">Appreciation Letter for Outstanding Contribution</h3>
-              <h4 class="achieve-sub-issuer">IEC College of Engineering &amp; Technology</h4>
-              <p class="achieve-body-desc">
-                Awarded official <strong>Appreciation Letter</strong> from IEC College for outstanding performance in
-                qualifying two selection stages and reaching the final stage of <strong>DD Robocon 2025</strong>
-                (organized by Prasar Bharati, IIT Delhi, and STPI). Contributed to the development of a
-                basketball-playing robot.
-              </p>
-              <div class="achieve-tag-pills">
-                <span class="achieve-tag">IEC Robocon 2025</span>
-                <span class="achieve-tag">DD Robocon National Level</span>
-                <span class="achieve-tag">IIT Delhi &amp; Prasar Bharati</span>
-                <span class="achieve-tag">Appreciation Award</span>
-              </div>
-              <div class="achieve-pill-actions">
-                <button class="btn-pill-action btn-primary cert-trigger"
-                  data-cert-img="assets/images/certificates/iec_appreciation_letter.png"
-                  data-cert-pdf="assets/docs/certificates/iec_appreciation_letter.pdf"
-                  data-cert-title="Appreciation Letter — IEC Robocon 2025 Team (DD Robocon 2025)"
-                  data-cert-issuer="IEC College of Engineering &amp; Technology">
-                  <span>View</span>
-                </button>
-                <a href="assets/docs/certificates/iec_appreciation_letter.pdf" download
-                  class="btn-pill-action btn-pill-download">
-                  <span>Download</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2: Internship (Dreamvessels) -->
-          <div class="achieve-timeline-item" id="achieve-internship">
-            <div class="achieve-timeline-dot"></div>
-            <div class="achieve-card-detailed">
-              <div class="achieve-top-row">
-                <span class="achieve-date-text">Sep 2024</span>
-                <span class="achieve-type-pill pill-green">Verified Internship</span>
-              </div>
-              <h3 class="achieve-main-heading">Integrated Campus Intern (Advance Excel &amp; PowerBI)</h3>
-              <h4 class="achieve-sub-issuer">Dreamvessels Technology Pvt. Ltd., Noida (Ref: 968132)</h4>
-              <p class="achieve-body-desc">
-                Completed integrated campus software &amp; data internship from <strong>2nd September 2024 to 30th
-                  September 2024</strong>. Specialized in Advance Excel data modeling, PowerBI analytics dashboards, and
-                structured business reporting.
-              </p>
-              <div class="achieve-tag-pills">
-                <span class="achieve-tag">Advance Excel</span>
-                <span class="achieve-tag">PowerBI</span>
-                <span class="achieve-tag">Data Analytics</span>
-                <span class="achieve-tag">Dashboard Design</span>
-              </div>
-              <div class="achieve-pill-actions">
-                <button class="btn-pill-action btn-primary cert-trigger"
-                  data-cert-img="assets/images/certificates/dreamvessels_internship_certificate.png"
-                  data-cert-pdf="assets/docs/certificates/dreamvessels_internship_letter.pdf"
-                  data-cert-title="Software Internship Offer &amp; Completion Letter — Dreamvessels Technology"
-                  data-cert-issuer="Dreamvessels Technology Pvt. Ltd.">
-                  <span>View</span>
-                </button>
-                <a href="assets/docs/certificates/dreamvessels_internship_letter.pdf" download
-                  class="btn-pill-action btn-pill-download">
-                  <span>Download</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 3: Smart India Hackathon 2025 -->
-          <div class="achieve-timeline-item" id="achieve-sih">
-            <div class="achieve-timeline-dot"></div>
-            <div class="achieve-card-detailed">
-              <div class="achieve-top-row">
-                <span class="achieve-date-text">Sep 10, 2025</span>
-                <span class="achieve-type-pill">National Hackathon Participant</span>
-              </div>
-              <h3 class="achieve-main-heading">Smart India Hackathon 2025 (SIH)</h3>
-              <h4 class="achieve-sub-issuer">Ministry of Education's Innovation Cell &amp; AICTE</h4>
-              <p class="achieve-body-desc">
-                Participated in <strong>Smart India Hackathon 2025</strong> organized by MoE's Innovation Cell, AICTE,
-                and IEC College. Solved real-world technical problem statements through collaborative software
-                engineering and prototype building.
-              </p>
-              <div class="achieve-tag-pills">
-                <span class="achieve-tag">SIH 2025</span>
-                <span class="achieve-tag">MoE Innovation Cell</span>
-                <span class="achieve-tag">AICTE National Hackathon</span>
-                <span class="achieve-tag">Problem Solving</span>
-              </div>
-              <div class="achieve-pill-actions">
-                <button class="btn-pill-action btn-primary cert-trigger"
-                  data-cert-img="assets/images/certificates/sih_hackathon_certificate.png"
-                  data-cert-pdf="assets/docs/certificates/sih_hackathon_certificate.pdf"
-                  data-cert-title="Certificate of Participation — Smart India Hackathon 2025 (SIH)"
-                  data-cert-issuer="Ministry of Education's Innovation Cell &amp; AICTE">
-                  <span>View</span>
-                </button>
-                <a href="assets/docs/certificates/sih_hackathon_certificate.pdf" download
-                  class="btn-pill-action btn-pill-download">
-                  <span>Download</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 4: Tata Imagination Challenge 2025 -->
-          <div class="achieve-timeline-item" id="achieve-tata">
-            <div class="achieve-timeline-dot"></div>
-            <div class="achieve-card-detailed">
-              <div class="achieve-top-row">
-                <span class="achieve-date-text">2025</span>
-                <span class="achieve-type-pill">National Quiz &amp; Challenge</span>
-              </div>
-              <h3 class="achieve-main-heading">Tata Imagination Challenge 2025</h3>
-              <h4 class="achieve-sub-issuer">Tata Group × Unstop</h4>
-              <p class="achieve-body-desc">
-                Participated in <strong>Tata Quiz of Tata Imagination Challenge 2025</strong> organized by Tata Group
-                via Unstop platform. Tested business aptitude, strategic thinking, and analytical decision-making
-                skills.
-              </p>
-              <div class="achieve-tag-pills">
-                <span class="achieve-tag">Tata Quiz</span>
-                <span class="achieve-tag">Unstop Challenge</span>
-                <span class="achieve-tag">Aptitude &amp; Analytics</span>
-                <span class="achieve-tag">Tata Group</span>
-              </div>
-              <div class="achieve-pill-actions">
-                <button class="btn-pill-action btn-primary cert-trigger"
-                  data-cert-img="assets/images/certificates/tata_imagination_challenge_certificate.png"
-                  data-cert-pdf="assets/docs/certificates/tata_imagination_challenge_certificate.pdf"
-                  data-cert-title="Certificate of Participation — Tata Quiz of Tata Imagination Challenge 2025"
-                  data-cert-issuer="Tata Group × Unstop">
-                  <span>View</span>
-                </button>
-                <a href="assets/docs/certificates/tata_imagination_challenge_certificate.pdf" download
-                  class="btn-pill-action btn-pill-download">
-                  <span>Download</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="load-more-wrapper">
-          <button class="btn-load-more" id="load-more-achievements">
-            <span>Load More Achievements</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── 07: CERTIFICATIONS & BADGES ─────────────────────────── -->
+    <!-- ─── 05: CREDENTIALS ─────────────────────────────────────────── -->
     <section class="section certifications" id="certifications">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">07 — Credentials</span>
+          <span class="section-label">05 &mdash; Credentials</span>
           <h2 class="section-title">Certifications &amp; Verified Badges</h2>
-          <p class="section-sub">Industry-recognized professional certifications, bootcamps, and verified cloud &amp;
-            security badges.</p>
+          <p class="section-sub">Industry-recognized credentials focused on backend engineering and security.</p>
         </div>
 
         <div class="cert-block">
-          <div class="cert-block-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="8" r="7" />
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-            </svg>
-            <h3>Professional Certifications</h3>
-          </div>
-
           <div class="achieve-timeline-stack">
             <div class="achieve-timeline-line"></div>
 
-            <!-- Timeline Item 1: Cisco Cybersecurity -->
             <div class="achieve-timeline-item" id="cert-cisco-cybersecurity">
               <div class="achieve-timeline-dot"></div>
               <div class="achieve-card-detailed">
                 <div class="achieve-top-row">
                   <span class="achieve-date-text">Jun 29, 2025</span>
-                  <span class="achieve-type-pill pill-green">Verified Credly Badge</span>
+                  <span class="achieve-type-pill pill-green">Verified Badge</span>
                 </div>
                 <h3 class="achieve-main-heading">Introduction to Cybersecurity</h3>
                 <h4 class="achieve-sub-issuer">Cisco Networking Academy</h4>
-                <p class="achieve-body-desc">
-                  Student-level credential covering online safety, network security fundamentals, cyber threats,
-                  vulnerabilities &amp; defense strategies.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">Cybersecurity</span>
-                  <span class="achieve-tag">Network Security</span>
-                  <span class="achieve-tag">Cisco Academy</span>
-                  <span class="achieve-tag">Credly Verified</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <a href="https://www.credly.com/badges/5067bf3b-9571-4cac-90ad-29cb439b5539" target="_blank"
-                    rel="noopener noreferrer" class="btn-pill-action btn-primary" onclick="event.stopPropagation()">
-                    <span>View</span>
-                  </a>
-                </div>
+                <p class="achieve-body-desc">Focuses on network security, threat defense, and defensive strategies.</p>
               </div>
             </div>
 
-            <!-- Timeline Item 2: Technoledge Java Training -->
             <div class="achieve-timeline-item" id="cert-java">
               <div class="achieve-timeline-dot"></div>
               <div class="achieve-card-detailed">
                 <div class="achieve-top-row">
                   <span class="achieve-date-text">Jun 20, 2025</span>
-                  <span class="achieve-type-pill">Industrial Training Certificate</span>
+                  <span class="achieve-type-pill">Training Certificate</span>
                 </div>
-                <h3 class="achieve-main-heading">Java Programming Training Program</h3>
-                <h4 class="achieve-sub-issuer">Technoledge Eduresearch Pvt. Ltd. × IEC College</h4>
-                <p class="achieve-body-desc">
-                  Completed comprehensive 3-week industrial training in Java core syntax, Object-Oriented Programming
-                  (OOPs), data structures, and exception handling.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">Java Programming</span>
-                  <span class="achieve-tag">OOPs Concept</span>
-                  <span class="achieve-tag">Technoledge</span>
-                  <span class="achieve-tag">Cert No: T/JAV/714817/25</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <button class="btn-pill-action btn-primary cert-trigger"
-                    data-cert-img="assets/images/certificates/java_training_certificate.png"
-                    data-cert-pdf="assets/docs/certificates/java_training_certificate.pdf"
-                    data-cert-title="Certificate of Completion — “JAVA” Training Program (No: T/JAV/714817/25)"
-                    data-cert-issuer="Technoledge Eduresearch Pvt. Ltd. × IEC College">
-                    <span>View</span>
-                  </button>
-                  <a href="assets/docs/certificates/java_training_certificate.pdf" download
-                    class="btn-pill-action btn-pill-download">
-                    <span>Download</span>
-                  </a>
-                </div>
+                <h3 class="achieve-main-heading">Java Programming Training</h3>
+                <h4 class="achieve-sub-issuer">Technoledge Eduresearch Pvt. Ltd.</h4>
+                <p class="achieve-body-desc">Core Java, OOPs, and exception handling.</p>
               </div>
             </div>
 
-            <!-- Timeline Item 3: DUCAT AI/ML Industrial Visit -->
-            <div class="achieve-timeline-item" id="cert-ducat">
-              <div class="achieve-timeline-dot"></div>
-              <div class="achieve-card-detailed">
-                <div class="achieve-top-row">
-                  <span class="achieve-date-text">Feb 28, 2026</span>
-                  <span class="achieve-type-pill">ISO 9001:2000 Certified</span>
-                </div>
-                <h3 class="achieve-main-heading">1 Day Industrial Visit on AI &amp; Machine Learning</h3>
-                <h4 class="achieve-sub-issuer">Ducat School of AI</h4>
-                <p class="achieve-body-desc">
-                  Participated in 1-day industrial exposure session on Artificial Intelligence &amp; Machine Learning
-                  pipelines at Ducat Noida Extension.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">Artificial Intelligence</span>
-                  <span class="achieve-tag">Machine Learning</span>
-                  <span class="achieve-tag">Ducat Noida</span>
-                  <span class="achieve-tag">Industrial Visit</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <button class="btn-pill-action btn-primary cert-trigger"
-                    data-cert-img="assets/images/certificates/ducat_aiml_certificate.png"
-                    data-cert-pdf="assets/docs/certificates/ducat_aiml_certificate.pdf"
-                    data-cert-title="Certificate of Completion — 1 Day Industrial Visit on AI/ML"
-                    data-cert-issuer="Ducat School of AI">
-                    <span>View</span>
-                  </button>
-                  <a href="assets/docs/certificates/ducat_aiml_certificate.pdf" download
-                    class="btn-pill-action btn-pill-download">
-                    <span>Download</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Timeline Item 4: Postman API Fundamentals -->
             <div class="achieve-timeline-item" id="cert-postman">
               <div class="achieve-timeline-dot"></div>
               <div class="achieve-card-detailed">
                 <div class="achieve-top-row">
                   <span class="achieve-date-text">Nov 5, 2024</span>
-                  <span class="achieve-type-pill">Student Expert Certification</span>
+                  <span class="achieve-type-pill">Student Expert</span>
                 </div>
-                <h3 class="achieve-main-heading">Postman API Fundamentals Student Expert</h3>
-                <h4 class="achieve-sub-issuer">LetsUpgrade × NSDC × GDG MAD</h4>
-                <p class="achieve-body-desc">
-                  Certified in API design, endpoint testing, request automation, environment variables, and RESTful
-                  collection workflows in Postman.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">Postman API</span>
-                  <span class="achieve-tag">RESTful APIs</span>
-                  <span class="achieve-tag">API Automation</span>
-                  <span class="achieve-tag">Cert No: LUEPAFSOCT22455</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <button class="btn-pill-action btn-primary cert-trigger"
-                    data-cert-img="assets/images/certificates/postman_expert_certificate.png"
-                    data-cert-pdf="assets/docs/certificates/postman_expert_certificate.pdf"
-                    data-cert-title="Postman API Fundamentals Student Expert Certification"
-                    data-cert-issuer="LetsUpgrade × NSDC">
-                    <span>View</span>
-                  </button>
-                  <a href="assets/docs/certificates/postman_expert_certificate.pdf" download
-                    class="btn-pill-action btn-pill-download">
-                    <span>Download</span>
-                  </a>
-                </div>
+                <h3 class="achieve-main-heading">Postman API Fundamentals</h3>
+                <h4 class="achieve-sub-issuer">LetsUpgrade × NSDC</h4>
+                <p class="achieve-body-desc">API design, RESTful workflows, and request automation.</p>
               </div>
             </div>
 
-            <!-- Timeline Item 5: SQL Bootcamp -->
-            <div class="achieve-timeline-item" id="cert-sql-bootcamp">
-              <div class="achieve-timeline-dot"></div>
-              <div class="achieve-card-detailed">
-                <div class="achieve-top-row">
-                  <span class="achieve-date-text">Dec 19, 2024</span>
-                  <span class="achieve-type-pill">Professional Bootcamp</span>
-                </div>
-                <h3 class="achieve-main-heading">SQL Bootcamp Certification</h3>
-                <h4 class="achieve-sub-issuer">LetsUpgrade × NSDC × GDG MAD</h4>
-                <p class="achieve-body-desc">
-                  Certified in relational database management systems (RDBMS), SQL queries, JOIN operations, aggregation
-                  functions, and database schema creation.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">SQL Queries</span>
-                  <span class="achieve-tag">RDBMS</span>
-                  <span class="achieve-tag">Database Design</span>
-                  <span class="achieve-tag">Cert No: LUESQLDEC1241088</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <button class="btn-pill-action btn-primary cert-trigger"
-                    data-cert-img="assets/images/certificates/sql_bootcamp_certificate.png"
-                    data-cert-pdf="assets/docs/certificates/sql_bootcamp_certificate.pdf"
-                    data-cert-title="SQL Bootcamp Certification" data-cert-issuer="LetsUpgrade × NSDC">
-                    <span>View</span>
-                  </button>
-                  <a href="assets/docs/certificates/sql_bootcamp_certificate.pdf" download
-                    class="btn-pill-action btn-pill-download">
-                    <span>Download</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Timeline Item 6: Java Bootcamp -->
-            <div class="achieve-timeline-item" id="cert-java-bootcamp">
-              <div class="achieve-timeline-dot"></div>
-              <div class="achieve-card-detailed">
-                <div class="achieve-top-row">
-                  <span class="achieve-date-text">Nov 28, 2024</span>
-                  <span class="achieve-type-pill">Professional Bootcamp</span>
-                </div>
-                <h3 class="achieve-main-heading">Java Bootcamp Certification</h3>
-                <h4 class="achieve-sub-issuer">LetsUpgrade × NSDC × GDG MAD</h4>
-                <p class="achieve-body-desc">
-                  Certified in Java programming language fundamentals, control statements, arrays, algorithms, and core
-                  object-oriented software development.
-                </p>
-                <div class="achieve-tag-pills">
-                  <span class="achieve-tag">Java Syntax</span>
-                  <span class="achieve-tag">OOPs</span>
-                  <span class="achieve-tag">Algorithms</span>
-                  <span class="achieve-tag">Cert No: LUEJAVANOV124617</span>
-                </div>
-                <div class="achieve-pill-actions">
-                  <button class="btn-pill-action btn-primary cert-trigger"
-                    data-cert-img="assets/images/certificates/java_bootcamp_certificate.png"
-                    data-cert-pdf="assets/docs/certificates/java_bootcamp_certificate.pdf"
-                    data-cert-title="Java Bootcamp Certification" data-cert-issuer="LetsUpgrade × NSDC">
-                    <span>View</span>
-                  </button>
-                  <a href="assets/docs/certificates/java_bootcamp_certificate.pdf" download
-                    class="btn-pill-action btn-pill-download">
-                    <span>Download</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="load-more-wrapper">
-            <button class="btn-load-more" id="load-more-certs">
-              <span>Load More Certifications</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
           </div>
         </div>
 
-        <!-- ─── VERIFIED CREDLY BADGES ──────────────────────────── -->
         <div class="credly-badges-section">
-          <div class="credly-header">
-            <div class="credly-logo-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              <span>Credly Verified Badges</span>
-            </div>
-            <h3 class="credly-section-title">Verified Cloud &amp; Cybersecurity Badges</h3>
-          </div>
-          <div class="credly-grid">
-
-            <!-- Badge 1: GCP Networking -->
-            <div class="credly-badge-card cert-trigger"
-              data-cert-img="https://images.credly.com/images/6edf3d92-7a1f-425f-aa2b-d17223df9cf7/image.png"
-              data-cert-title="Networking Fundamentals on Google Cloud Skill Badge"
-              data-cert-issuer="Google Cloud (Verified via Credly)"
-              data-cert-url="https://www.credly.com/badges/77fb19dc-272b-4b81-af41-3cafdb82d856">
-              <div class="credly-img-wrap">
-                <img src="https://images.credly.com/images/6edf3d92-7a1f-425f-aa2b-d17223df9cf7/image.png"
-                  alt="Networking Fundamentals Google Cloud Skill Badge" loading="lazy" />
-              </div>
-              <div class="credly-card-body">
-                <span class="credly-issuer">Google Cloud</span>
-                <h4 class="credly-badge-title">Networking Fundamentals on Google Cloud</h4>
-                <a href="https://www.credly.com/badges/77fb19dc-272b-4b81-af41-3cafdb82d856" target="_blank"
-                  rel="noopener" class="credly-verify-link" onclick="event.stopPropagation();">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Verify on Credly
-                </a>
-              </div>
-            </div>
-
-            <!-- Badge 3: GCP Monitoring -->
-            <div class="credly-badge-card cert-trigger"
-              data-cert-img="https://images.credly.com/images/5a9654e8-37e5-4043-8a94-eeb0f98a2a9c/image.png"
-              data-cert-title="Monitoring in Google Cloud Skill Badge"
-              data-cert-issuer="Google Cloud (Verified via Credly)"
-              data-cert-url="https://www.credly.com/badges/ea09e3f2-1e9c-4990-897e-6dcdeac4fae3">
-              <div class="credly-img-wrap">
-                <img src="https://images.credly.com/images/5a9654e8-37e5-4043-8a94-eeb0f98a2a9c/image.png"
-                  alt="Monitoring in Google Cloud Skill Badge" loading="lazy" />
-              </div>
-              <div class="credly-card-body">
-                <span class="credly-issuer">Google Cloud</span>
-                <h4 class="credly-badge-title">Monitoring in Google Cloud</h4>
-                <a href="https://www.credly.com/badges/ea09e3f2-1e9c-4990-897e-6dcdeac4fae3" target="_blank"
-                  rel="noopener" class="credly-verify-link" onclick="event.stopPropagation();">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Verify on Credly
-                </a>
-              </div>
-            </div>
-
-            <!-- Badge 4: GCP Speech & Language -->
-            <div class="credly-badge-card cert-trigger"
-              data-cert-img="https://images.credly.com/images/1e28665a-38ab-4569-bdcb-706cbcbd9b63/blob"
-              data-cert-title="Implement Speech and Language Solutions with Pre-trained APIs"
-              data-cert-issuer="Google Cloud (Verified via Credly)"
-              data-cert-url="https://www.credly.com/badges/00ac2dc8-4c2d-45f7-af17-7e49a9fabe88">
-              <div class="credly-img-wrap">
-                <img src="https://images.credly.com/images/1e28665a-38ab-4569-bdcb-706cbcbd9b63/blob"
-                  alt="Speech & Language Solutions Google Cloud Skill Badge" loading="lazy" />
-              </div>
-              <div class="credly-card-body">
-                <span class="credly-issuer">Google Cloud</span>
-                <h4 class="credly-badge-title">Speech &amp; Language APIs</h4>
-                <a href="https://www.credly.com/badges/00ac2dc8-4c2d-45f7-af17-7e49a9fabe88" target="_blank"
-                  rel="noopener" class="credly-verify-link" onclick="event.stopPropagation();">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Verify on Credly
-                </a>
-              </div>
-            </div>
-
-            <!-- Badge 5: GCP App Engine -->
-            <div class="credly-badge-card cert-trigger"
-              data-cert-img="https://images.credly.com/images/3f7aa8de-4e83-4fc8-95a8-ff28ec3cdb61/blob"
-              data-cert-title="Deploy and Manage Applications on Google App Engine"
-              data-cert-issuer="Google Cloud (Verified via Credly)"
-              data-cert-url="https://www.credly.com/badges/49315492-535a-4b2a-92ed-0279b0829458">
-              <div class="credly-img-wrap">
-                <img src="https://images.credly.com/images/3f7aa8de-4e83-4fc8-95a8-ff28ec3cdb61/blob"
-                  alt="Google App Engine Deploy & Manage Skill Badge" loading="lazy" />
-              </div>
-              <div class="credly-card-body">
-                <span class="credly-issuer">Google Cloud</span>
-                <h4 class="credly-badge-title">Google App Engine Deployment</h4>
-                <a href="https://www.credly.com/badges/49315492-535a-4b2a-92ed-0279b0829458" target="_blank"
-                  rel="noopener" class="credly-verify-link" onclick="event.stopPropagation();">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Verify on Credly
-                </a>
-              </div>
-            </div>
-
-            <!-- Badge 6: GCP Vision API -->
-            <div class="credly-badge-card cert-trigger"
-              data-cert-img="https://images.credly.com/images/bb8edfd1-9d69-48a3-bf81-3ab830caf393/image.png"
-              data-cert-title="Analyze Images with the Cloud Vision API Skill Badge"
-              data-cert-issuer="Google Cloud (Verified via Credly)"
-              data-cert-url="https://www.credly.com/badges/61d70bd3-a3e7-4c04-b4fe-2794fc54fc5c">
-              <div class="credly-img-wrap">
-                <img src="https://images.credly.com/images/bb8edfd1-9d69-48a3-bf81-3ab830caf393/image.png"
-                  alt="Cloud Vision API Google Cloud Skill Badge" loading="lazy" />
-              </div>
-              <div class="credly-card-body">
-                <span class="credly-issuer">Google Cloud</span>
-                <h4 class="credly-badge-title">Cloud Vision API Image Analysis</h4>
-                <a href="https://www.credly.com/badges/61d70bd3-a3e7-4c04-b4fe-2794fc54fc5c" target="_blank"
-                  rel="noopener" class="credly-verify-link" onclick="event.stopPropagation();">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Verify on Credly
-                </a>
-              </div>
-            </div>
-
+          <div class="credly-single-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="credly-inline-icon">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>Credly-verified: Cisco Cybersecurity badge &amp; 6 Google Cloud skill badges (Networking, Monitoring,
+              App Engine, Vision API, Speech &amp; Language) &mdash;</span>
+            <a href="https://www.credly.com/users/iamvineetupadhyay" target="_blank" rel="noopener"
+              class="credly-all-link">View on Credly &rarr;</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ─── 08: CONTACT ─────────────────────────────────────────────── -->
+    <!-- ─── 06: CONTACT ─────────────────────────────────────────────── -->
     <section class="section contact" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">08 — Contact</span>
+          <span class="section-label">06 — Contact</span>
           <h2 class="section-title">Let's Connect</h2>
           <p class="section-sub">I'm open to collaborations, backend roles, and interesting technology discussions.</p>
         </div>
@@ -1812,7 +1297,7 @@
     <div class="cert-modal" id="cert-modal" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
       <div class="cert-modal-container">
-        <img src="" alt="Certificate Picture" id="cert-modal-img" class="cert-modal-img" />
+        <img src="" alt="Certificate Picture" id="cert-modal-img" class="cert-modal-img" loading="lazy" />
         <button class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate modal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="18" y1="6" x2="6" y2="18" />

@@ -15,12 +15,12 @@ Final-year B.Tech CSE student building **CYPR**, a cybersecurity SaaS platform, 
 ## 🛠️ Technical Skills
 
 * **Languages & Core CS:** Java, JavaScript, SQL, Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks
-* **Frameworks:** Spring Boot, Spring Security, Hibernate/JPA
-* **Frontend:** HTML, CSS, JavaScript (vanilla), REST API integration, responsive UI
-* **Databases & Caching:** PostgreSQL, MySQL, Redis, Caffeine Cache, HikariCP Tuning
-* **Cloud & DevOps:** AWS (EC2, RDS, ALB), Docker, Kubernetes, Git, CI/CD, Vercel
-* **Testing:** JUnit, Mockito, Integration Testing
-* **Backend Concepts:** REST APIs, WebSockets (STOMP), JWT/OAuth 2.0, Multithreading, RBAC, Rate Limiting, Microservices
+* **Frameworks & Backend:** Spring Boot, Spring Security, Hibernate/JPA, REST APIs, WebSockets (STOMP), Microservices, Multithreading, Rate Limiting, RBAC
+* **Cloud & DevOps:** Google Cloud Platform (GCP - 5x Skill Badges), AWS (EC2, RDS), Docker, Kubernetes, Git, CI/CD, Vercel
+* **Cybersecurity & NetSec:** Cybersecurity Fundamentals (Cisco Certified), Vulnerability & Threat Defense, JWT / OAuth 2.0, Access Control
+* **API Engineering & Testing:** Postman API Testing & Automation (Student Expert), JUnit, Mockito, Integration Testing
+* **Databases & Performance:** PostgreSQL, MySQL, Redis, Caffeine Cache, HikariCP Tuning
+* **Frontend Web:** HTML5, CSS3, JavaScript (Vanilla), REST API Integration, Responsive UI
 
 ---
 
@@ -43,6 +43,15 @@ Final-year B.Tech CSE student building **CYPR**, a cybersecurity SaaS platform, 
 
 ---
 
+## 💼 Work & Leadership Experience
+
+* **Software Engineering Intern** *(2025)*  
+  Designed and implemented scalable Java & Spring Boot backend services, RESTful API endpoints, and PostgreSQL database schemas.
+* **Robotics Team Lead & Project Head** — *IEC College of Engineering and Technology* *(2024 – 2025)*  
+  Led the robotics engineering team representing IEC College at the **National Level ABU Robocon India** competition. Awarded official College Certificate of Appreciation for leadership and technical execution.
+
+---
+
 ## 🎓 Education
 
 * **IEC College of Engineering and Technology** (Greater Noida, UP)  
@@ -54,14 +63,26 @@ Final-year B.Tech CSE student building **CYPR**, a cybersecurity SaaS platform, 
 
 ---
 
-## 🏆 Achievements
+## 🏆 Achievements & Awards
 
+* **College Certificate of Appreciation (2025):** Awarded by IEC College for taking & leading the robotics team to the National Level Robotics Competition (ABU Robocon India).
 * **National Finalist, ABU Robocon India (2025):** Competed among top robotics teams nationally in autonomous/manual robot design and control.
+* **2× Smart India Hackathon (SIH) Participant (2024 & 2025):** Represented IEC College in two consecutive national editions of SIH, solving complex real-world problem statements.
 * **Tata Imagination Challenge (2025):** Participated in the Tata Quiz, organized by Tata Group via Unstop.
 
 ---
 
-## 📜 Certifications
+## 📜 Certifications & Verified Digital Badges
 
 * **Java Programming Training:** IEC College of Engineering & Technology, in association with Technoledge Eduresearch Pvt. Ltd. *(Apr – Jun 2025)*
 * **Postman API Fundamentals (Student Expert):** LetsUpgrade x NSDC x GDG MAD *(Nov 2024)*
+
+### 🎖️ Verified Credly Credentials
+* **Introduction to Cybersecurity** — *Cisco* [(Verify Credly Badge)](https://www.credly.com/badges/5067bf3b-9571-4cac-90ad-29cb439b5539)
+* **Networking Fundamentals on Google Cloud Skill Badge** — *Google Cloud* [(Verify Credly Badge)](https://www.credly.com/badges/77fb19dc-272b-4b81-af41-3cafdb82d856)
+* **Monitoring in Google Cloud Skill Badge** — *Google Cloud* [(Verify Credly Badge)](https://www.credly.com/badges/ea09e3f2-1e9c-4990-897e-6dcdeac4fae3)
+* **Implement Speech & Language Solutions with Pre-trained APIs** — *Google Cloud* [(Verify Credly Badge)](https://www.credly.com/badges/00ac2dc8-4c2d-45f7-af17-7e49a9fabe88)
+* **Deploy and Manage Applications on Google App Engine** — *Google Cloud* [(Verify Credly Badge)](https://www.credly.com/badges/49315492-535a-4b2a-92ed-0279b0829458)
+* **Analyze Images with the Cloud Vision API Skill Badge** — *Google Cloud* [(Verify Credly Badge)](https://www.credly.com/badges/61d70bd3-a3e7-4c04-b4fe-2794fc54fc5c)
+
+

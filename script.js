@@ -11,13 +11,24 @@
   var navLinksEl = document.getElementById("nav-links");
 
   function onScroll() {
+    if (!navbar) return;
     if (window.scrollY > 12) {
       navbar.classList.add("is-scrolled");
     } else {
       navbar.classList.remove("is-scrolled");
     }
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
+
+  var ticking = false;
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
   onScroll();
 
   if (hamburger && navLinksEl) {
@@ -182,12 +193,21 @@
   });
 
   /* ---------------------------------------------------------------------
-     Contact form — client-side simulation
+     Contact form — client-side simulation with rate limiting protection
   --------------------------------------------------------------------- */
   var form = document.getElementById("contact-form");
   if (form) {
+    var lastSubmitTime = 0;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      // Client-side rate-limiting cooldown (prevent rapid double clicks/spam)
+      var now = Date.now();
+      if (now - lastSubmitTime < 4000) {
+        return;
+      }
+      lastSubmitTime = now;
+
       var submitBtn = document.getElementById("submit-btn");
       var btnText = submitBtn.querySelector(".btn-text");
       if (!btnText) return;
