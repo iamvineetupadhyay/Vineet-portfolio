@@ -38,7 +38,7 @@
       hamburger.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    navLinksEl.querySelectorAll(".nav-link").forEach(function (link) {
+    navLinksEl.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navLinksEl.classList.remove("is-open");
         hamburger.classList.remove("is-open");
@@ -266,6 +266,7 @@
     updateModalOrigin(btn);
 
     certModalImg.src = imgSrc || "";
+    certModalImg.alt = (btn && btn.getAttribute("data-cert-title")) || "Certificate Picture";
 
     certModal.classList.add("is-visible");
     document.body.style.overflow = "hidden";
@@ -359,4 +360,33 @@
 
   setupLoadMore("load-more-achievements", "#achievements", ".achieve-timeline-item", 3, "Load More Achievements", "Show Less");
   setupLoadMore("load-more-certs", "#certifications", ".achieve-timeline-item", 3, "Load More Certifications", "Show Less");
+
+  /* ---------------------------------------------------------------------
+     Skills Domain Filter Tabs
+  --------------------------------------------------------------------- */
+  var skillTabBtns = document.querySelectorAll(".skills-tab-btn");
+  var skillDomainCards = document.querySelectorAll(".skill-domain-card");
+
+  skillTabBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var filter = this.getAttribute("data-filter");
+
+      skillTabBtns.forEach(function (b) {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+      this.classList.add("active");
+      this.setAttribute("aria-selected", "true");
+
+      skillDomainCards.forEach(function (card) {
+        var domain = card.getAttribute("data-domain");
+        if (filter === "all" || domain === filter) {
+          card.classList.remove("is-filtered-out");
+        } else {
+          card.classList.add("is-filtered-out");
+        }
+      });
+    });
+  });
 })();
+
