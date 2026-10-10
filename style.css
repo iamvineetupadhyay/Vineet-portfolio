@@ -15,18 +15,86 @@
      --font-mono:  'JetBrains Mono', monospace (Code, hashes, tech)
    ========================================================================== */
 
-:root {
-  --tg-ivory: #d7d7d7;
-  --tg-silver: #c4c4c4;
-  --tg-slate: #1d1d1d;
+/* ---------- THEME SYSTEM: CHAIUI DARK & MODERN WARM LIGHT ---------- */
+:root,
+[data-theme="dark"] {
+  --color-mode: "dark";
+  
+  /* Primary Surface Palettes */
+  --tg-ivory: #0f0f13;                  /* Elevated dark tone for alternating sections */
+  --tg-silver: #1e1e24;                 /* Subtle silver/slate box */
+  --tg-slate: #0a0a0c;                  /* Pure ChaiCode deep near-black */
   --tg-black: #000000;
   --tg-white: #ffffff;
-  --tg-charcoal: #111111;
+  --tg-charcoal: #050506;               /* Deepest footer */
+  
+  --tg-bg-base: #0a0a0c;
+  --tg-text: #f4f4f5;                   /* Crisp white primary text */
+  --tg-text-muted: #a1a1aa;             /* Soft zinc text */
+  --tg-text-sub: #71717a;
+  
+  --tg-border-light: rgba(255, 237, 213, 0.09); /* ChaiUI warm hairline */
+  --tg-card-bg-light: rgba(20, 20, 26, 0.75);   /* Frosted dark card */
+  
+  --tg-nav-bg: rgba(10, 10, 12, 0.88);
+  --tg-nav-border: rgba(255, 237, 213, 0.08);
+  
+  --tg-boxed-border: #f4f4f5;
+  --tg-boxed-text: #f4f4f5;
+  
+  --tg-input-bg: rgba(18, 18, 23, 0.9);
+  --tg-input-border: rgba(255, 237, 213, 0.15);
+  --tg-input-color: #ffffff;
+  
+  --tg-resume-bg: rgba(255, 255, 255, 0.08);
+  --tg-resume-border: rgba(255, 237, 213, 0.18);
+  --tg-resume-color: #f4f4f5;
+
+  --tg-contact-btn-bg: #ffffff;
+  --tg-contact-btn-color: #000000;
+  
   --font-title: "Montserrat", sans-serif;
   --font-sub: "Raleway", sans-serif;
   --font-body: "Open Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --nav-h: 74px;
+}
+
+[data-theme="light"] {
+  --color-mode: "light";
+  
+  /* Modern Warm Porcelain Duo (Replacing outdated cement grey) */
+  --tg-ivory: #f4f4f0;                  /* Warm porcelain alabaster */
+  --tg-silver: #e2e2dc;                 /* Warm silver box */
+  --tg-slate: #ffffff;                  /* Clean crisp white for alternating sections */
+  --tg-black: #000000;
+  --tg-white: #ffffff;
+  --tg-charcoal: #0e0e11;               /* Dark footer */
+  
+  --tg-bg-base: #f4f4f0;
+  --tg-text: #121214;                   /* Crisp dark slate text */
+  --tg-text-muted: #52525b;             /* Muted grey */
+  --tg-text-sub: #71717a;
+  
+  --tg-border-light: rgba(120, 53, 15, 0.14); /* ChaiUI light hairline */
+  --tg-card-bg-light: #ffffff;
+  
+  --tg-nav-bg: rgba(244, 244, 240, 0.92);
+  --tg-nav-border: rgba(0, 0, 0, 0.08);
+  
+  --tg-boxed-border: #121214;
+  --tg-boxed-text: #121214;
+  
+  --tg-input-bg: #ffffff;
+  --tg-input-border: rgba(0, 0, 0, 0.22);
+  --tg-input-color: #121214;
+  
+  --tg-resume-bg: #ffffff;
+  --tg-resume-border: #121214;
+  --tg-resume-color: #121214;
+
+  --tg-contact-btn-bg: #000000;
+  --tg-contact-btn-color: #ffffff;
 }
 
 /* ---------- RESET & DEFAULTS ---------- */
@@ -45,12 +113,13 @@ html {
 
 body.tg-theme {
   font-family: var(--font-body);
-  background-color: var(--tg-ivory);
-  color: var(--tg-black);
+  background-color: var(--tg-bg-base);
+  color: var(--tg-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
 }
 
 a {
@@ -89,14 +158,15 @@ button {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   padding: 12px 36px;
-  border: 4px solid var(--tg-white);
-  color: var(--tg-white);
+  border: 4px solid var(--tg-boxed-border);
+  color: var(--tg-boxed-text);
   line-height: 1.2;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .tg-boxed-header.light .tg-boxed-title {
-  border-color: var(--tg-black);
-  color: var(--tg-black);
+  border-color: var(--tg-boxed-border);
+  color: var(--tg-boxed-text);
 }
 
 @media (max-width: 600px) {
@@ -117,14 +187,14 @@ button {
   left: 0;
   right: 0;
   height: var(--nav-h);
-  background: rgba(215, 215, 215, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--tg-nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--tg-nav-border);
   z-index: 100;
   display: flex;
   align-items: center;
-  transition: background 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .tg-nav-container {
@@ -148,7 +218,8 @@ button {
   font-size: 26px;
   font-weight: 900;
   letter-spacing: 1px;
-  color: var(--tg-black);
+  color: var(--tg-text);
+  transition: color 0.25s ease;
 }
 
 .logo-accent {
@@ -166,9 +237,9 @@ button {
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--tg-black);
+  color: var(--tg-text);
   text-transform: uppercase;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, color 0.25s ease;
 }
 
 .tg-nav-link:hover {
@@ -180,16 +251,16 @@ button {
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--tg-white);
-  background: var(--tg-black);
+  color: var(--tg-contact-btn-color);
+  background: var(--tg-contact-btn-bg);
   padding: 8px 22px;
-  border-radius: 9999px;
+  border-radius: 0 10px 0 10px;
   text-transform: uppercase;
   transition: all 0.2s ease;
 }
 
 .tg-nav-contact-btn:hover {
-  background: #333333;
+  opacity: 0.88;
   transform: translateY(-1px);
 }
 
@@ -197,6 +268,57 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* ─── CHAIUI THEME SWITCHER BUTTON ─── */
+.chai-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 0 10px 0 10px;
+  border: 1px solid var(--tg-border-light);
+  background: var(--tg-card-bg-light);
+  color: var(--tg-text);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.chai-theme-toggle:hover {
+  border-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.25);
+}
+
+.chai-theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+}
+
+/* Dark Mode Icon display */
+[data-theme="dark"] .theme-icon-sun,
+:root:not([data-theme="light"]) .theme-icon-sun {
+  display: block;
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .theme-icon-moon,
+:root:not([data-theme="light"]) .theme-icon-moon {
+  display: none;
+}
+
+/* Light Mode Icon display */
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-moon {
+  display: block;
+  color: #1e1e24;
 }
 
 .tg-btn-resume {
@@ -207,11 +329,11 @@ button {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--tg-black);
-  background: #ffffff;
-  border: 1.5px solid var(--tg-black);
+  color: var(--tg-resume-color);
+  background: var(--tg-resume-bg);
+  border: 1.5px solid var(--tg-resume-border);
   padding: 7px 14px;
-  border-radius: 9999px;
+  border-radius: 10px 0 10px 0;
   transition: all 0.2s ease;
 }
 
@@ -221,8 +343,8 @@ button {
 }
 
 .tg-btn-resume:hover {
-  background: var(--tg-black);
-  color: var(--tg-white);
+  background: var(--tg-text);
+  color: var(--tg-bg-base);
 }
 
 .tg-hamburger {
@@ -238,37 +360,30 @@ button {
   display: block;
   height: 2.5px;
   width: 100%;
-  background: var(--tg-black);
+  background: var(--tg-text);
   border-radius: 2px;
   transition: all 0.2s ease;
 }
 
 @media (max-width: 860px) {
   .tg-navbar {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-bottom: none;
-    transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    background: var(--tg-nav-bg);
+    border-bottom: 1px solid var(--tg-nav-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .tg-navbar.is-scrolled {
-    background: rgba(29, 29, 29, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--tg-nav-bg);
+    border-bottom: 1px solid var(--tg-nav-border);
   }
 
   .tg-logo .logo-text {
-    color: #ffffff;
-  }
-
-  .tg-logo .logo-accent {
-    color: #c68a2e;
+    color: var(--tg-text);
   }
 
   .tg-hamburger span {
-    background: #ffffff;
+    background: var(--tg-text);
   }
 
   .tg-btn-resume {
@@ -280,8 +395,9 @@ button {
     top: var(--nav-h);
     left: 0;
     right: 0;
-    background: var(--tg-slate);
-    color: var(--tg-white);
+    background: var(--tg-bg-base);
+    color: var(--tg-text);
+    border-bottom: 1px solid var(--tg-border-light);
     flex-direction: column;
     padding: 24px 20px 32px;
     gap: 18px;
@@ -299,13 +415,13 @@ button {
   }
 
   .tg-nav-links .tg-nav-link {
-    color: var(--tg-white);
+    color: var(--tg-text);
     font-size: 15px;
   }
 
   .tg-nav-contact-btn {
-    background: var(--tg-white);
-    color: var(--tg-black);
+    background: var(--tg-contact-btn-bg);
+    color: var(--tg-contact-btn-color);
     width: 100%;
     text-align: center;
   }
@@ -345,28 +461,31 @@ button {
   font-family: var(--font-sub);
   font-size: 26px;
   font-weight: 700;
-  color: var(--tg-black);
+  color: var(--tg-text);
   margin-bottom: 8px;
   letter-spacing: 0.5px;
+  transition: color 0.25s ease;
 }
 
 .tg-hero-name {
   font-family: var(--font-sub);
   font-size: 60px;
   font-weight: 900;
-  color: var(--tg-black);
+  color: var(--tg-text);
   line-height: 1.08;
   margin-bottom: 16px;
   text-transform: none;
+  transition: color 0.25s ease;
 }
 
 .tg-hero-role {
   font-family: var(--font-sub);
   font-size: 22px;
   font-weight: 600;
-  color: #333333;
+  color: var(--tg-text-muted);
   margin-bottom: 32px;
   line-height: 1.35;
+  transition: color 0.25s ease;
 }
 
 /* Tomasz Gajda Iconic Square Shadow Social Buttons */
@@ -381,11 +500,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  color: var(--tg-black);
+  color: var(--tg-text);
   font-family: var(--font-sub);
   font-size: 16px;
   font-weight: 600;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.25s ease;
 }
 
 .tg-social-item:hover {
@@ -397,17 +516,21 @@ button {
   width: 38px;
   height: 38px;
   background: var(--tg-silver);
-  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--tg-border-light);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--tg-black);
-  transition: background 0.2s ease, transform 0.2s ease;
+  color: var(--tg-text);
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .tg-social-item:hover .tg-social-box {
-  background: #a8a8a8;
+  background: rgba(234, 88, 12, 0.15);
+  border-color: rgba(234, 88, 12, 0.5);
+  color: #ea580c;
   transform: scale(1.05);
 }
 
@@ -433,18 +556,19 @@ button {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--tg-white);
-  background: var(--tg-black);
+  color: var(--tg-btn-solid-color, #000000);
+  background: var(--tg-btn-solid-bg, #ffffff);
   padding: 13px 28px;
   border-radius: 9999px;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .tg-btn-solid:hover {
-  background: #333333;
+  background: var(--tg-btn-solid-hover-bg, #e4e4e7);
+  color: var(--tg-btn-solid-hover-color, #000000);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .tg-btn-solid.sm {
@@ -461,17 +585,17 @@ button {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--tg-black);
+  color: var(--tg-btn-outline-color, #ffffff);
   background: transparent;
-  border: 2px solid var(--tg-black);
+  border: 2px solid var(--tg-btn-outline-border, #ffffff);
   padding: 11px 26px;
   border-radius: 9999px;
   transition: all 0.2s ease;
 }
 
 .tg-btn-outline:hover {
-  background: var(--tg-black);
-  color: var(--tg-white);
+  background: var(--tg-btn-outline-hover-bg, #ffffff);
+  color: var(--tg-btn-outline-hover-color, #000000);
   transform: translateY(-2px);
 }
 
@@ -519,20 +643,22 @@ button {
 }
 
 @media (max-width: 860px) {
-  /* ─── MOBILE HERO: EXACT TOMASZ GAJDA MOBILE LAYOUT ─── */
+  /* ─── MOBILE HERO: SEAMLESS THEME-AWARE LAYOUT ─── */
   .tg-hero {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
-    height: 100vh;
-    height: 100svh;
-    min-height: 560px;
-    padding-top: 0;
-    background-color: #000000;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: var(--nav-h);
+    background-color: var(--tg-bg-base);
     overflow: hidden;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Full Bleed Cutout Portrait against Pure Black Backdrop */
+  /* Full Bleed Cutout Portrait against Dynamic Theme Backdrop */
   .tg-hero-right {
     position: absolute;
     inset: 0;
@@ -540,67 +666,73 @@ button {
     height: 100%;
     z-index: 1;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    background: #000000;
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
   }
 
   .tg-hero-shape {
-    display: none; /* No geometric backdrop on mobile: pure pitch black */
+    display: none; /* Seamless full bleed on mobile */
   }
 
   .tg-hero-portrait-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 460px;
+    max-width: 440px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: calc(var(--nav-h) + 10px);
     padding-bottom: 70px;
   }
 
   .tg-hero-portrait {
-    width: 100%;
-    max-width: 440px;
+    width: 88%;
+    max-width: 380px;
     height: auto;
-    max-height: 75vh;
+    max-height: calc(100svh - var(--nav-h) - 90px);
     object-fit: contain;
-    transform: translateY(-20px) scale(1.18);
-    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.6));
+    transform: none;
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
-  /* Bottom Angled Overlay Container */
+  /* Bottom Slanted Overlay Container */
   .tg-hero-left {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
     z-index: 5;
+    width: 100%;
     padding: 0;
     margin: 0;
     display: block;
   }
 
-  /* Signature Tomasz Gajda Slanted Translucent Card */
+  /* Signature Tomasz Gajda Slanted Translucent Card — Theme Aware */
   .tg-hero-content {
     max-width: 100%;
     width: 100%;
     margin: 0;
-    background: rgba(52, 56, 60, 0.88);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* Slanted top border: Left is lower, Right is higher */
-    clip-path: polygon(0 42px, 100% 0, 100% 100%, 0 100%);
-    padding: 56px 20px 28px 24px;
+    background: var(--tg-card-bg-light);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--tg-border-light);
+    clip-path: polygon(0 26px, 100% 0, 100% 100%, 0 100%);
+    padding: 38px 20px 24px 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     gap: 16px;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
   .tg-hero-text {
@@ -610,33 +742,36 @@ button {
 
   .tg-hero-greeting {
     font-family: var(--font-sub);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--tg-text);
     margin-bottom: 2px;
     letter-spacing: 0.3px;
+    transition: color 0.25s ease;
   }
 
   .tg-hero-name {
     font-family: var(--font-title);
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--tg-text);
     line-height: 1.12;
     margin-bottom: 6px;
     letter-spacing: -0.01em;
+    transition: color 0.25s ease;
   }
 
   .tg-hero-role {
     font-family: var(--font-sub);
     font-size: 12px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.88);
+    color: var(--tg-text-muted);
     margin-bottom: 0;
     line-height: 1.35;
+    transition: color 0.25s ease;
   }
 
-  /* 3 Vertically Stacked White Circular Social Icons on Right */
+  /* 3 Vertically Stacked Circular Social Icons on Right */
   .tg-social-list {
     display: flex;
     flex-direction: column;
@@ -652,7 +787,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--tg-text);
+    transition: transform 0.2s ease, color 0.25s ease;
   }
 
   .tg-social-item:hover {
@@ -660,29 +796,30 @@ button {
   }
 
   .tg-social-label {
-    display: none; /* Hide textual labels on mobile hero */
+    display: none;
   }
 
   .tg-social-box {
     width: 32px;
     height: 32px;
-    background: transparent;
+    background: var(--tg-silver);
+    border: 1px solid var(--tg-border-light);
     box-shadow: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--tg-text);
     padding: 0;
+    transition: all 0.2s ease;
   }
 
   .tg-social-box svg {
-    width: 26px;
-    height: 26px;
-    color: #ffffff;
+    width: 18px;
+    height: 18px;
+    color: var(--tg-text);
   }
 
-  /* Hide bulky CTA buttons inside the mobile hero card */
   .tg-hero-cta {
     display: none;
   }
@@ -690,30 +827,20 @@ button {
 
 @media (max-width: 400px) {
   .tg-hero-content {
-    clip-path: polygon(0 34px, 100% 0, 100% 100%, 0 100%);
-    padding: 46px 16px 22px 18px;
+    clip-path: polygon(0 18px, 100% 0, 100% 100%, 0 100%);
+    padding: 28px 16px 20px 16px;
   }
 
   .tg-hero-greeting {
-    font-size: 14.5px;
+    font-size: 14px;
   }
 
   .tg-hero-name {
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .tg-hero-role {
     font-size: 11px;
-  }
-
-  .tg-social-box {
-    width: 28px;
-    height: 28px;
-  }
-
-  .tg-social-box svg {
-    width: 23px;
-    height: 23px;
   }
 }
 
@@ -727,12 +854,19 @@ button {
 
 .tg-section-dark {
   background-color: var(--tg-slate);
-  color: var(--tg-white);
+  color: var(--tg-text);
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+[data-theme="light"] .tg-section-dark {
+  background-color: #fafaf7;
+  color: var(--tg-text);
 }
 
 .tg-section-light {
   background-color: var(--tg-ivory);
-  color: var(--tg-black);
+  color: var(--tg-text);
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
 }
 
 .tg-section-lead {
@@ -750,102 +884,363 @@ button {
 }
 
 /* ==========================================================================
-   ABOUT ME — 3 PILLARS & ACADEMIC BLOCK
+   ABOUT ME — 2-PANEL BENTO GRID (ENGINEERING FOCUS & CONNECTED TIMELINE)
    ========================================================================== */
-.tg-pillars-grid {
+.tg-about-panels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
-  margin-bottom: 56px;
+  align-items: stretch;
+  margin-top: 36px;
 }
 
-.tg-pillar-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 32px 26px;
-  border-radius: 4px;
-  transition: all 0.22s ease;
-}
-
-.tg-pillar-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.28);
-  transform: translateY(-4px);
-}
-
-.tg-pillar-icon {
-  width: 44px;
-  height: 44px;
-  color: var(--tg-white);
-  margin-bottom: 18px;
-}
-
-.tg-pillar-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.tg-pillar-title {
-  font-family: var(--font-title);
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  margin-bottom: 12px;
-  color: var(--tg-white);
-}
-
-.tg-pillar-desc {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.6;
-}
-
-.tg-edu-block {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 36px;
-}
-
-.tg-edu-item {
+/* ─── Harmonious ChaiUI Bento Card ─── */
+.card-chai,
+.tg-bento-panel {
+  background: var(--tg-card-bg-light, rgba(20, 20, 26, 0.75));
+  border: 1px solid var(--tg-border-light, rgba(255, 237, 213, 0.09));
+  border-radius: 14px;
+  padding: 32px 30px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
-.tg-edu-badge {
-  display: inline-block;
-  align-self: flex-start;
+.card-chai:hover,
+.tg-bento-panel:hover {
+  border-color: rgba(198, 138, 46, 0.35);
+}
+
+/* ─── Bento Panel Header ─── */
+.tg-panel-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--tg-border-light, rgba(255, 237, 213, 0.09));
+  margin-bottom: 24px;
+}
+
+.tg-panel-badge {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--tg-white);
-  border-radius: 9999px;
+  letter-spacing: 0.12em;
+  color: #c68a2e;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
-.tg-edu-text h4 {
+.tg-panel-title {
   font-family: var(--font-title);
-  font-size: 14.5px;
+  font-size: 21px;
   font-weight: 700;
-  color: var(--tg-white);
+  color: var(--tg-text);
+  margin: 0;
+  line-height: 1.25;
 }
 
-.tg-edu-text p {
+/* ─── Left Panel: Engineering Capabilities ─── */
+.tg-capabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.tg-cap-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] .tg-cap-item {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tg-cap-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(198, 138, 46, 0.35);
+  transform: translateX(4px);
+}
+
+[data-theme="light"] .tg-cap-item:hover {
+  background: rgba(198, 138, 46, 0.05);
+  border-color: rgba(198, 138, 46, 0.4);
+}
+
+.tg-cap-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(198, 138, 46, 0.1);
+  border: 1px solid rgba(198, 138, 46, 0.25);
+  color: #c68a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.tg-cap-item:hover .tg-cap-icon-box {
+  background: rgba(198, 138, 46, 0.18);
+  border-color: rgba(198, 138, 46, 0.5);
+  transform: scale(1.05);
+}
+
+.tg-cap-icon-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tg-cap-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tg-cap-heading {
+  font-family: var(--font-title);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tg-text);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.tg-cap-text {
+  font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.55;
+  color: var(--tg-text-muted);
+  margin: 0;
 }
 
-@media (max-width: 860px) {
-  .tg-pillars-grid,
-  .tg-edu-block {
-    grid-template-columns: 1fr;
-    gap: 20px;
+/* ─── Right Panel: Vertical Connected Education Timeline ─── */
+.tg-timeline-container {
+  position: relative;
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* Continuous Vertical Connecting Line */
+.tg-timeline-track-line {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    #c68a2e 0%,
+    rgba(198, 138, 46, 0.5) 55%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  border-radius: 2px;
+}
+
+[data-theme="light"] .tg-timeline-track-line {
+  background: linear-gradient(
+    180deg,
+    #b45309 0%,
+    rgba(180, 83, 9, 0.45) 55%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+}
+
+.tg-timeline-step {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.tg-timeline-step:hover {
+  transform: translateX(3px);
+}
+
+.tg-step-indicator {
+  position: absolute;
+  left: -28px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tg-step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--tg-bg-base);
+  border: 2px solid #c68a2e;
+  z-index: 2;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tg-timeline-step.is-active .tg-step-dot {
+  background: #c68a2e;
+  box-shadow: 0 0 10px rgba(198, 138, 46, 0.85);
+}
+
+.tg-timeline-step:hover .tg-step-dot {
+  transform: scale(1.25);
+  background: #ffffff;
+}
+
+[data-theme="light"] .tg-timeline-step:hover .tg-step-dot {
+  background: #b45309;
+}
+
+/* Live Pulse Ring on Active Step */
+.tg-step-pulse {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #c68a2e;
+  animation: tgPulseRing 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes tgPulseRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
   }
 }
+
+.tg-step-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.tg-step-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tg-step-year {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #c68a2e;
+  letter-spacing: 0.06em;
+}
+
+.tg-step-status {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(198, 138, 46, 0.4);
+  color: #c68a2e;
+  background: rgba(198, 138, 46, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tg-step-status.muted {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--tg-text-muted);
+  background: transparent;
+}
+
+[data-theme="light"] .tg-step-status.muted {
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.tg-step-title {
+  font-family: var(--font-title);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tg-text);
+  line-height: 1.35;
+  margin: 0 0 3px 0;
+}
+
+.tg-step-institution {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tg-text);
+  opacity: 0.9;
+  margin: 0 0 2px 0;
+}
+
+.tg-step-sub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--tg-text-muted);
+  margin: 0;
+}
+
+.tg-step-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tg-step-pills span {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--tg-border-light);
+  color: var(--tg-text-muted);
+  letter-spacing: 0.03em;
+}
+
+[data-theme="light"] .tg-step-pills span {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+  .tg-about-panels-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .tg-bento-panel {
+    padding: 24px 20px;
+  }
+  .tg-cap-item {
+    padding: 14px 14px;
+    gap: 14px;
+  }
+  .tg-timeline-container {
+    gap: 22px;
+  }
+}
+
 
 /* ==========================================================================
    SKILLS SECTION — TOMASZ GAJDA ICON GRID
@@ -863,8 +1258,9 @@ button {
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.18em;
-  color: var(--tg-black);
+  color: var(--tg-text);
   margin-bottom: 24px;
+  transition: color 0.25s ease;
 }
 
 .tg-skills-grid {
@@ -879,33 +1275,56 @@ button {
   align-items: center;
   justify-content: center;
   padding: 24px 14px 18px;
-  background: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.08);
+  background: var(--tg-card-bg-light);
+  border: 1px solid var(--tg-border-light);
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  transition: all 0.22s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
 }
 
 .tg-skill-item:hover {
   transform: translateY(-4px);
-  border-color: var(--tg-black);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ea580c;
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.12);
 }
 
 .tg-skill-icon {
   width: 44px;
   height: 44px;
-  color: var(--tg-black);
+  color: var(--tg-text);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 
+.tg-skill-item:hover .tg-skill-icon {
+  color: #ea580c;
+  transform: scale(1.08);
+}
+
+.tg-skill-icon img,
 .tg-skill-icon svg {
   width: 100%;
   height: 100%;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tg-skill-icon .tg-svg-brand {
+  width: 38px;
+  height: 38px;
+  max-width: 38px;
+  max-height: 38px;
+  display: block;
+}
+
+.tg-skill-item:hover .tg-svg-brand {
+  transform: scale(1.12);
 }
 
 .tg-skill-name {
@@ -913,8 +1332,9 @@ button {
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--tg-black);
+  color: var(--tg-text);
   text-transform: uppercase;
+  transition: color 0.25s ease;
 }
 
 @media (max-width: 600px) {
@@ -927,6 +1347,37 @@ button {
 /* ==========================================================================
    PORTFOLIO SECTION — ALTERNATING PROJECTS + FANCY SEPARATOR
    ========================================================================== */
+/* ─── Minimal Project Summary Inline Pills ─── */
+.tg-projects-summary-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tg-proj-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  background: rgba(198, 138, 46, 0.08);
+  border: 1px solid rgba(198, 138, 46, 0.25);
+  border-radius: 9999px;
+  color: var(--tg-text, #ffffff);
+  transition: all 0.2s ease;
+}
+
+.tg-proj-pill:hover {
+  background: rgba(198, 138, 46, 0.16);
+  border-color: #c68a2e;
+  transform: translateY(-1px);
+}
+
 .tg-portfolio-list {
   display: flex;
   flex-direction: column;
@@ -1086,7 +1537,21 @@ button {
   flex-wrap: wrap;
 }
 
-/* In dark sections (Portfolio), ensure outline button text and border are white so they are clearly visible */
+/* ChaiUI & Tomasz Gajda Dark Section Buttons (High-contrast solid white & mirrored outline) */
+.tg-section-dark .tg-btn-solid,
+.tg-project-actions .tg-btn-solid {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+.tg-section-dark .tg-btn-solid:hover,
+.tg-project-actions .tg-btn-solid:hover {
+  background: #e5e5e5;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
 .tg-section-dark .tg-btn-outline,
 .tg-project-actions .tg-btn-outline {
   color: #ffffff;
@@ -1106,6 +1571,53 @@ button {
   justify-content: center;
   color: rgba(255, 255, 255, 0.3);
   margin: 10px 0;
+}
+
+[data-theme="light"] .tg-project-badge {
+  background: rgba(198, 138, 46, 0.1);
+  border-color: rgba(198, 138, 46, 0.3);
+  color: #b45309;
+}
+
+[data-theme="light"] .tg-project-title {
+  color: #121214;
+}
+
+[data-theme="light"] .tg-project-desc {
+  color: #52525b;
+}
+
+[data-theme="light"] .tg-project-bullets {
+  color: #52525b;
+}
+
+[data-theme="light"] .tg-section-dark .tg-btn-solid,
+[data-theme="light"] .tg-project-actions .tg-btn-solid {
+  background: #121214;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .tg-section-dark .tg-btn-solid:hover,
+[data-theme="light"] .tg-project-actions .tg-btn-solid:hover {
+  background: #27272a;
+  color: #ffffff;
+}
+
+[data-theme="light"] .tg-section-dark .tg-btn-outline,
+[data-theme="light"] .tg-project-actions .tg-btn-outline {
+  color: #121214;
+  border-color: #121214;
+}
+
+[data-theme="light"] .tg-section-dark .tg-btn-outline:hover,
+[data-theme="light"] .tg-project-actions .tg-btn-outline:hover {
+  background: #121214;
+  color: #ffffff;
+}
+
+[data-theme="light"] .tg-separator {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .tg-separator svg {
@@ -1139,20 +1651,20 @@ button {
 }
 
 .tg-card {
-  background: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.08);
+  background: var(--tg-card-bg-light);
+  border: 1px solid var(--tg-border-light);
   border-radius: 8px;
   padding: 26px 22px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  transition: all 0.22s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tg-card:hover {
   transform: translateY(-4px);
-  border-color: var(--tg-black);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #ea580c;
+  box-shadow: 0 12px 28px rgba(234, 88, 12, 0.12);
 }
 
 .tg-card-tag {
@@ -1162,10 +1674,10 @@ button {
   font-weight: 700;
   letter-spacing: 0.1em;
   padding: 3px 9px;
-  background: var(--tg-ivory);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: var(--tg-silver);
+  border: 1px solid var(--tg-border-light);
   border-radius: 9999px;
-  color: var(--tg-black);
+  color: var(--tg-text);
   margin-bottom: 12px;
 }
 
@@ -1173,24 +1685,26 @@ button {
   font-family: var(--font-title);
   font-size: 16px;
   font-weight: 800;
-  color: var(--tg-black);
+  color: var(--tg-text);
   line-height: 1.35;
   margin-bottom: 4px;
+  transition: color 0.25s ease;
 }
 
 .tg-card-sub {
   font-size: 12.5px;
   font-weight: 600;
-  color: #666666;
+  color: #c68a2e;
   margin-bottom: 12px;
 }
 
 .tg-card-desc {
   font-size: 13px;
-  color: #444444;
+  color: var(--tg-text-muted);
   line-height: 1.55;
   margin-bottom: 20px;
   flex-grow: 1;
+  transition: color 0.25s ease;
 }
 
 .tg-card-actions {
@@ -1207,25 +1721,28 @@ button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 8px 14px;
-  border-radius: 9999px;
-  border: 1.5px solid var(--tg-black);
-  color: var(--tg-black);
+  border-radius: 8px 0 8px 0;
+  border: 1.5px solid var(--tg-btn-outline-border);
+  color: var(--tg-btn-outline-color);
   background: transparent;
   transition: all 0.18s ease;
 }
 
 .tg-card-btn:hover {
-  background: var(--tg-black);
-  color: var(--tg-white);
+  background: var(--tg-btn-outline-hover-bg);
+  color: var(--tg-btn-outline-hover-color);
 }
 
 .tg-card-btn.primary {
-  background: var(--tg-black);
-  color: var(--tg-white);
+  border-radius: 0 8px 0 8px;
+  background: var(--tg-btn-solid-bg);
+  color: var(--tg-btn-solid-color);
+  border-color: var(--tg-btn-solid-bg);
 }
 
 .tg-card-btn.primary:hover {
-  background: #333333;
+  background: var(--tg-btn-solid-hover-bg);
+  color: var(--tg-btn-solid-hover-color);
 }
 
 /* ==========================================================================
@@ -1251,23 +1768,23 @@ button {
   font-weight: 600;
   letter-spacing: 0.06em;
   padding: 14px 16px;
-  background: #ffffff;
-  border: 2px solid var(--tg-black);
-  border-radius: 0px;
-  color: var(--tg-black);
+  background: var(--tg-input-bg);
+  border: 1.5px solid var(--tg-input-border);
+  border-radius: 8px;
+  color: var(--tg-input-color);
   outline: none;
   transition: all 0.2s ease;
 }
 
 .tg-form-group input:focus,
 .tg-form-group textarea:focus {
-  background: #fafafa;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
 }
 
 .tg-form-group input::placeholder,
 .tg-form-group textarea::placeholder {
-  color: #777777;
+  color: var(--tg-text-sub);
 }
 
 .tg-form-footer {
@@ -1280,7 +1797,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  border-top: 2px solid var(--tg-black);
+  border-top: 1px solid var(--tg-border-light);
   padding-top: 32px;
   text-align: center;
 }
@@ -1292,12 +1809,15 @@ button {
   font-weight: 800;
   letter-spacing: 0.1em;
   margin-bottom: 4px;
+  color: var(--tg-text);
+  transition: color 0.25s ease;
 }
 
 .tg-direct-item a,
 .tg-direct-item span {
   font-size: 13px;
-  color: #333333;
+  color: var(--tg-text-muted);
+  transition: color 0.25s ease;
 }
 
 .tg-direct-item a:hover {
@@ -1463,3 +1983,230 @@ button {
   width: 18px;
   height: 18px;
 }
+
+/* ==========================================================================
+   CHAIUI COMPONENT SYSTEM INTEGRATION (Blend with Tomasz Gajda)
+   ========================================================================== */
+
+/* ── 1. Animated Glint Badge (Hero & Highlights) ────────────────────────── */
+.chai-animated-badge {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 1px;
+  margin-bottom: 22px;
+  text-decoration: none;
+  background: transparent;
+  cursor: default;
+}
+
+.chai-badge-glint {
+  position: absolute;
+  inset: -1000%;
+  animation: chai-spin 4s linear infinite;
+  background: conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 50%, #ea580c 80%, #fb923c 100%);
+  pointer-events: none;
+}
+
+@keyframes chai-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chai-badge-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  background: #111111;
+  padding: 6px 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffedd5;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 237, 213, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  user-select: none;
+}
+
+.chai-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f97316;
+  box-shadow: 0 0 8px #f97316;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: chai-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes chai-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+/* ── 2. ChaiUI Cream & Warm Highlight Phrases (1 per paragraph) ──────────── */
+.highlight {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  display: inline;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark theme highlight (Pale cream) */
+[data-theme="dark"] .highlight,
+:root:not([data-theme="light"]) .highlight {
+  color: #ffedd5;
+  border-bottom: 1px solid rgba(249, 115, 22, 0.4);
+}
+
+/* Light theme highlight (Warm Amber) */
+[data-theme="light"] .highlight {
+  color: #9a3412;
+  border-bottom: 1px solid rgba(154, 52, 18, 0.35);
+}
+
+/* Light mode Glint Badge inner capsule */
+[data-theme="light"] .chai-badge-inner {
+  background: rgba(255, 255, 255, 0.95);
+  color: #121214;
+  border: 1px solid rgba(120, 53, 15, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ── 3. ChaiUI Asymmetric Buttons (0 10px 0 10px / 10px 0 10px 0) ───────── */
+.btn-asym {
+  border-radius: 0 10px 0 10px !important;
+}
+
+.btn-asym.sm {
+  border-radius: 0 8px 0 8px !important;
+}
+
+.btn-asym-mirror {
+  border-radius: 10px 0 10px 0 !important;
+}
+
+.btn-asym-mirror.sm {
+  border-radius: 8px 0 8px 0 !important;
+}
+
+/* Arrow micro-interaction */
+.btn-arrow {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.tg-btn-solid:hover .btn-arrow,
+.tg-btn-outline:hover .btn-arrow,
+.btn-asym:hover .btn-arrow,
+.btn-asym-mirror:hover .btn-arrow {
+  transform: translate(2.5px, -2.5px);
+}
+
+/* ── 4. ChaiUI Hairline Cards & Transitions ─────────────────────────────── */
+.card-chai {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease,
+              box-shadow 0.25s ease !important;
+}
+
+/* Dark section cards (About pillars & dark modules) */
+.tg-section-dark .card-chai,
+.tg-section-dark .tg-pillar-card {
+  background: rgba(24, 24, 24, 0.75) !important;
+  border: 1px solid rgba(255, 237, 213, 0.12) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Light mode cards across all sections (About bento panels, achievements, contact, etc.) */
+[data-theme="light"] .card-chai,
+[data-theme="light"] .tg-bento-panel,
+[data-theme="light"] .tg-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(120, 53, 15, 0.14) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .card-chai:hover,
+[data-theme="light"] .tg-bento-panel:hover,
+[data-theme="light"] .tg-card:hover {
+  background: #ffffff !important;
+  border-color: rgba(180, 83, 9, 0.38) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(120, 53, 15, 0.08) !important;
+}
+
+/* Dark mode cards across all sections */
+[data-theme="dark"] .card-chai,
+[data-theme="dark"] .tg-bento-panel,
+[data-theme="dark"] .tg-card,
+:root:not([data-theme="light"]) .card-chai,
+:root:not([data-theme="light"]) .tg-bento-panel,
+:root:not([data-theme="light"]) .tg-card {
+  background: rgba(20, 20, 26, 0.75) !important;
+  border: 1px solid rgba(255, 237, 213, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .card-chai:hover,
+[data-theme="dark"] .tg-bento-panel:hover,
+[data-theme="dark"] .tg-card:hover,
+:root:not([data-theme="light"]) .card-chai:hover,
+:root:not([data-theme="light"]) .tg-bento-panel:hover,
+:root:not([data-theme="light"]) .tg-card:hover {
+  background: rgba(30, 30, 38, 0.9) !important;
+  border-color: rgba(249, 115, 22, 0.45) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Direct Contact cards polish */
+.tg-contact-direct .tg-direct-item.card-chai {
+  padding: 16px 20px;
+  border-radius: 0 12px 0 12px;
+}
+
+/* ── 5. ChaiUI 10% Amber Hairline Section Top Accents ───────────────────── */
+.tg-footer {
+  position: relative;
+}
+
+.tg-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(249, 115, 22, 0.45) 50%, transparent 100%);
+  pointer-events: none;
+}
+

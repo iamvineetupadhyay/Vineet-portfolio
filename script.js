@@ -388,5 +388,42 @@
       });
     });
   });
+
+  /* ---------------------------------------------------------------------
+     ChaiUI Theme Switcher (Dark / Light mode toggle with persistence)
+  --------------------------------------------------------------------- */
+  var themeToggleBtn = document.getElementById("theme-toggle");
+  var htmlRoot = document.documentElement;
+  var THEME_KEY = "vku_portfolio_theme";
+
+  function updateThemeUI(theme) {
+    htmlRoot.setAttribute("data-theme", theme);
+    localStorage.setItem(THEME_KEY, theme);
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute("data-current-theme", theme);
+      themeToggleBtn.setAttribute(
+        "title",
+        theme === "dark" ? "Switch to Light Theme" : "Switch to ChaiUI Dark Theme"
+      );
+      themeToggleBtn.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to Light Theme" : "Switch to ChaiUI Dark Theme"
+      );
+    }
+  }
+
+  // Check stored theme or initialize
+  var storedTheme = localStorage.getItem(THEME_KEY);
+  var initialTheme = (storedTheme === "light" || storedTheme === "dark") ? storedTheme : "dark";
+  updateThemeUI(initialTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", function () {
+      var current = htmlRoot.getAttribute("data-theme") || "dark";
+      var nextTheme = current === "dark" ? "light" : "dark";
+      updateThemeUI(nextTheme);
+    });
+  }
 })();
+
 

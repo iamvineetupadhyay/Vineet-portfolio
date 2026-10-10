@@ -15,15 +15,23 @@
   <meta property="og:type" content="website" />
   <title>Vineet Kumar Upadhyay | Backend Engineer</title>
 
-  <!-- Tomasz Gajda Typography: Raleway, Montserrat, Open Sans -->
+  <!-- Typography: Manrope (ChaiUI), Montserrat, Raleway, Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Theme Init: Prevent flash of unstyled theme (default: ChaiUI Dark) -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("vku_portfolio_theme");
+      var theme = (saved === "light" || saved === "dark") ? saved : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 
 <body class="tg-theme" id="top">
@@ -44,6 +52,24 @@
       </nav>
 
       <div class="tg-nav-actions">
+        <!-- ChaiUI Theme Switcher Toggle Button -->
+        <button class="chai-theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
         <a href="assets/docs/Vineet_Kumar_Upadhyay_Resume.pdf" download="Vineet_Kumar_Upadhyay_Resume.pdf"
           class="tg-btn-resume" title="Download Resume">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -68,9 +94,17 @@
       <div class="tg-hero-left">
         <div class="tg-hero-content">
           <div class="tg-hero-text">
+            <!-- ChaiUI Signature Animated Glint Badge -->
+            <div class="chai-animated-badge">
+              <span class="chai-badge-glint" aria-hidden="true"></span>
+              <span class="chai-badge-inner">
+                <span class="chai-badge-dot" aria-hidden="true"></span>
+                JAVA 21 &bull; SPRING BOOT &bull; CLOUD BACKEND
+              </span>
+            </div>
             <p class="tg-hero-greeting">Hi, I am</p>
             <h1 class="tg-hero-name">Vineet Kumar<br>Upadhyay</h1>
-            <h2 class="tg-hero-role">Backend Engineer / Java &amp; Spring Boot</h2>
+            <h2 class="tg-hero-role">Backend Engineer specializing in <span class="highlight">distributed systems &amp; microservices</span></h2>
           </div>
 
           <!-- Iconic Tomasz Gajda Square Shadow Social Buttons (Desktop) / Vertical Circular Icons (Mobile) -->
@@ -109,10 +143,22 @@
             </a>
           </div>
 
+          <!-- ChaiUI Asymmetric Hero Buttons -->
           <div class="tg-hero-cta">
-            <a href="#portfolio" class="tg-btn-solid">VIEW PROJECTS</a>
+            <a href="#portfolio" class="tg-btn-solid btn-asym">
+              <span>VIEW PROJECTS</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
             <a href="assets/docs/Vineet_Kumar_Upadhyay_Resume.pdf" download="Vineet_Kumar_Upadhyay_Resume.pdf"
-              class="tg-btn-outline">DOWNLOAD RESUME</a>
+              class="tg-btn-outline btn-asym-mirror">
+              <span>DOWNLOAD RESUME</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -136,79 +182,136 @@
         </div>
 
         <p class="tg-section-lead">
-          Final-year B.Tech CSE student with hands-on experience building and deploying backend applications using
-          <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>REST APIs</strong>, <strong>PostgreSQL</strong>,
-          <strong>Docker</strong>, and <strong>AWS</strong>.
+          Final-year B.Tech CSE student specializing in <span class="highlight">resilient backend architecture and distributed systems</span> with hands-on production deployments using
+          <strong>Java 21</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>, <strong>Docker</strong>, and <strong>AWS</strong>.
         </p>
 
-        <!-- 3 Architecture Pillars in Tomasz Gajda style -->
-        <div class="tg-pillars-grid">
-          <div class="tg-pillar-card">
-            <div class="tg-pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                <line x1="6" y1="6" x2="6.01" y2="6" />
-                <line x1="6" y1="18" x2="6.01" y2="18" />
-              </svg>
+        <!-- About Layout: 2 Harmonious Bento Panels (Engineering Focus & Academic Journey) -->
+        <div class="tg-about-panels-grid">
+
+          <!-- Panel 1: Architectural Capabilities -->
+          <div class="tg-bento-panel card-chai">
+            <div class="tg-panel-header">
+              <span class="tg-panel-badge">01 &bull; ENGINEERING CORE</span>
+              <h3 class="tg-panel-title">Architectural Focus</h3>
             </div>
-            <h3 class="tg-pillar-title">SYSTEM ARCHITECTURE</h3>
-            <p class="tg-pillar-desc">
-              Designing robust Spring Boot REST microservices, STOMP WebSockets for low-latency live streaming, and
-              high-concurrency ThreadPoolExecutor workers.
-            </p>
+
+            <div class="tg-capabilities-list">
+              <div class="tg-cap-item">
+                <div class="tg-cap-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                    <line x1="6" y1="6" x2="6.01" y2="6" />
+                    <line x1="6" y1="18" x2="6.01" y2="18" />
+                  </svg>
+                </div>
+                <div class="tg-cap-content">
+                  <h4 class="tg-cap-heading">System Architecture</h4>
+                  <p class="tg-cap-text">
+                    Designing resilient Spring Boot REST microservices, low-latency STOMP WebSockets, and high-concurrency ThreadPoolExecutor workers.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tg-cap-item">
+                <div class="tg-cap-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div class="tg-cap-content">
+                  <h4 class="tg-cap-heading">Zero-Trust Security</h4>
+                  <p class="tg-cap-text">
+                    Enforcing JWT authentication, OAuth 2.0 social auth, step-up MFA, strict RBAC permissions, and total elimination of IDOR vulnerabilities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tg-cap-item">
+                <div class="tg-cap-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
+                  </svg>
+                </div>
+                <div class="tg-cap-content">
+                  <h4 class="tg-cap-heading">Cloud &amp; Data Tier</h4>
+                  <p class="tg-cap-text">
+                    Containerized Docker deployments, AWS EC2/RDS management, multi-stage GitHub Actions CI/CD pipelines, and Caffeine/Redis caching.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="tg-pillar-card">
-            <div class="tg-pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
+          <!-- Panel 2: Academic Journey (Vertical Connected Timeline) -->
+          <div class="tg-bento-panel card-chai">
+            <div class="tg-panel-header">
+              <span class="tg-panel-badge">02 &bull; ACADEMIC PATHWAY</span>
+              <h3 class="tg-panel-title">Education &amp; Milestones</h3>
             </div>
-            <h3 class="tg-pillar-title">ZERO-TRUST SECURITY</h3>
-            <p class="tg-pillar-desc">
-              Implementing JWT verification, OAuth 2.0 social auth, step-up MFA, strict RBAC permissions, and total
-              elimination of IDOR vulnerabilities.
-            </p>
+
+            <div class="tg-timeline-container">
+              <div class="tg-timeline-track-line"></div>
+
+              <!-- Milestone 1: B.Tech -->
+              <div class="tg-timeline-step is-active">
+                <div class="tg-step-indicator">
+                  <span class="tg-step-dot"></span>
+                  <span class="tg-step-pulse"></span>
+                </div>
+                <div class="tg-step-body">
+                  <div class="tg-step-badge-row">
+                    <span class="tg-step-year">2023 – 2027</span>
+                    <span class="tg-step-status">Pursuing</span>
+                  </div>
+                  <h4 class="tg-step-title">B.Tech in Computer Science and Engineering</h4>
+                  <p class="tg-step-institution">IEC College of Engineering and Technology</p>
+                  <p class="tg-step-sub">Greater Noida, Uttar Pradesh &bull; AKTU</p>
+                  <div class="tg-step-pills">
+                    <span>Distributed Systems</span>
+                    <span>Java 21</span>
+                    <span>Algorithms</span>
+                    <span>DBMS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 2: Class XII -->
+              <div class="tg-timeline-step">
+                <div class="tg-step-indicator">
+                  <span class="tg-step-dot"></span>
+                </div>
+                <div class="tg-step-body">
+                  <div class="tg-step-badge-row">
+                    <span class="tg-step-year">2020 – 2022</span>
+                    <span class="tg-step-status muted">Completed</span>
+                  </div>
+                  <h4 class="tg-step-title">Senior Secondary Education (Class XII)</h4>
+                  <p class="tg-step-institution">UP Board &bull; Intermediate</p>
+                  <p class="tg-step-sub">Science &amp; Mathematics Stream</p>
+                </div>
+              </div>
+
+              <!-- Milestone 3: Class X -->
+              <div class="tg-timeline-step">
+                <div class="tg-step-indicator">
+                  <span class="tg-step-dot"></span>
+                </div>
+                <div class="tg-step-body">
+                  <div class="tg-step-badge-row">
+                    <span class="tg-step-year">2019 – 2020</span>
+                    <span class="tg-step-status muted">Completed</span>
+                  </div>
+                  <h4 class="tg-step-title">Secondary Education (Class X)</h4>
+                  <p class="tg-step-institution">UP Board &bull; High School</p>
+                  <p class="tg-step-sub">Science, Mathematics &amp; Foundations</p>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div class="tg-pillar-card">
-            <div class="tg-pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
-              </svg>
-            </div>
-            <h3 class="tg-pillar-title">CLOUD &amp; DATA TIER</h3>
-            <p class="tg-pillar-desc">
-              Containerized Docker deployments, AWS EC2/RDS management, multi-stage CI/CD pipelines via GitHub Actions,
-              and Caffeine/Redis caching.
-            </p>
-          </div>
-        </div>
-
-        <!-- Academic Background from Resume -->
-        <div class="tg-edu-block">
-          <div class="tg-edu-item">
-            <span class="tg-edu-badge">2023 – 2027</span>
-            <div class="tg-edu-text">
-              <h4>B.Tech in Computer Science and Engineering</h4>
-              <p>IEC College of Engineering and Technology, Greater Noida, UP</p>
-            </div>
-          </div>
-          <div class="tg-edu-item">
-            <span class="tg-edu-badge">2020 – 2022</span>
-            <div class="tg-edu-text">
-              <h4>Senior Secondary Education (Class XII)</h4>
-              <p>UP Board &bull; Science &amp; Mathematics</p>
-            </div>
-          </div>
-          <div class="tg-edu-item">
-            <span class="tg-edu-badge">2019 – 2020</span>
-            <div class="tg-edu-text">
-              <h4>Secondary Education (Class X)</h4>
-              <p>UP Board &bull; High School</p>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -228,120 +331,158 @@
           <h3 class="tg-skills-heading">USING NOW:</h3>
           <div class="tg-skills-grid">
 
+            <!-- 1. Java -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M4.198 17.518c0 0-1.129.565 0 1.129 1.411.706 4.704.988 7.339.988 3.528 0 7.339-.706 7.339-1.976 0-1.27-2.823-1.694-5.363-1.835-2.823-.141-6.774.282-9.315 1.694zm.847 2.4c0 0-.847.565 0 .988 1.411.706 4.422.847 7.057.847 3.387 0 6.633-.423 6.633-1.411 0-1.129-2.54-1.552-5.08-1.694-2.823-.141-6.633.282-8.61 1.27zm10.725-7.339c0 0 1.27.282 1.976 1.411.847 1.27.141 2.54-.565 3.387-.706.847-1.129.847-1.129.847s.423-.423.706-1.129c.423-.706.141-1.694-.565-2.54-.706-.847-1.129-1.129-1.129-1.129.141-.423.706-.847.706-.847zm-3.669 2.258c1.411 1.552.141 3.246-.423 4.234 0 0 .565-.565.847-1.27.423-.988.423-1.976-.423-2.964-.565-.706-.847-1.129-.847-1.129s.282.423.847 1.129zm.423-6.491c0 0 1.552.847.988 3.105-.423 1.552-1.694 2.823-1.694 2.823s.282-.565.565-1.411c.282-.847 0-1.835-.706-2.54-.706-.847-1.129-1.129-1.129-1.129s.988-.282 1.976-.848z" />
+                <svg viewBox="0 0 32 32" fill="none" class="tg-svg-brand">
+                  <path d="M16.0497 8.44062C22.6378 3.32607 19.2566 0 19.2566 0C19.7598 5.28738 13.813 6.53583 12.2189 10.1692C11.1312 12.6485 12.9638 14.8193 16.0475 17.5554C15.7749 16.9494 15.3544 16.3606 14.9288 15.7645C13.4769 13.7313 11.9645 11.6132 16.0497 8.44062Z" fill="#E76F00"/>
+                  <path d="M17.1015 18.677C17.1015 18.677 19.0835 17.0779 17.5139 15.3008C12.1931 9.27186 23.3333 6.53583 23.3333 6.53583C16.5317 9.8125 17.5471 11.7574 19.2567 14.1202C21.0871 16.6538 17.1015 18.677 17.1015 18.677Z" fill="#E76F00"/>
+                  <path d="M22.937 23.4456C29.0423 20.3258 26.2195 17.3278 24.2492 17.7317C23.7662 17.8305 23.5509 17.9162 23.5509 17.9162C23.5509 17.9162 23.7302 17.64 24.0726 17.5204C27.9705 16.1729 30.9682 21.4949 22.8143 23.6028C22.8143 23.6029 22.9088 23.5198 22.937 23.4456Z" fill="#5382A1"/>
+                  <path d="M10.233 19.4969C6.41312 18.9953 12.3275 17.6139 12.3275 17.6139C12.3275 17.6139 10.0307 17.4616 7.20592 18.8043C3.86577 20.3932 15.4681 21.1158 21.474 19.5625C22.0984 19.1432 22.9614 18.7798 22.9614 18.7798C22.9614 18.7798 20.5037 19.2114 18.0561 19.4145C15.0612 19.6612 11.8459 19.7093 10.233 19.4969Z" fill="#5382A1"/>
+                  <path d="M11.6864 22.4758C9.55624 22.2592 10.951 21.2439 10.951 21.2439C5.43898 23.0429 14.0178 25.083 21.7199 22.8682C20.9012 22.5844 20.3806 22.0653 20.3806 22.0653C16.6163 22.7781 14.441 22.7553 11.6864 22.4758Z" fill="#5382A1"/>
+                  <path d="M12.6145 25.6991C10.486 25.4585 11.7295 24.7474 11.7295 24.7474C6.72594 26.1222 14.7729 28.9625 21.1433 26.2777C20.0999 25.8787 19.3528 25.4181 19.3528 25.4181C16.5111 25.9469 15.1931 25.9884 12.6145 25.6991Z" fill="#5382A1"/>
+                  <path d="M25.9387 27.3388C25.9387 27.3388 26.8589 28.0844 24.9252 28.6612C21.2481 29.7566 9.62093 30.0874 6.39094 28.7049C5.22984 28.2082 7.40723 27.5189 8.09215 27.3742C8.80646 27.2219 9.21466 27.2503 9.21466 27.2503C7.9234 26.3558 0.868489 29.0067 5.63111 29.7659C18.6195 31.8372 29.3077 28.8331 25.9387 27.3388Z" fill="#5382A1"/>
+                  <path d="M28 28.9679C27.7869 31.6947 18.7877 32.2683 12.9274 31.8994C9.10432 31.6583 8.33812 31.0558 8.32691 31.047C11.9859 31.6402 18.1549 31.7482 23.1568 30.8225C27.5903 30.0016 28 28.9679 28 28.9679Z" fill="#5382A1"/>
                 </svg>
               </div>
               <span class="tg-skill-name">JAVA</span>
             </div>
 
+            <!-- 2. Spring Boot -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M11.968 0C5.358 0 0 5.358 0 11.968c0 6.61 5.358 11.968 11.968 11.968 6.61 0 11.968-5.358 11.968-11.968C23.936 5.358 18.578 0 11.968 0zm6.273 8.358c-.378 4.398-3.626 9.48-9.043 11.644 1.34-2.73 1.05-6.074-.78-8.528-1.782-2.39-4.71-3.23-7.23-2.11 2.8-4.24 7.912-5.74 12.012-3.486 2.458 1.353 3.652 3.666 5.04 2.48z" />
+                <svg viewBox="-2.4 -2.4 28.80 28.80" class="tg-svg-brand">
+                  <path transform="translate(-2.4, -2.4), scale(1.8)" fill="#6DB33F" d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z"/>
+                  <path fill="#ffffff" d="M20.205 16.392c-2.469 3.289-7.741 2.179-11.122 2.338 0 0-.599.034-1.201.133 0 0 .228-.097.519-.198 2.374-.821 3.496-.986 4.939-1.727 2.71-1.388 5.408-4.413 5.957-7.555-1.032 3.022-4.17 5.623-7.027 6.679-1.955.722-5.492 1.424-5.493 1.424a5.28 5.28 0 0 1-.143-.076c-2.405-1.17-2.475-6.38 1.894-8.059 1.916-.736 3.747-.332 5.818-.825 2.208-.525 4.766-2.18 5.805-4.344 1.165 3.458 2.565 8.866.054 12.21zm.042-13.28a9.212 9.212 0 0 1-1.065 1.89 9.982 9.982 0 0 0-7.167-3.031C6.492 1.971 2 6.463 2 11.985a9.983 9.983 0 0 0 3.205 7.334l.22.194a.856.856 0 1 1 .001.001l.149.132A9.96 9.96 0 0 0 12.015 22c5.278 0 9.613-4.108 9.984-9.292.274-2.539-.476-5.763-1.752-9.596"/>
                 </svg>
               </div>
               <span class="tg-skill-name">SPRING BOOT</span>
             </div>
 
+            <!-- 3. Spring Security -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <path d="M16 2L4 6.5V15c0 7.8 5.1 14.2 12 16 6.9-1.8 12-8.2 12-16V6.5L16 2z" fill="#6DB33F"/>
+                  <path d="M16 4.2L6 8.3V15c0 6.5 4.3 12.2 10 13.8 5.7-1.6 10-7.3 10-13.8V8.3L16 4.2z" fill="#589632"/>
+                  <path d="M16 11c-2.2 0-4 1.8-4 4v2h-1v6h10v-6h-1v-2c0-2.2-1.8-4-4-4zm2 6h-4v-2c0-1.1.9-2 2-2s2 .9 2 2v2z" fill="#FFFFFF"/>
+                  <circle cx="16" cy="20" r="1.2" fill="#F59E0B"/>
                 </svg>
               </div>
               <span class="tg-skill-name">SPRING SECURITY</span>
             </div>
 
+            <!-- 4. PostgreSQL -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M11.975 0C5.362 0 0 5.362 0 11.975c0 6.613 5.362 11.975 11.975 11.975s11.975-5.362 11.975-11.975C23.95 5.362 18.588 0 11.975 0zm.04 3.7c3.4 0 6.15 2.1 6.15 4.7 0 1.7-.12 3.1-.35 4.4-.23 1.3-.65 2.6-1.2 3.6-.55 1-1.25 1.9-2.05 2.5s-1.7.9-2.65.9c-.95 0-1.85-.3-2.65-.9s-1.5-1.5-2.05-2.5c-.55-1-.97-2.3-1.2-3.6-.23-1.3-.35-2.7-.35-4.4 0-2.6 2.75-4.7 6.15-4.7z" />
+                <svg viewBox="-4 0 264 264" class="tg-svg-brand">
+                  <path d="M237.906 160.722c-29.74 6.135-31.785-3.934-31.785-3.934 31.4-46.593 44.527-105.736 33.2-120.211-30.904-39.485-84.399-20.811-85.292-20.327l-.287.052c-5.876-1.22-12.451-1.946-19.842-2.067-13.456-.22-23.664 3.528-31.41 9.402 0 0-95.43-39.314-90.991 49.444.944 18.882 27.064 142.873 58.218 105.422 11.387-13.695 22.39-25.274 22.39-25.274 5.464 3.63 12.006 5.482 18.864 4.817l.533-.452c-.166 1.7-.09 3.363.213 5.332-8.026 8.967-5.667 10.541-21.711 13.844-16.235 3.346-6.698 9.302-.471 10.86 7.549 1.887 25.013 4.561 36.813-11.958l-.47 1.885c3.144 2.519 5.352 16.383 4.982 28.952-.37 12.568-.617 21.197 1.86 27.937 2.479 6.74 4.948 21.905 26.04 17.386 17.623-3.777 26.756-13.564 28.027-29.89.901-11.606 2.942-9.89 3.07-20.267l1.637-4.912c1.887-15.733.3-20.809 11.157-18.448l2.64.232c7.99.363 18.45-1.286 24.589-4.139 13.218-6.134 21.058-16.377 8.024-13.686h.002" fill="#336791"/>
+                  <path d="M108.076 81.525c-2.68-.373-5.107-.028-6.335.902-.69.523-.904 1.129-.962 1.546-.154 1.105.62 2.327 1.096 2.957 1.346 1.784 3.312 3.01 5.258 3.28.282.04.563.058.842.058 3.245 0 6.196-2.527 6.456-4.392.325-2.336-3.066-3.893-6.355-4.35M196.86 81.599c-.256-1.831-3.514-2.353-6.606-1.923-3.088.43-6.082 1.824-5.832 3.659.2 1.427 2.777 3.863 5.827 3.863.258 0 .518-.017.78-.054 2.036-.282 3.53-1.575 4.24-2.32 1.08-1.136 1.706-2.402 1.591-3.225" fill="#FFF"/>
+                  <path d="M247.802 160.025c-1.134-3.429-4.784-4.532-10.848-3.28-18.005 3.716-24.453 1.142-26.57-.417 13.995-21.32 25.508-47.092 31.719-71.137 2.942-11.39 4.567-21.968 4.7-30.59.147-9.463-1.465-16.417-4.789-20.665-13.402-17.125-33.072-26.311-56.882-26.563-16.369-.184-30.199 4.005-32.88 5.183-5.646-1.404-11.801-2.266-18.502-2.376-12.288-.199-22.91 2.743-31.704 8.74-3.82-1.422-13.692-4.811-25.765-6.756-20.872-3.36-37.458-.814-49.294 7.571-14.123 10.006-20.643 27.892-19.38 53.16.425 8.501 5.269 34.653 12.913 59.698 10.062 32.964 21 51.625 32.508 55.464 1.347.449 2.9.763 4.613.763 4.198 0 9.345-1.892 14.7-8.33a529.832 529.832 0 0 1 20.261-22.926c4.524 2.428 9.494 3.784 14.577 3.92.01.133.023.266.035.398a117.66 117.66 0 0 0-2.57 3.175c-3.522 4.471-4.255 5.402-15.592 7.736-3.225.666-11.79 2.431-11.916 8.435-.136 6.56 10.125 9.315 11.294 9.607 4.074 1.02 7.999 1.523 11.742 1.523 9.103 0 17.114-2.992 23.516-8.781-.197 23.386.778 46.43 3.586 53.451 2.3 5.748 7.918 19.795 25.664 19.794 2.604 0 5.47-.303 8.623-.979 18.521-3.97 26.564-12.156 29.675-30.203 1.665-9.645 4.522-32.676 5.866-45.03 2.836.885 6.487 1.29 10.434 1.289 8.232 0 17.731-1.749 23.688-4.514 6.692-3.108 18.768-10.734 16.578-17.36z" fill="#295173"/>
                 </svg>
               </div>
               <span class="tg-skill-name">POSTGRESQL</span>
             </div>
 
+            <!-- 5. Docker -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m0 2.716h2.118a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.956 0h2.119a.186.186 0 00.185-.186V6.29a.186.186 0 00-.185-.185H5.144a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m5.886 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.956 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.144a.185.185 0 00-.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M.015 11.233c0 3.238 2.274 5.766 5.86 5.766 3.655 0 7.37-1.127 10.6-3.328 1.488.225 3.01.211 4.457-.156.408-.104.707-.442.748-.86.04-.419-.183-.815-.558-.992-1.026-.484-2.155-.734-3.308-.734-.236 0-.472.01-.707.03-.454-2.023-2.091-3.606-4.14-3.957a.789.789 0 00-.916.634.789.789 0 00.634.916c1.408.24 2.535 1.332 2.846 2.73-1.042-.31-2.132-.47-3.235-.47H.015z" />
+                <svg viewBox="20 0 236 150" class="tg-svg-brand">
+                  <path d="M221.57 54.38c1.533-11.916-7.384-21.275-12.914-25.719-6.373 7.368-7.363 26.678 2.635 34.808-5.58 4.956-17.337 9.448-29.376 9.448H35.37c-1.17 12.567 1.036 24.14 6.075 34.045l1.667 3.05a56.536 56.536 0 0 0 3.455 5.184c6.025.387 11.58.52 16.662.408h.002c9.987-.22 18.136-1.4 24.312-3.54a1.761 1.761 0 0 1 1.153 3.326c-.822.286-1.678.552-2.562.805h-.003c-4.863 1.389-10.078 2.323-16.806 2.738.4.007-.416.06-.418.06-.229.015-.517.048-.747.06-2.648.149-5.506.18-8.428.18-3.196 0-6.343-.06-9.862-.24l-.09.06c12.21 13.724 31.302 21.955 55.234 21.955 50.648 0 93.608-22.452 112.632-72.857 13.496 1.385 26.467-2.057 32.367-13.575-9.398-5.423-21.484-3.694-28.443-.196" fill="#2496ED"/>
+                  <path d="M55.26 49.543h19.818v19.818H55.26V49.543zm22.866-22.866h19.819v19.817h-19.82V26.677zm0 22.866h19.819v19.818h-19.82V49.543zm22.867 0h19.818v19.818h-19.818V49.543zm0-22.866h19.818v19.817h-19.818V26.677zm22.866 22.866h19.818v19.818h-19.818V49.543zm0-22.866h19.818v19.817h-19.818V26.677zm0-22.867h19.818V23.63h-19.818V3.81z" fill="#0db7ed"/>
                 </svg>
               </div>
               <span class="tg-skill-name">DOCKER</span>
             </div>
 
+            <!-- 6. AWS EC2/RDS -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
+                <svg viewBox="1.578 -113.594 1087.411 1087.411" class="tg-svg-brand">
+                  <path fill="#FF9900" d="M318.839 547.785l-99.62 42.792 92.26 39.455 106.98-39.455-99.62-42.792zm-149.773 53.49l-3.338 192.564 145.75 64.188V658.104l-142.412-56.829zm299.545 0l-131.715 50.152V839.97l131.715-53.49V601.275zM625.743 2.186L525.438 44.979l92.944 39.454 106.98-39.454-99.619-42.793zm-139.074 56.85V251.6l124.354 36.116 4.022-175.191-128.376-53.489zm278.149 10.697L647.14 119.886v189.227l117.679-53.49V69.733zM154.688 273.21l-99.62 42.792 92.26 39.455 106.98-39.455-99.62-42.792zM4.916 326.7L1.578 519.265l145.75 64.188V383.528L4.916 326.7zm299.545 0l-131.714 50.152v188.542l131.714-53.49V326.7zm171.168-60.594l-99.62 42.792 92.26 39.455 106.98-39.455-99.62-42.792zm-149.773 53.491l-3.338 192.564 145.75 64.188V376.446l-142.412-56.849zm299.545 0l-131.714 50.152v188.542l131.714-53.49V319.597zM939.217 2.186l-99.619 42.792 92.26 39.454 106.979-39.454-99.62-42.792zm-149.773 53.49l-3.337 192.564 145.75 64.188V112.525L789.444 55.676zm299.545 0l-131.714 50.152V294.37l131.714-53.49V55.676z"/>
                 </svg>
               </div>
               <span class="tg-skill-name">AWS EC2/RDS</span>
             </div>
 
+            <!-- 7. Redis -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                <svg viewBox="0 -18 256 256" class="tg-svg-brand">
+                  <path d="M245.97 168.943c-13.662 7.121-84.434 36.22-99.501 44.075-15.067 7.856-23.437 7.78-35.34 2.09-11.902-5.69-87.216-36.112-100.783-42.597C3.566 169.271 0 166.535 0 163.951v-25.876s98.05-21.345 113.879-27.024c15.828-5.679 21.32-5.884 34.79-.95 13.472 4.936 94.018 19.468 107.331 24.344l-.006 25.51c.002 2.558-3.07 5.364-10.024 8.988" fill="#912626"/>
+                  <path d="M245.965 143.22c-13.661 7.118-84.431 36.218-99.498 44.072-15.066 7.857-23.436 7.78-35.338 2.09-11.903-5.686-87.214-36.113-100.78-42.594-13.566-6.485-13.85-10.948-.524-16.166 13.326-5.22 88.224-34.605 104.055-40.284 15.828-5.677 21.319-5.884 34.789-.948 13.471 4.934 83.819 32.935 97.13 37.81 13.316 4.881 13.827 8.9.166 16.02" fill="#D82C20"/>
+                  <path d="M245.97 127.074c-13.662 7.122-84.434 36.22-99.501 44.078-15.067 7.853-23.437 7.777-35.34 2.087-11.903-5.687-87.216-36.112-100.783-42.597C3.566 127.402 0 124.67 0 122.085V96.206s98.05-21.344 113.879-27.023c15.828-5.679 21.32-5.885 34.79-.95C162.142 73.168 242.688 87.697 256 92.574l-.006 25.513c.002 2.557-3.07 5.363-10.024 8.987" fill="#912626"/>
+                  <path d="M245.965 101.351c-13.661 7.12-84.431 36.218-99.498 44.075-15.066 7.854-23.436 7.777-35.338 2.087-11.903-5.686-87.214-36.112-100.78-42.594-13.566-6.483-13.85-10.947-.524-16.167C23.151 83.535 98.05 54.148 113.88 48.47c15.828-5.678 21.319-5.884 34.789-.949 13.471 4.934 83.819 32.933 97.13 37.81 13.316 4.88 13.827 8.9.166 16.02" fill="#D82C20"/>
+                  <path d="M245.97 83.653c-13.662 7.12-84.434 36.22-99.501 44.078-15.067 7.854-23.437 7.777-35.34 2.087-11.903-5.687-87.216-36.113-100.783-42.595C3.566 83.98 0 81.247 0 78.665v-25.88s98.05-21.343 113.879-27.021c15.828-5.68 21.32-5.884 34.79-.95C162.142 29.749 242.688 44.278 256 49.155l-.006 25.512c.002 2.555-3.07 5.361-10.024 8.986" fill="#912626"/>
+                  <path d="M245.965 57.93c-13.661 7.12-84.431 36.22-99.498 44.074-15.066 7.854-23.436 7.777-35.338 2.09C99.227 98.404 23.915 67.98 10.35 61.497-3.217 55.015-3.5 50.55 9.825 45.331 23.151 40.113 98.05 10.73 113.88 5.05c15.828-5.679 21.319-5.883 34.789-.948 13.471 4.935 83.819 32.934 97.13 37.811 13.316 4.876 13.827 8.897.166 16.017" fill="#D82C20"/>
+                  <path d="M159.283 32.757l-22.01 2.285-4.927 11.856-7.958-13.23-25.415-2.284 18.964-6.839-5.69-10.498 17.755 6.944 16.738-5.48-4.524 10.855 17.067 6.391M131.032 90.275L89.955 73.238l58.86-9.035-17.783 26.072M74.082 39.347c17.375 0 31.46 5.46 31.46 12.194 0 6.736-14.085 12.195-31.46 12.195s-31.46-5.46-31.46-12.195c0-6.734 14.085-12.194 31.46-12.194" fill="#FFF"/>
                 </svg>
               </div>
               <span class="tg-skill-name">REDIS</span>
             </div>
 
+            <!-- 8. WebSockets -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <circle cx="16" cy="16" r="15" fill="#0F172A"/>
+                  <path d="M8 12l6-6v4h8a2 2 0 0 1 2 2v2h-3v-1H14v4L8 12z" fill="#00D2FF"/>
+                  <path d="M24 20l-6 6v-4H10a2 2 0 0 1-2-2v-2h3v1h9v-4l6 5z" fill="#3B82F6"/>
+                  <circle cx="16" cy="16" r="2.5" fill="#38BDF8"/>
                 </svg>
               </div>
               <span class="tg-skill-name">WEBSOCKETS</span>
             </div>
 
+            <!-- 9. REST APIs -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect width="32" height="32" rx="7" fill="#1E293B"/>
+                  <circle cx="8" cy="16" r="4" fill="#10B981"/>
+                  <text x="8" y="18" font-size="5" font-family="monospace" font-weight="bold" fill="#fff" text-anchor="middle">G</text>
+                  <circle cx="24" cy="9" r="4" fill="#3B82F6"/>
+                  <text x="24" y="11" font-size="5" font-family="monospace" font-weight="bold" fill="#fff" text-anchor="middle">P</text>
+                  <circle cx="24" cy="23" r="4" fill="#F59E0B"/>
+                  <text x="24" y="25" font-size="5" font-family="monospace" font-weight="bold" fill="#fff" text-anchor="middle">D</text>
+                  <circle cx="16" cy="16" r="3" fill="#A855F7"/>
+                  <line x1="12" y1="16" x2="13" y2="16" stroke="#94A3B8" stroke-width="1.8"/>
+                  <line x1="18.5" y1="14" x2="20.5" y2="11" stroke="#94A3B8" stroke-width="1.8"/>
+                  <line x1="18.5" y1="18" x2="20.5" y2="21" stroke="#94A3B8" stroke-width="1.8"/>
                 </svg>
               </div>
               <span class="tg-skill-name">REST APIS</span>
             </div>
 
+            <!-- 10. JWT / Auth -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                  <path d="M7 11V7a5 5 0 0110 0v4" />
+                <svg viewBox="0 0 24 24" class="tg-svg-brand">
+                  <path d="M10.2 0v6.456L12 8.928l1.8-2.472V0zm3.6 6.456v3.072l2.904-.96L20.52 3.36l-2.928-2.136z" fill="#FB015B"/>
+                  <path d="M16.704 8.568l-1.8 2.496 2.928.936 6.144-1.992-1.128-3.432zm1.128 3.432l-2.928.936 1.8 2.496 6.144 1.992 1.128-3.432z" fill="#D63AFF"/>
+                  <path d="M16.704 15.432l-2.904-.96v3.072l3.792 5.232 2.928-2.136zm-2.904 2.112L12 15.072l-1.8 2.472V24h3.6z" fill="#00B9F1"/>
+                  <path d="M10.2 17.544v-3.072l-2.904.96L3.48 20.64l2.928 2.136zm-2.904-2.112l1.8-2.496L6.168 12 .024 13.992l1.128 3.432z" fill="#00E676"/>
+                  <path d="M6.168 12l2.928-.936-1.8-2.496-6.144-1.992-1.128 3.432zm1.128-3.432l2.904.96V6.456L6.408 1.224 3.48 3.36z" fill="#EB5424"/>
                 </svg>
               </div>
               <span class="tg-skill-name">JWT / AUTH</span>
             </div>
 
+            <!-- 11. Git / GitHub -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="18" cy="18" r="3" />
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M6 9v12" />
-                  <path d="M18 15V9a9 9 0 00-9-9" />
+                <svg viewBox="0 0 32 32" fill="none" class="tg-svg-brand">
+                  <path d="M2.58536 17.4132C1.80488 16.6327 1.80488 15.3673 2.58536 14.5868L14.5868 2.58536C15.3673 1.80488 16.6327 1.80488 17.4132 2.58536L29.4146 14.5868C30.1951 15.3673 30.1951 16.6327 29.4146 17.4132L17.4132 29.4146C16.6327 30.1951 15.3673 30.1951 14.5868 29.4146L2.58536 17.4132Z" fill="#F05032"/>
+                  <path d="M12.1489 5.06152L10.9336 6.27686L14.0725 9.41577C13.9455 9.68819 13.8746 9.99201 13.8746 10.3124C13.8746 11.222 14.4461 11.9981 15.2496 12.3012V19.9798C14.4461 20.2829 13.8746 21.059 13.8746 21.9686C13.8746 23.1422 14.826 24.0936 15.9996 24.0936C17.1732 24.0936 18.1246 23.1422 18.1246 21.9686C18.1246 21.144 17.6549 20.429 16.9684 20.0768V12.3117L19.9689 15.3122C19.8481 15.5791 19.7809 15.8754 19.7809 16.1874C19.7809 17.361 20.7323 18.3124 21.9059 18.3124C23.0795 18.3124 24.0309 17.361 24.0309 16.1874C24.0309 15.0138 23.0795 14.0624 21.9059 14.0624C21.6778 14.0624 21.4582 14.0983 21.2522 14.1648L18.0297 10.9423C18.0914 10.7433 18.1246 10.5317 18.1246 10.3124C18.1246 9.13878 17.1732 8.18738 15.9996 8.18738C15.7803 8.18738 15.5688 8.22061 15.3697 8.2823L12.1489 5.06152Z" fill="white"/>
                 </svg>
               </div>
               <span class="tg-skill-name">GIT / GITHUB</span>
             </div>
 
+            <!-- 12. Linux & Bash -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="4 17 10 11 4 5" />
-                  <line x1="12" y1="19" x2="20" y2="19" />
-                </svg>
+                <img src="assets/svg-icons/linux-svgrepo-com.svg" alt="Linux &amp; Bash" class="tg-svg-brand" />
               </div>
               <span class="tg-skill-name">LINUX &amp; BASH</span>
             </div>
@@ -354,45 +495,55 @@
           <h3 class="tg-skills-heading">LEARNING / ADVANCING:</h3>
           <div class="tg-skills-grid">
 
+            <!-- 13. Kubernetes -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                  <polyline points="2 17 12 22 22 17" />
-                  <polyline points="2 12 12 17 22 12" />
+                <svg viewBox="0 0 16 16" class="tg-svg-brand">
+                  <path fill="#326DE6" d="M4.5 14.569c.214.278.539.431.874.431h5.251c.335 0 .66-.165.875-.434l3.258-4.178c.214-.278.288-.633.214-.978l-1.165-5.207a1.128 1.128 0 00-.606-.777l-4.714-2.31A1.062 1.062 0 008.002 1c-.168 0-.335.038-.485.115l-4.715 2.32a1.129 1.129 0 00-.605.777L1.032 9.42c-.084.345 0 .7.214.978L4.5 14.568z"/>
+                  <path fill="#ffffff" fill-rule="evenodd" d="M12.741 9.128c.098.002.196.01.293.024l.058.013.031.008a.308.308 0 01.26.371.306.306 0 01-.396.223h-.004l-.003-.001-.003-.002a1.58 1.58 0 00-.03-.006l-.05-.01a2.55 2.55 0 01-.274-.106 2.867 2.867 0 00-.533-.157.242.242 0 00-.171.064 4.656 4.656 0 00-.131-.023 3.971 3.971 0 01-1.764 2.212c.015.042.032.083.051.123a.239.239 0 00-.023.18c.074.17.165.332.271.484.06.078.114.16.164.244l.028.057.012.025a.306.306 0 01-.381.44.308.308 0 01-.172-.18l-.01-.02a1.57 1.57 0 01-.028-.058 2.546 2.546 0 01-.089-.28 2.837 2.837 0 00-.21-.512.242.242 0 00-.156-.095l-.03-.053-.035-.064a3.97 3.97 0 01-2.823-.007l-.07.125a.25.25 0 00-.132.064 2.13 2.13 0 00-.237.548 2.518 2.518 0 01-.088.28 1.196 1.196 0 01-.025.05l-.013.027v.001a.306.306 0 01-.421.173.308.308 0 01-.173-.314.306.306 0 01.041-.12l.014-.03.026-.052c.05-.085.104-.166.164-.244.108-.156.2-.322.277-.496a.302.302 0 00-.028-.173l.056-.133A3.972 3.972 0 014.22 9.532l-.134.023a.34.34 0 00-.176-.062 2.871 2.871 0 00-.533.156c-.09.04-.181.075-.274.105a1.017 1.017 0 01-.05.011l-.03.007H3.02l-.002.002h-.005a.308.308 0 01-.397-.349.306.306 0 01.261-.245l.005-.001h.002l.006-.002c.024-.006.054-.014.076-.018.097-.013.195-.021.293-.023.186-.013.37-.043.549-.09a.422.422 0 00.131-.133l.128-.037a3.938 3.938 0 01.625-2.752l-.098-.087a.338.338 0 00-.062-.176 2.854 2.854 0 00-.455-.319 2.557 2.557 0 01-.254-.148l-.048-.038-.015-.013-.004-.003a.323.323 0 01-.076-.45.295.295 0 01.244-.107.365.365 0 01.213.08l.022.017c.016.013.034.026.046.037.072.067.139.139.202.213.125.137.263.262.412.372.056.03.121.036.182.018l.11.078a3.938 3.938 0 012.552-1.224l.008-.129a.332.332 0 00.099-.158 2.844 2.844 0 00-.034-.553 2.56 2.56 0 01-.042-.29v-.082-.005A.306.306 0 018 2.82a.308.308 0 01.306.337v.087a2.529 2.529 0 01-.041.29 2.85 2.85 0 00-.035.553.242.242 0 00.1.153v.007l.007.129c.967.088 1.87.522 2.54 1.223l.116-.082a.34.34 0 00.186-.02c.149-.11.287-.236.412-.373.063-.075.13-.146.202-.213l.051-.04.017-.014a.307.307 0 11.381.477l-.024.02c-.015.012-.03.025-.043.034a2.537 2.537 0 01-.254.148 2.87 2.87 0 00-.455.32.241.241 0 00-.058.172l-.05.044-.058.053c.542.806.77 1.783.637 2.745l.123.036c.031.055.077.101.133.132.179.048.363.078.548.09zM7.291 5.24c.107-.024.216-.043.326-.056l-.09 1.6-.008.004a.268.268 0 01-.293.256.27.27 0 01-.135-.05l-.002.001-1.316-.93c.419-.41.945-.696 1.518-.825zm1.618 1.75l1.308-.924a3.182 3.182 0 00-1.833-.882l.09 1.598h.002a.268.268 0 00.294.256.27.27 0 00.135-.05l.004.002zm2.248 1.656L9.609 8.2l-.002-.006a.27.27 0 01-.185-.343.27.27 0 01.08-.12L9.5 7.73l1.195-1.067c.366.594.527 1.29.46 1.983zM9.096 9.5l.618 1.49a3.148 3.148 0 001.275-1.598l-1.593-.269-.002.003a.26.26 0 00-.166.023.27.27 0 00-.13.348l-.002.003zm-.385 1.905c-.573.13-1.17.1-1.727-.088l.777-1.4h.001a.27.27 0 01.475-.001h.006l.779 1.402a3.286 3.286 0 01-.311.087zm-2.418-.422l.611-1.474-.004-.006a.268.268 0 00-.297-.37L6.6 9.13l-1.579.267a3.16 3.16 0 001.272 1.586zm-.997-4.32l1.201 1.071-.001.007a.269.269 0 01-.106.462l-.001.005-1.54.443a3.134 3.134 0 01.447-1.988zm2.95 1.154h-.492l-.307.38.11.476.443.213.442-.212.11-.476-.306-.381z" clip-rule="evenodd"/>
                 </svg>
               </div>
               <span class="tg-skill-name">KUBERNETES</span>
             </div>
 
+            <!-- 14. Microservices -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M12 2v4m0 12v4m-10-10h4m12 0h4" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect x="3" y="3" width="10" height="10" rx="3" fill="#6DB33F"/>
+                  <rect x="19" y="3" width="10" height="10" rx="3" fill="#2496ED"/>
+                  <rect x="11" y="19" width="10" height="10" rx="3" fill="#A855F7"/>
+                  <line x1="13" y1="8" x2="19" y2="8" stroke="#F59E0B" stroke-width="2" stroke-dasharray="2 1"/>
+                  <line x1="8" y1="13" x2="13" y2="21" stroke="#06B6D4" stroke-width="2" stroke-dasharray="2 1"/>
+                  <line x1="24" y1="13" x2="19" y2="21" stroke="#EC4899" stroke-width="2" stroke-dasharray="2 1"/>
+                  <circle cx="16" cy="13.5" r="3.2" fill="#F59E0B"/>
+                  <circle cx="16" cy="13.5" r="1.5" fill="#FFFFFF"/>
                 </svg>
               </div>
               <span class="tg-skill-name">MICROSERVICES</span>
             </div>
 
+            <!-- 15. GitHub Actions -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="23 4 23 10 17 10" />
-                  <polyline points="1 20 1 14 7 14" />
-                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-                </svg>
+                <img src="assets/svg-icons/githubactions-original.svg" alt="GitHub Actions CI/CD" class="tg-svg-brand" />
               </div>
               <span class="tg-skill-name">GITHUB ACTIONS CI/CD</span>
             </div>
 
+            <!-- 16. Concurrency -->
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="18" cy="5" r="3" />
-                  <circle cx="6" cy="12" r="3" />
-                  <circle cx="18" cy="19" r="3" />
-                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect x="3" y="3" width="26" height="26" rx="5" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+                  <rect x="7" y="7" width="7" height="7" rx="2" fill="#10B981"/>
+                  <rect x="18" y="7" width="7" height="7" rx="2" fill="#06B6D4"/>
+                  <rect x="7" y="18" width="7" height="7" rx="2" fill="#F59E0B"/>
+                  <rect x="18" y="18" width="7" height="7" rx="2" fill="#EC4899"/>
+                  <line x1="14" y1="10.5" x2="18" y2="10.5" stroke="#38BDF8" stroke-width="1.8"/>
+                  <line x1="10.5" y1="14" x2="10.5" y2="18" stroke="#34D399" stroke-width="1.8"/>
+                  <line x1="21.5" y1="14" x2="21.5" y2="18" stroke="#F472B6" stroke-width="1.8"/>
+                  <line x1="14" y1="21.5" x2="18" y2="21.5" stroke="#FBBF24" stroke-width="1.8"/>
                 </svg>
               </div>
               <span class="tg-skill-name">CONCURRENCY &amp; THREADS</span>
@@ -408,12 +559,20 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="18" cy="5" r="3" />
-                  <circle cx="6" cy="12" r="3" />
-                  <circle cx="18" cy="19" r="3" />
-                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <circle cx="16" cy="6" r="4.2" fill="#F59E0B"/>
+                  <circle cx="8" cy="17" r="3.6" fill="#06B6D4"/>
+                  <circle cx="24" cy="17" r="3.6" fill="#10B981"/>
+                  <circle cx="4" cy="27" r="2.8" fill="#8B5CF6"/>
+                  <circle cx="12" cy="27" r="2.8" fill="#EC4899"/>
+                  <circle cx="20" cy="27" r="2.8" fill="#3B82F6"/>
+                  <circle cx="28" cy="27" r="2.8" fill="#10B981"/>
+                  <line x1="13" y1="9" x2="9.5" y2="14" stroke="#94A3B8" stroke-width="1.6"/>
+                  <line x1="19" y1="9" x2="22.5" y2="14" stroke="#94A3B8" stroke-width="1.6"/>
+                  <line x1="6.5" y1="20" x2="4.8" y2="24.5" stroke="#94A3B8" stroke-width="1.3"/>
+                  <line x1="9.5" y1="20" x2="11.2" y2="24.5" stroke="#94A3B8" stroke-width="1.3"/>
+                  <line x1="22.5" y1="20" x2="20.8" y2="24.5" stroke="#94A3B8" stroke-width="1.3"/>
+                  <line x1="25.5" y1="20" x2="27.2" y2="24.5" stroke="#94A3B8" stroke-width="1.3"/>
                 </svg>
               </div>
               <span class="tg-skill-name">DATA STRUCTURES</span>
@@ -421,9 +580,11 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect x="2" y="2" width="28" height="28" rx="6" fill="#1E1B4B" stroke="#4338CA" stroke-width="1.2"/>
+                  <path d="M11 11L6 16L11 21" stroke="#A855F7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 11L26 16L21 21" stroke="#EC4899" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="18" y1="9" x2="14" y2="23" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
               </div>
               <span class="tg-skill-name">ALGORITHMS</span>
@@ -431,11 +592,15 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="7" height="7" rx="1" />
-                  <rect x="14" y="3" width="7" height="7" rx="1" />
-                  <rect x="14" y="14" width="7" height="7" rx="1" />
-                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect x="3" y="3" width="11" height="11" rx="3" fill="#3B82F6"/>
+                  <rect x="18" y="3" width="11" height="11" rx="3" fill="#10B981"/>
+                  <rect x="3" y="18" width="11" height="11" rx="3" fill="#F59E0B"/>
+                  <rect x="18" y="18" width="11" height="11" rx="3" fill="#8B5CF6"/>
+                  <circle cx="8.5" cy="8.5" r="2" fill="#FFFFFF"/>
+                  <circle cx="23.5" cy="8.5" r="2" fill="#FFFFFF"/>
+                  <circle cx="8.5" cy="23.5" r="2" fill="#FFFFFF"/>
+                  <circle cx="23.5" cy="23.5" r="2" fill="#FFFFFF"/>
                 </svg>
               </div>
               <span class="tg-skill-name">OOP DESIGN</span>
@@ -443,22 +608,22 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <ellipse cx="12" cy="5" rx="9" ry="3" />
-                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                </svg>
+                <img src="assets/svg-icons/mysql-original.svg" alt="DBMS / SQL" class="tg-svg-brand" />
               </div>
               <span class="tg-skill-name">DBMS / SQL</span>
             </div>
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <circle cx="16" cy="16" r="14" fill="#0C4A6E"/>
+                  <circle cx="16" cy="16" r="14" fill="none" stroke="#0284C7" stroke-width="1.5"/>
+                  <ellipse cx="16" cy="16" rx="7" ry="14" fill="none" stroke="#38BDF8" stroke-width="1.5"/>
+                  <line x1="2" y1="16" x2="30" y2="16" stroke="#38BDF8" stroke-width="1.5"/>
+                  <circle cx="16" cy="8" r="2.2" fill="#10B981"/>
+                  <circle cx="16" cy="24" r="2.2" fill="#10B981"/>
+                  <circle cx="8" cy="16" r="2.2" fill="#F59E0B"/>
+                  <circle cx="24" cy="16" r="2.2" fill="#F59E0B"/>
                 </svg>
               </div>
               <span class="tg-skill-name">COMPUTER NETWORKS</span>
@@ -466,9 +631,13 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="4 17 10 11 4 5" />
-                  <line x1="12" y1="19" x2="20" y2="19" />
+                <svg viewBox="0 0 32 32" class="tg-svg-brand">
+                  <rect x="2" y="4" width="28" height="24" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1.2"/>
+                  <circle cx="6" cy="8" r="1.5" fill="#EF4444"/>
+                  <circle cx="10" cy="8" r="1.5" fill="#F59E0B"/>
+                  <circle cx="14" cy="8" r="1.5" fill="#10B981"/>
+                  <path d="M7 16l4 3.5-4 3.5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="14" y1="23" x2="23" y2="23" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <span class="tg-skill-name">OPERATING SYSTEMS</span>
@@ -476,19 +645,14 @@
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="22" y1="2" x2="11" y2="13" />
-                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                </svg>
+                <img src="assets/svg-icons/postman-original.svg" alt="Postman Expert" class="tg-svg-brand" />
               </div>
               <span class="tg-skill-name">POSTMAN EXPERT</span>
             </div>
 
             <div class="tg-skill-item">
               <div class="tg-skill-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
+                <img src="assets/svg-icons/junit-original.svg" alt="JUnit &amp; Mockito" class="tg-svg-brand" />
               </div>
               <span class="tg-skill-name">JUNIT &amp; MOCKITO</span>
             </div>
@@ -507,6 +671,15 @@
         <div class="tg-boxed-header">
           <h2 class="tg-boxed-title">PORTFOLIO</h2>
         </div>
+
+        <p class="tg-section-lead">
+          Production-grade distributed systems and security architectures built with <span class="highlight">Java 21, Spring Boot, WebSockets &amp; AWS</span>. Engineered for fault tolerance, zero-trust authorization, and low-latency throughput.
+          <span class="tg-projects-summary-inline">
+            <span class="tg-proj-pill">CYPR Tech &bull; Phishing Defense</span>
+            <span class="tg-proj-pill">CYPR NAINA &bull; AI Threat Intel</span>
+            <span class="tg-proj-pill">CI/CD Orchestrator &bull; Async Engine</span>
+          </span>
+        </p>
 
         <div class="tg-portfolio-list">
 
@@ -534,8 +707,8 @@
               <div class="tg-project-badge">ENTERPRISE SECURITY</div>
               <h3 class="tg-project-title">CYPR — Enterprise Cybersecurity Suite</h3>
               <p class="tg-project-desc">
-                Enterprise security platform featuring <strong>VAJRA</strong>, a self-contained phishing detection
-                engine using 15+ independent heuristic signals alongside an AI Analyzer for automated NLP-based payload
+                Enterprise security platform featuring <strong>VAJRA</strong>, a <span class="highlight">self-contained phishing detection engine</span>
+                using 15+ independent heuristic signals alongside an AI Analyzer for automated NLP-based payload
                 and email threat classification.
               </p>
               <ul class="tg-project-bullets">
@@ -549,8 +722,20 @@
                   rate limiting.</li>
               </ul>
               <div class="tg-project-actions">
-                <a href="https://cyprtech.vercel.app" class="tg-btn-solid sm" target="_blank" rel="noopener">VISIT PLATFORM</a>
-                <a href="https://github.com/iamvineetupadhyay/CYPR-Tech" class="tg-btn-outline sm" target="_blank" rel="noopener">GITHUB CODE</a>
+                <a href="https://cyprtech.vercel.app" class="tg-btn-solid btn-asym sm" target="_blank" rel="noopener">
+                  <span>VISIT PLATFORM</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/iamvineetupadhyay/CYPR-Tech" class="tg-btn-outline btn-asym-mirror sm" target="_blank" rel="noopener">
+                  <span>GITHUB CODE</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
@@ -584,9 +769,8 @@
               <div class="tg-project-badge">THREAT INTELLIGENCE</div>
               <h3 class="tg-project-title">CYPR NAINA — AI Threat Intelligence</h3>
               <p class="tg-project-desc">
-                Engineered an AI Security Assistant and threat platform using <strong>Java 21</strong>, <strong>Spring
-                  Boot 3</strong>, and LLM APIs to deliver real-time interactive threat analysis, vulnerability
-                guidance, and breach risk reports.
+                Engineered an AI Security Assistant and threat platform delivering <span class="highlight">real-time interactive threat analysis</span>,
+                vulnerability guidance, and breach risk reports using <strong>Java 21</strong>, <strong>Spring Boot 3</strong>, and LLM APIs.
               </p>
               <ul class="tg-project-bullets">
                 <li>AI-Driven Log Analyzer to summarize breach data and classify compromised credentials with high
@@ -598,8 +782,14 @@
                 <li>Containerized microservices setup using Docker Compose with Nginx reverse proxying.</li>
               </ul>
               <div class="tg-project-actions">
-                <a href="https://github.com/iamvineetupadhyay/CYPR-NAINA" class="tg-btn-solid sm" target="_blank"
-                  rel="noopener">GITHUB CODE</a>
+                <a href="https://github.com/iamvineetupadhyay/CYPR-NAINA" class="tg-btn-solid btn-asym sm" target="_blank"
+                  rel="noopener">
+                  <span>GITHUB CODE</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
@@ -640,8 +830,8 @@
               <div class="tg-project-badge">SYSTEMS &amp; TOOLING</div>
               <h3 class="tg-project-title">CI/CD Orchestrator — Async Build Engine</h3>
               <p class="tg-project-desc">
-                High-throughput asynchronous build execution orchestrator written in Java. Manages multi-threaded
-                pipeline execution and streams live telemetry to clients.
+                High-throughput asynchronous build execution orchestrator with <span class="highlight">real-time WebSocket log streaming</span>
+                and multi-threaded worker pools written in Java.
               </p>
               <ul class="tg-project-bullets">
                 <li>Non-blocking task scheduling using bounded <code>ThreadPoolExecutor</code> workers to eliminate
@@ -652,8 +842,14 @@
                 </li>
               </ul>
               <div class="tg-project-actions">
-                <a href="https://github.com/iamvineetupadhyay/cicd-orchestrator" class="tg-btn-solid sm" target="_blank"
-                  rel="noopener">GITHUB CODE</a>
+                <a href="https://github.com/iamvineetupadhyay/cicd-orchestrator" class="tg-btn-solid btn-asym sm" target="_blank"
+                  rel="noopener">
+                  <span>GITHUB CODE</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
@@ -865,7 +1061,7 @@
         </div>
 
         <p class="tg-section-lead text-center">
-          Have an engineering opportunity or want to discuss backend architecture? Let's connect!
+          Have an engineering opportunity or want to discuss <span class="highlight">backend architecture &amp; distributed systems</span>? Let's connect!
         </p>
 
         <div class="tg-contact-wrap">
@@ -883,22 +1079,26 @@
               <textarea id="message" name="message" rows="5" placeholder="YOUR MESSAGE*" required></textarea>
             </div>
             <div class="tg-form-footer">
-              <button type="submit" class="tg-btn-solid" id="submit-btn">
+              <button type="submit" class="tg-btn-solid btn-asym" id="submit-btn">
                 <span class="btn-text">SUBMIT</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
           </form>
 
           <div class="tg-contact-direct">
-            <div class="tg-direct-item">
+            <div class="tg-direct-item card-chai">
               <strong>EMAIL</strong>
               <a href="mailto:iec.vineet@gmail.com">iec.vineet@gmail.com</a>
             </div>
-            <div class="tg-direct-item">
+            <div class="tg-direct-item card-chai">
               <strong>PHONE</strong>
               <a href="tel:+919506185689">+91-9506185689</a>
             </div>
-            <div class="tg-direct-item">
+            <div class="tg-direct-item card-chai">
               <strong>LOCATION</strong>
               <span>DDU Nagar, Chandauli, Uttar Pradesh – 232101</span>
             </div>
